@@ -1,9 +1,71 @@
+<!DOCTYPE HTML>
 <html>
     <head>
-        <!-- TODO -->
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <link rel="shortcut icon" type="image/ico" href="img/favicon.ico">
+        <title> Sebastian Hubenschmid | Personal website </title>
+
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+        <link rel="stylesheet" href="css/pure.css">
+        <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+
+        <noscript>
+            <meta HTTP-EQUIV="REFRESH" content="0; url=http://www.sehub.de/noscript.html"> 
+        </noscript>
+
+        <script type="text/javascript">
+            function loadPage(href)
+                {
+                    var xmlhttp = new XMLHttpRequest();
+                    xmlhttp.open("GET", href + ".html", false);
+                    xmlhttp.send();
+                    var element = document.getElementById("contentcontainer");
+                    element.innerHTML = xmlhttp.responseText;
+                }
+
+            function getAnchor()
+                {
+                    var anchor = window.location.hash;
+                    // to prevent tomfoolery
+                    anchor = anchor.replace(/\W/g, "").substring(0, 10);
+                    return anchor;
+                }
+
+            function loadPageFromAnchor()
+                {
+                    var anchor = getAnchor();
+                    if (anchor == "")
+                        loadPage("home");
+                    else
+                        loadPage(anchor);
+                }
+        </script>
     </head>
-    <body>
-        <p> Hello world! </p>
+
+    <body onload="loadPageFromAnchor();">
+        <!--<nav id="nav" class="pure-menu pure-menu-open pure-menu-horizontal"> -->
+    <div id="navigation" class="pure-menu pure-menu-open pure-menu-horizontal">
+        <ul class="menu-list">
+            <li class="pure-menu-selected">
+            <a class="menu-item-link" href="#home"
+                onclick="loadPage('home');">Home</a>
+            </li>
+            <li class="pure-menu-selected">
+            <a class="menu-item-link" href="#projects" 
+                onclick="loadPage('projects');">Past Projects</a>
+            </li>
+            <li class="pure-menu-selected">
+            <a class="menu-item-link" href="#aboutme"
+                onclick="loadPage('aboutme')">About me</a>
+            </li>
+        </ul>
+    </div>
+        <!--</nav> -->
+
+        <div id="contentcontainer" class="floatmiddle">
+            <p> Javascript is disabled. Content is loaded dynamically with Javascript, you should be redirected to a static site. </p>
+            <p> If not, go to <a href="noscript.html"> this site </a> for a javascript-free version of this site. </p>
+        </div>
     </body>
-</head>
+</html>
 

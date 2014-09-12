@@ -1,0 +1,79 @@
+.floatmiddle {
+    height: 400px;
+    margin-top: 100px;
+
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    background-color: #EEEEEE;
+    box-shadow: 10px 10px 5px #191919;
+}
+
+.icon {
+    height: 32px;
+    width: 32px;
+}
+
+body {
+    background-color: #222222;
+    background: -moz-radial-gradient(center 45deg, circle closest-corner, #222222 0%, #333333 100%);
+    background: -webkit-gradient(radial, center center, 500, center center, 2000, from(#222222), to(#2A2A2A));
+    color: #111111;
+    font-family: 'Lato', sans-serif;
+}
+
+p {
+    margin-left: 20px;
+    vertical-align: center;
+    font-size: 48px;
+    height: 200px;
+    padding: 40px;
+}
+
+.cf {
+    position:absolute;
+    -webkit-transition: opacity 0.2s ease-in-out;
+    -moz-transition: opacity 0.2s ease-in-out;
+    -o-transition: opacity 0.2s ease-in-out;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.cf.top:hover {
+    opacity:0;
+}
+
+#iconlist {
+    width:400px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#iconlist ul {
+    list-style-type:none;
+}
+
+#iconlist li {
+    text-align:center;
+    display:inline;
+    float:left;
+    width:10%;
+    margin-left:0%;
+    margin-right:0%;
+    margin-top:5%;
+}
+
+#navigation {
+    width: 330px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-top: 10%;
+
+}
+
+#navigation ul {
+    margin-left: auto;
+    margin-right: auto;
+}
+
