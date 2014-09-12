@@ -25,7 +25,6 @@
                 background-color: #222222;
                 background: -moz-radial-gradient(center 45deg, circle closest-corner, #222222 0%, #333333 100%);
                 background: -webkit-gradient(radial, center center, 500, center center, 2000, from(#222222), to(#2A2A2A));
-                color: #EEEEEE;
             }
 
         </style>
