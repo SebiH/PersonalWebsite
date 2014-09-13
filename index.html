@@ -14,10 +14,10 @@
         </noscript>
 
         <script type="text/javascript">
-            function loadPage(href)
+            function loadContent(href)
                 {
                     var xmlhttp = new XMLHttpRequest();
-                    xmlhttp.open("GET", href + ".html", false);
+                    xmlhttp.open("GET", "/content/" + href + ".html", false);
                     xmlhttp.send();
                     var element = document.getElementById("contentcontainer");
                     element.innerHTML = xmlhttp.responseText;
@@ -31,32 +31,32 @@
                     return anchor;
                 }
 
-            function loadPageFromAnchor()
+            function loadContentFromAnchor()
                 {
                     var anchor = getAnchor();
                     if (anchor == "")
-                        loadPage("home");
+                        loadContent("home");
                     else
-                        loadPage(anchor);
+                        loadContent(anchor);
                 }
         </script>
     </head>
 
-    <body onload="loadPageFromAnchor();">
+    <body onload="loadContentFromAnchor();">
         <!--<nav id="nav" class="pure-menu pure-menu-open pure-menu-horizontal"> -->
     <div id="navigation" class="pure-menu pure-menu-open pure-menu-horizontal">
         <ul class="menu-list">
             <li class="pure-menu-selected">
             <a class="menu-item-link" href="#home"
-                onclick="loadPage('home');">Home</a>
+                onclick="loadContent('home');">Home</a>
             </li>
             <li class="pure-menu-selected">
             <a class="menu-item-link" href="#projects" 
-                onclick="loadPage('projects');">Past Projects</a>
+                onclick="loadContent('projects');">Past Projects</a>
             </li>
             <li class="pure-menu-selected">
             <a class="menu-item-link" href="#aboutme"
-                onclick="loadPage('aboutme')">About me</a>
+                onclick="loadContent('aboutme')">About me</a>
             </li>
         </ul>
     </div>
