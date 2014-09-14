@@ -20,17 +20,25 @@ function sendMsg($id, $msg) {
 // Report all PHP errors
 error_reporting(-1);
 
-$serverTime = time();
-$filename = "index.html";
-$lastModifiedTime = date ("F d Y H:i:s", filemtime($filename));
-
+// retrieve latest logged change
 $cacheFile = "/var/www/lastModTime";
+$lastLoggedModTime = file_get_contents($cacheFile);
 
-$contents = file_get_contents($cacheFile);
-echo "Contents: " . $contents . " lastModifiedTime is " . $lastModifiedTime;
+$lastModifiedTime = $lastLoggedModTime;
 
-if (!empty($contents) && $lastModifiedTime > $contents)
-    sendMsg($serverTime, 'time: ' . date("h:i:s", time()));
+$objects = new RecursiveIteratorIterator(new RecursiveDirectoryIterator("."));
+foreach($objects as $filename => $object){
+    $fileModTime = date ("F d Y H:i:s", filemtime($filename));
 
+    // get the most rectent file
+    if ($fileModTime > $lastModifiedTime)
+        $lastModifiedTime = date ("F d Y H:i:s", filemtime($filename));
+}
+//$filename = "index.html";
+
+if (!empty($lastLoggedModTime) && $lastModifiedTime > $lastLoggedModTime)
+    sendMsg(1, 'Doesnt matter what is sent here');
+
+// log for next lookup
 file_put_contents($cacheFile, $lastModifiedTime);
 ?>
