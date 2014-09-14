@@ -13,6 +13,13 @@
             <meta HTTP-EQUIV="REFRESH" content="0; url=http://www.sehub.de/content/noscript.html"> 
         </noscript>
 
+        <!-- TODO REMOVE -->
+        <script>
+            var source = new EventSource('events.php');
+            source.onmessage = function(e) {
+                location.reload();
+            };
+        </script>
         <script type="text/javascript">
             function loadContent(href)
                 {
@@ -43,28 +50,30 @@
     </head>
 
     <body onload="loadContentFromAnchor();">
-    <div id="navigation" class="pure-menu pure-menu-open pure-menu-horizontal">
-        <ul class="menu-list">
-            <li class="pure-menu-selected">
-            <a class="menu-item-link" href="#home"
-                onclick="loadContent('home');">Home</a>
-            </li>
-            <li class="pure-menu-selected">
-            <a class="menu-item-link" href="#projects" 
-                onclick="loadContent('projects');">Past Projects</a>
-            </li>
-            <li class="pure-menu-selected">
-            <a class="menu-item-link" href="#aboutme"
-                onclick="loadContent('aboutme')">About me</a>
-            </li>
-        </ul>
-    </div>
+        <main>
+            <div id="navigation" class="pure-menu pure-menu-open pure-menu-horizontal">
+                <ul class="menu-list">
+                    <li class="pure-menu-selected">
+                    <a class="menu-item-link" href="#home"
+                        onclick="loadContent('home');">Home</a>
+                    </li>
+                    <li class="pure-menu-selected">
+                    <a class="menu-item-link" href="#projects" 
+                        onclick="loadContent('projects');">Past Projects</a>
+                    </li>
+                    <li class="pure-menu-selected">
+                    <a class="menu-item-link" href="#aboutme"
+                        onclick="loadContent('aboutme')">About me</a>
+                    </li>
+                </ul>
+            </div>
 
-        <div id="contentcontainer" class="floatmiddle">
-            <p> Javascript is disabled. Content is loaded dynamically with Javascript, you should be redirected to a static site. </p>
-            <!-- TODO -->
-            <!-- <p> If not, go to <a href="/content/noscript.html"> this site </a> for a javascript-free version of this site. </p> -->
-        </div>
+            <div id="contentcontainer" class="floatmiddle">
+                <p> Javascript is disabled. Content is loaded dynamically with Javascript, you should be redirected to a static site. </p>
+                <!-- TODO -->
+                <!-- <p> If not, go to <a href="/content/noscript.html"> this site </a> for a javascript-free version of this site. </p> -->
+            </div>
+        </main>
     </body>
 </html>
 
