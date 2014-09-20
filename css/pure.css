@@ -21,7 +21,11 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
-p {
+.menu {
+    position: fixed;
+}
+
+.header {
     margin-left: 20px;
     vertical-align: center;
     font-size: 48px;
@@ -41,9 +45,14 @@ p {
     opacity:0;
 }
 
+#iconcontainer {
+    position: fixed;
+    bottom: 0px;
+}
+
 #iconlist {
     width:400px;
-    position:absolute;
+    position: relative;
     bottom: 50px;
 }
 

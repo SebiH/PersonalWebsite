@@ -55,7 +55,7 @@ function loadContentFromAnchor()
 
         <!-- MAIN MENU -->
 
-        <div id="navigation" class="pure-menu pure-menu-open pure-menu-vertical">
+        <div id="navigation" class="menu pure-menu pure-menu-open pure-menu-vertical">
             <ul class="menu-list">
                 <li class="pure-menu-selected">
                 <a class="menu-item-link" href="#home"
@@ -87,7 +87,7 @@ if (strpos($_SERVER['SERVER_NAME'], 'sehub') !== false) {
         <!-- MAIN CONTAINER -->
 
         <div id="contentcontainer" class="floatmiddle">
-            <p> Loading... </p>
+            <p class="header"> Loading... </p>
             <!-- TODO -->
             <!-- <p> If not, go to <a href="/content/noscript.html"> this site </a> for a javascript-free version of this site. </p> -->
         </div>
@@ -95,6 +95,7 @@ if (strpos($_SERVER['SERVER_NAME'], 'sehub') !== false) {
 
         <!-- ICONS -->
 
+        <div id="iconcontainer">
         <ul id="iconlist">
             <li>
             <a href="http://www.github.com/SebiH">
@@ -122,6 +123,7 @@ if (strpos($_SERVER['SERVER_NAME'], 'sehub') !== false) {
             </li>
 
         </ul>
+        </div>
         </main>
     </body>
 </html>
