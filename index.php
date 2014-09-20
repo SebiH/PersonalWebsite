@@ -42,8 +42,8 @@ function loadContentFromAnchor()
 {
     var anchor = getAnchor();
     if (anchor == "")
-        loadContent("home");
-    // TODO differentiate betwen PHP and HTML content
+        loadContent("home.html");
+    // TODO differentiate between PHP and HTML content
     //else
     //    loadContent(anchor);
 }
