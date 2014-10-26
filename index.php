@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="css/sehub.css">
         <link rel="stylesheet" href="css/dropzone.css">
         <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+        <!-- http://fortawesome.github.io/Font-Awesome/icons/ -->
         <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -75,41 +76,6 @@
         <div id="contentcontainer">
         </div>
 
-
-            <div id="iconcontainer" class="content">
-                <ul id="iconlist">
-                    <li>
-                    <a href="http://www.github.com/SebiH">
-                        <img class="cf icon bottom" src="/img/github_active.png"/>
-                        <img class="cf icon top" src ="/img/github_inactive.png"/>
-                    </a>
-                    </li>
-                    <li>
-                    <a href="https://www.google.com/+SebastianHubenschmid">
-                        <img class="cf icon bottom" src="/img/googleplus_active.png"/>
-                        <img class="cf icon top" src ="/img/googleplus_inactive.png"/>
-                    </a>
-                    </li>
-                    <li>
-                    <a href="https://de.linkedin.com/in/sebastianhubenschmid">
-                        <img class="cf icon bottom" src="/img/linkedin_active.png"/>
-                        <img class="cf icon top" src ="/img/linkedin_inactive.png"/>
-                    </a>
-                    </li>
-                    <li>
-                    <a href="http://www.facebook.com/SebastianHubenschmid">
-                        <img class="cf icon bottom" src="/img/facebook_active.png"/>
-                        <img class="cf icon top" src ="/img/facebook_inactive.png"/>
-                    </a>
-                    </li>
-                    <li>
-                    <a href="https://twitter.com/Sebi__H">
-                        <img class="cf icon bottom" src="/img/twitter_active.png"/>
-                        <img class="cf icon top" src ="/img/twitter_inactive.png"/>
-                    </a>
-                    </li>
-                </ul>
-            </div>
         </div>
         <script src="js/pure.js"></script>
         <script type='text/javascript' src='js/lilithplugin.js'></script>
