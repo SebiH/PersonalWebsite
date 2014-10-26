@@ -1,0 +1,621 @@
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-color: #FFFFFF;
+    color: #111111;
+    font-family: 'Lato', sans-serif;
+}
+
+/* unvisited link */
+a:link {
+    color: #00FF00;
+}
+
+/* visited link */
+a:visited {
+    color: #00FF00;
+}
+
+/* mouse over link */
+a:hover {
+    color: #00FF00;
+}
+
+/* selected link */
+a:active {
+    color: #2AAF66;
+}
+
+::selection {
+    background: #01AF31; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+    background: #01AF31; /* Gecko Browsers */
+}
+
+.button-dl {
+    color: white;
+    border-radius: 4px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    background: rgb(28, 184, 65);
+    font-size: 200%;
+}
+
+.header {
+    vertical-align: center;
+    font-size: 48px;
+}
+
+.cf {
+    position:absolute;
+    -webkit-transition: opacity 0.2s ease-in-out;
+    -moz-transition: opacity 0.2s ease-in-out;
+    -o-transition: opacity 0.2s ease-in-out;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.cf.top:hover {
+    opacity:0;
+}
+
+.icon {
+    height: 32px;
+    width: 32px;
+}
+
+#iconcontainer {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 50px;
+}
+
+#iconlist li {
+    display: inline;
+    list-style-type: none;
+    padding-right: 50px;
+}
+
+#icons {
+    position: fixed;
+    bottom: 0px;
+    width: 230px;
+    height: 200px;
+    background-color: black;
+}
+
+#contentcontainer {
+    height: 100%;
+}
+
+#menuTitle {
+    background-color: black;
+    height: 100%;
+}
+
+.logo-text {
+    height: 60px;
+    width: 300px;
+    text-align: left;
+    font-size: 22px;
+    letter-spacing: 2px;
+    color: white;
+
+    transform: rotate(90deg);
+    transform-origin: 0px;
+}
+
+.logo-text:hover,
+.logo-text:active,
+.logo-text:focus {
+    color: #01CF01;
+}
+/* override yahoos pure-menu */
+.pure-menu ul {
+    visibility: visible;
+    position: initial;
+}
+
+/* todo */
+li .cont {
+    height: 32px;
+    position: absolute;
+    right: 32px;
+    top: 4px;
+    width: 32px;
+}
+
+li a .plus-icon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -8px 0 0 -8px;
+    width: 16px;
+    height: 16px;
+    background-image: url(sprite-menu.svg);
+    background-repeat: no-repeat;
+    background-position: 0 -48px;
+    opacity: 0.35;
+    z-index: 5;
+
+    -webkit-transition: -webkit-transform 0.250s ease-out 0s, opacity 0.215s ease-in-out 0s;
+    transition: transform 0.250s ease-out 0s, opacity 0.215s ease-in-out 0s;
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+
+    li a .cont {
+        width: 48px;
+        height: 48px;
+        right: 8px;
+        top: 6px;
+    }
+.no-svg li a .plus-icon {
+    background-image: url(sprite-menu.svg);
+}
+
+li a .cont:hover .plus-icon {
+    opacity: 1;
+}
+
+li a .cont.active .plus-icon {
+    opacity: 1;
+    -webkit-transition: -webkit-transform 0.250s ease-out 0s;
+    transition: transform 0.250s ease-out 0s;
+    -webkit-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+
+    .header-menu {
+        position: relative;
+        height: px;
+        width: 10%;
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    -webkit-transform-origin: 0px 0px;
+    -ms-transform-origin: 0px 0px;
+    transform-origin: 0px 0px;
+    }
+
+#my-menu,
+.header-menu,
+.wrap_all {
+    -webkit-transition: left 0.215s cubic-bezier(0.785, 0.135, 0.150, 0.860);
+    transition: left 0.215s cubic-bezier(0.785, 0.135, 0.150, 0.860);
+}
+
+.header-menu.moveNowLeft,
+.wrap_all.moveNowLeft {
+    left: 300px;
+}
+
+#my-menu.moveNowLeft {
+    left: 0px;
+}
+
+/* shameful purecss.io copy */
+* {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+html, button, input, select, textarea,
+.pure-g [class *= "pure-u"] {
+    font-family: "proxima-nova", sans-serif;
+}
+
+
+/* --------------------------
+ * Element Styles
+ * --------------------------
+*/
+
+body {
+    min-width: 320px;
+    color: #777;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    color: rgb(75, 75, 75);
+}
+h3 {
+    font-size: 1.25em;
+}
+h4 {
+    font-size: 1.125em;
+}
+
+a {
+    color: #3b8bba; /* block-background-text-normal */
+    text-decoration: none;
+}
+
+a:visited {
+    color: #265778; /* block-normal-text-normal */
+}
+
+dt {
+    font-weight: bold;
+}
+dd {
+    margin: 0 0 10px 0;
+}
+
+aside {
+    background: #1f8dd6; /* same color as selected state on site menu */
+    padding: 0.3em 1em;
+    border-radius: 3px;
+    color: #fff;
+}
+    aside a, aside a:visited {
+        color: rgb(169, 226, 255);
+    }
+
+
+/* --------------------------
+ * Layout Styles
+ * --------------------------
+*/
+
+/* Navigation Push Styles */
+#layout {
+    height: 100%;
+    position: relative;
+    padding-left: 0;
+}
+    #layout.active {
+        position: relative;
+        /*left: 230px;*/
+    }
+        #layout.active #menu {
+            left: 230px;
+            width: 230px;
+        }
+
+/* Apply the .box class on the immediate parent of any grid element (pure-u-*) to apply some padding. */
+.l-box {
+    padding: 1em;
+}
+
+.l-wrap {
+    margin-left: auto;
+    margin-right: auto;
+}
+.content .l-wrap {
+    margin-left: -1em;
+    margin-right: -1em;
+}
+
+
+/* --------------------------
+ * Header Module Styles
+ * --------------------------
+*/
+
+.header {
+     font-family: "omnes-pro", sans-serif;
+     max-width: 768px;
+     margin: 0 auto;
+     padding: 1em;
+     text-align: center;
+     /*border-bottom: 1px solid #eee;*/
+     /*background: #fff;*/
+ }
+    .header h1 {
+        font-size: 300%;
+        font-weight: 100;
+        margin: 0;
+    }
+     .header h2 {
+        font-size: 125%;
+        font-weight: 100;
+        line-height: 1.5;
+        margin: 0;
+        color: #666;
+    }
+
+
+ /* --------------------------
+  * Content Module Styles
+  * --------------------------
+ */
+
+/* The content div is placed as a wrapper around all the docs */
+.content {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1em;
+    padding-right: 1em;
+    max-width: 768px;
+}
+
+    .content .content-subhead {
+        margin: 2em 0 1em 0;
+        font-weight: 300;
+        color: #888;
+        position: relative;
+    }
+
+    .content .content-spaced {
+        line-height: 1.8;
+    }
+
+    .content .content-quote {
+        font-family: "Georgia", serif;
+        color: #666;
+        font-style: italic;
+        line-height: 1.8;
+        border-left: 5px solid #ddd;
+        padding-left: 1.5em;
+    }
+
+    .content-link {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: block;
+        height: 100%;
+        width: 20px;
+        background: transparent url('/img/link-icon.png') no-repeat center center;
+        background-size: 20px 20px;
+    }
+
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+        .content-link {
+            background-image: url('/img/link-icon@2x.png');
+        }
+    }
+
+
+/* --------------------------
+ * Code Styles
+ * --------------------------
+*/
+
+pre,
+code {
+    font-family: Consolas, 'Liberation Mono', Courier, monospace;
+    color: #333;
+    background: rgb(250, 250, 250);
+}
+
+code {
+    padding: 0.2em 0.4em;
+    white-space: nowrap;
+}
+.content p code {
+    font-size: 90%;
+}
+
+.code {
+    margin-left: -1em;
+    margin-right: -1em;
+    padding: 1em;
+    border: 1px solid #eee;
+    border-left-width: 0;
+    border-right-width: 0;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+.code code {
+    font-size: 95%;
+    white-space: pre;
+    word-wrap: normal;
+    padding: 0;
+    background: none;
+}
+.code-wrap code {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/* --------------------------
+ * Footer Module Styles
+ * --------------------------
+*/
+
+.footer {
+    font-size: 87.5%;
+    border-top: 1px solid #eee;
+    margin-top: 3.4286em;
+    padding: 1.1429em;
+    background: rgb(250, 250, 250);
+}
+
+.legal {
+    line-height: 1.6;
+    text-align: center;
+    margin: 0 auto;
+}
+
+    .legal-license {
+        margin-top: 0;
+    }
+    .legal-links {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 0;
+    }
+    .legal-copyright {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+
+/* --------------------------
+ * Main Navigation Bar Styles
+ * --------------------------
+*/
+
+/* Add transition to containers so they can push in and out */
+#layout,
+#menu,
+.menu-link {
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+#layout.active .menu-link {
+    left: 230px;
+}
+
+#menu-container {
+    
+}
+
+#menu {
+    margin-left: -230px; /* "#menu" width */
+    width: 230px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1000; /* so the menu or its navicon stays above all content */
+    background: #191818;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+    #menu a {
+        color: #999;
+        border: none;
+        white-space: normal;
+        padding: 0.625em 1em;
+    }
+
+    #menu .pure-menu-open {
+        background: transparent;
+        border: 0;
+    }
+
+    #menu .pure-menu ul {
+        border: none;
+        background: transparent;
+    }
+
+    #menu .pure-menu ul,
+    #menu .pure-menu .menu-item-divided {
+        border-top: 1px solid #333;
+    }
+
+        #menu .pure-menu li a:hover,
+        #menu .pure-menu li a:focus {
+            background: #333;
+        }
+
+    .menu-link {
+        position: fixed;
+        /*display: block; /* show this only on small screens */
+        top: 0;
+        left: 0; /* "#menu width" */
+        background: #000;
+        background: rgba(0,0,0,0.7);
+        font-size: 11px; /* change this value to increase/decrease button size */
+        z-index: 10;
+        width: 4em;
+        height: 4em;
+        padding: 1em;
+    }
+
+        .menu-link:hover,
+        .menu-link:focus {
+            background: #000;
+        }
+
+        .menu-link span {
+            position: relative;
+            display: block;
+            margin-top: 0.9em;
+        }
+
+        .menu-link span,
+        .menu-link span:before,
+        .menu-link span:after {
+            background-color: #fff;
+            width: 100%;
+            height: .2em;
+            -webkit-transition: all 0.4s;
+               -moz-transition: all 0.4s;
+                -ms-transition: all 0.4s;
+                 -o-transition: all 0.4s;
+                    transition: all 0.4s;
+        }
+
+            .menu-link span:before,
+            .menu-link span:after {
+                position: absolute;
+                top: -.55em;
+                content: " ";
+            }
+
+            .menu-link span:after {
+                top: .55em;
+            }
+
+        .menu-link.active span {
+            background: transparent;
+        }
+
+            .menu-link.active span:before {
+                -webkit-transform: rotate(45deg) translate(.5em, .4em);
+                   -moz-transform: rotate(45deg) translate(.5em, .4em);
+                    -ms-transform: rotate(45deg) translate(.5em, .4em);
+                     -o-transform: rotate(45deg) translate(.5em, .4em);
+                        transform: rotate(45deg) translate(.5em, .4em);
+            }
+
+            .menu-link.active span:after {
+                -webkit-transform: rotate(-45deg) translate(.4em, -.3em);
+                   -moz-transform: rotate(-45deg) translate(.4em, -.3em);
+                    -ms-transform: rotate(-45deg) translate(.4em, -.3em);
+                     -o-transform: rotate(-45deg) translate(.4em, -.3em);
+                        transform: rotate(-45deg) translate(.4em, -.3em);
+            }
+
+    #menu .pure-menu-heading {
+        font-size: 125%;
+        font-weight: 300;
+        letter-spacing: 0.1em;
+        color: #fff;
+        margin-top: 0;
+        padding: 0.5em 0.8em;
+        left: 100px;
+    }
+    #menu .pure-menu-heading:hover,
+    #menu .pure-menu-heading:focus {
+        color: #999;
+    }
+
+    #menu .pure-menu-selected {
+        background: #1f8dd6;
+    }
+
+        #menu .pure-menu-selected a {
+            color: #fff;
+        }
+
+        #menu li.pure-menu-selected a:hover,
+        #menu li.pure-menu-selected a:focus {
+            background: none;
+        }
+
+
+
