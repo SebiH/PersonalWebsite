@@ -1,3 +1,5 @@
+var currentActiveSite;
+
 function getAnchor()
 {
     var anchor = window.location.hash;
@@ -11,6 +13,9 @@ function loadContentFromAnchor() {
 }
 
 function loadContent(site) {
+    if (site == currentActiveSite)
+        return;
+
     $.ajax({
         url: 'scripts/loadSite.php',
         data: {
@@ -19,14 +24,37 @@ function loadContent(site) {
         },
         error: function() {
             $('#contentcontainer').html('<p>An error has occurred</p>');
+            setActiveMenu('');
         },
         dataType: 'json',
         success: function(data) {
             if (data.error != null)
+            {
                 $('#contentcontainer').html(data.error);
+                setActiveMenu('');
+            }
             else
+            {
                 $('#contentcontainer').html(data.result);
+                setActiveMenu(site);
+            }
         },
         type: 'POST'
     });
+}
+
+function setActiveMenu(site) {
+    currentActiveSite = site;
+
+    // remove active element from all classes
+    var elements = $('.menu-item-link');
+
+    for (var i = 0; i < elements.length; i++)
+    {
+        var element = elements[i];
+        element.className = element.className.replace(/\bpure-menu-selected\b/, '').trim();
+
+        if (site.length > 0 && element.href.indexOf(site) >= 0)
+            element.className = element.className + " pure-menu-selected";
+    }
 }

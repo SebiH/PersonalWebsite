@@ -607,7 +607,9 @@ code {
     }
 
     #menu .pure-menu-selected {
-        background: #1f8dd6;
+        background: #1f8d18;
+        color: white;
+        text-shadow: 1px 1px black;
     }
 
         #menu .pure-menu-selected a {
