@@ -489,7 +489,7 @@ code {
     top: 0;
     left: 0;
     bottom: 0;
-    z-index: 1000; /* so the menu or its navicon stays above all content */
+    z-index: 99; /* so the menu or its navicon stays above all content */
     background: #191818;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
@@ -498,7 +498,7 @@ code {
         color: #999;
         border: none;
         white-space: normal;
-        padding: 0.625em 1em;
+        padding: 1.125em 2em;
     }
 
     #menu .pure-menu-open {
@@ -514,11 +514,13 @@ code {
     #menu .pure-menu ul,
     #menu .pure-menu .menu-item-divided {
         border-top: 1px solid #333;
+        margin-top: 20px;
     }
 
         #menu .pure-menu li a:hover,
         #menu .pure-menu li a:focus {
-            background: #333;
+            background: #232;
+            color: white;
         }
 
     .menu-link {
