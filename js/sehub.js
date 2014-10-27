@@ -1,5 +1,24 @@
 var currentActiveSite;
 
+var loadingSpinner = (function () {/*
+            <div class='demo'>
+              <div class='circle'>
+                <div class='inner'></div>
+              </div>
+              <div class='circle'>
+                <div class='inner'></div>
+              </div>
+              <div class='circle'>
+                <div class='inner'></div>
+              </div>
+              <div class='circle'>
+                <div class='inner'></div>
+              </div>
+              <div class='circle'>
+                <div class='inner'></div>
+              </div>
+            </div> */}).toString().match(/[^]*\/\*([^]*)\*\/\}$/)[1];
+
 function getAnchor()
 {
     var anchor = window.location.hash;
@@ -15,6 +34,7 @@ function loadContentFromAnchor() {
 function loadContent(site) {
     if (site == currentActiveSite)
         return;
+    $('#contentcontainer').html(loadingSpinner);
 
     $.ajax({
         url: 'scripts/loadSite.php',
@@ -41,6 +61,10 @@ function loadContent(site) {
         },
         type: 'POST'
     });
+}
+
+function bla(site) {
+
 }
 
 function setActiveMenu(site) {

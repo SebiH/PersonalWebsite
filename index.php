@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
         <link rel="stylesheet" href="css/sehub.css">
         <link rel="stylesheet" href="css/dropzone.css">
+        <link rel="stylesheet" href="css/loadingbar.css">
         <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
         <!-- http://fortawesome.github.io/Font-Awesome/icons/ -->
         <!--<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">-->
@@ -75,6 +76,27 @@
 
         <!-- MAIN CONTAINER -->
         <div id="contentcontainer">
+<center style="display: table">
+<div style="width: 150px; height: 150px; display: tablecell; vertical-align: middle;">
+            <div class='demo'>
+              <div class='circle'>
+                <div class='inner'></div>
+              </div>
+              <div class='circle'>
+                <div class='inner'></div>
+              </div>
+              <div class='circle'>
+                <div class='inner'></div>
+              </div>
+              <div class='circle'>
+                <div class='inner'></div>
+              </div>
+              <div class='circle'>
+                <div class='inner'></div>
+              </div>
+            </div>
+</div>
+</center>
         </div>
 
         </div>
