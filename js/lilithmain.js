@@ -73,14 +73,10 @@ LILITH.mobileNavEvents = function(){
             $('#blocker').removeClass('visible');
         }
     
-        if (!$('#mobile-nav').hasClass('open')) {
-            $('#menu').css('display', 'none');
-        }
     } else {
         if ($('#mobile-nav').hasClass('open')) {
             $('#mobile-nav').removeClass('open');
         }   
-        $('#menu').css('display', 'block');
     }
 }
 
