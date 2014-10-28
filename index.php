@@ -23,61 +23,88 @@
     <body>
 
         <div id="layout" class="active">
-            <div id="menuTitle" class="menu-link active">
-                <p class="logo-text">Sebastian Hubenschmid</a>
+            <div id="menuTitle" class="noselect menu-link active">
+                <p class="selectable logo-text">Sebastian Hubenschmid</a>
             </div>
-            <a href="#menu" id="menuLink" class="menu-link active"> 
+            <a href="#menu" id="menuLink" class="noselect menu-link active"> 
                 <span></span> 
             </a>
         <div id="menu-container">
-            <div id="menu" class="active">
+            <div id="menu" class="noselect active">
 
                 <!-- MAIN MENU -->
-                <div class="pure-menu pure-menu-open" id="menu-content" ondragstart="return false">
-                    <a class="pure-menu-heading" href="/">SSH</a>
+                <div class="noselect pure-menu pure-menu-open" id="menu-content" ondragstart="return false">
+                    <a class="noselect pure-menu-heading" href="/">SSH</a>
                     <ul>
                         <li>
-                            <a class="menu-item-link" href="#home"
+                            <a class="noselect menu-item-link" href="#home"
                                 onclick="loadContent('home');"> Home </a>
                         </li>
                         <!--<li>
                             <a class="menu-item-link" href="#friends" 
                                 onclick="loadContent('friend');">Friends</a>
                             <ul>-->
-                                <li><a class="menu-item-link" href="#minecraft" onclick="loadContent('minecraft');">Minecraft</a></li>
-                                <li><a class="menu-item-link" href="#files" onclick="loadContent('files');">Files</a></li>
+                                <li><a class="noselect menu-item-link" href="#minecraft" onclick="loadContent('minecraft');">Minecraft</a></li>
+                                <li><a class="noselect menu-item-link" href="#files" onclick="loadContent('files');">Files</a></li>
                             <!--</ul>
                         </li>-->
                         <li>
-                            <a class="menu-item-link" href="#projects" 
+                            <a class="noselect menu-item-link" href="#projects" 
                                 onclick="loadContent('projects');">Past Projects</a>
                         </li>
                         <li>
-                            <a class="menu-item-link" href="#publications"
+                            <a class="noselect menu-item-link" href="#publications"
                                 onclick="loadContent('publications')">Publications</a>
                         </li>
                         <li>
-                        <a class="menu-item-link" href="#CV"
+                        <a class="noselect menu-item-link" href="#CV"
                             onclick="loadContent('CV')">CV</a>
                         </li>
                         <li>
-                        <a class="menu-item-link" href="#aboutme"
+                        <a class="noselect menu-item-link" href="#aboutme"
                             onclick="loadContent('aboutme')">About me</a>
                         </li>
                     </ul>
 
                 </div>
+            </div>
 
-                <!-- ICONS -->
-               <!-- TODO <div id="icons"></div> -->
+            <!-- ICONS -->
+           <div id="iconPanel" class="noselect active" ondragstart="return false;" ondrop="return false;">
+                <div id="iconTable" class="noselect">
+                <div class="row">
+                    <a class="icon" href="https://www.facebook.com/SebastianHubenschmid" >
+                        <p> <i class="fa fa-facebook icon"></i> </p>
+                    </a>
 
+                    <a class="icon" href="https://plus.google.com/+SebastianHubenschmid/" >
+                        <p> <i class="fa fa-google-plus"></i> </p>
+                    </a>
+
+                    <a class="icon" href="https://twitter.com/Sebi__H" >
+                        <p> <i class="fa fa-twitter"></i> </p>
+                    </a>
+                </div>
+
+                <div class="row">
+
+                    <a class="icon" href="https://github.com/SebiH" >
+                        <p> <i class="fa fa-github"></i> </p>
+                    </a>
+
+                    <a class="icon" href="https://www.linkedin.com/in/sebastianhubenschmid" >
+                        <p> <i class="fa fa-linkedin"></i> </p>
+                    </a>
+
+                    <a class="icon" href="#contact" onclick="loadContent('contact');">
+                        <p> <i class="fa fa-envelope"></i> </p>
+                    </a>
+                </div>
             </div>
         </div>
 
         <!-- MAIN CONTAINER -->
         <div id="contentcontainer">
-<center style="display: table">
-<div style="width: 150px; height: 150px; display: tablecell; vertical-align: middle;">
             <div class='demo'>
               <div class='circle'>
                 <div class='inner'></div>
@@ -95,8 +122,6 @@
                 <div class='inner'></div>
               </div>
             </div>
-</div>
-</center>
         </div>
 
         </div>

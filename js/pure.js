@@ -3,7 +3,8 @@
     var layout   = document.getElementById('layout'),
         menu     = document.getElementById('menu'),
         menuLink = document.getElementById('menuLink'),
-        menuTitle = document.getElementById('menuTitle');
+        menuTitle = document.getElementById('menuTitle'),
+        menuIcons = document.getElementById('iconPanel');
 
     var menuClicked = false;
 
@@ -64,6 +65,7 @@
         toggleClass(menu, active);
         toggleClass(menuLink, active);
         toggleClass(menuTitle, active);
+        toggleClass(menuIcons, active);
     };
 
     function setCorrectMenuStatus() {
@@ -77,11 +79,13 @@
             addClass(menu, active);
             addClass(menuLink, active);
             addClass(menuTitle, active);
+            addClass(menuIcons, active);
         } else {
             removeClass(layout, active);
             removeClass(menu, active);
             removeClass(menuLink, active);
             removeClass(menuTitle, active);
+            removeClass(menuIcons, active);
         }
     }
 

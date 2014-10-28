@@ -27,23 +27,25 @@
     color: white;
 }
 
-.fa {
+.dl-icon {
     font-size: 300%;
 }
 </style>
 
 
 <div id="minecraft-image-background">
-<center id="valign-helper"> 
-    <div id="minecraft-text-container">
-        <a class="pure-button button-dl" href="data/SebisSoundMix0.3.zip">
-<p><i class="fa fa-music"></i></p>
-<p>Sound Mix</p>
-</a> 
-        <a class="pure-button button-dl" href="data/SebisTextureMix1.8v1.zip">
-<p><i class="fa fa-download"></i></p>
-<p>Texture Pack</p>
-</a> 
-    <div>
-</center>
+    <center id="valign-helper"> 
+        <div id="minecraft-text-container">
+
+            <a class="pure-button button-dl" href="data/SebisSoundMix0.3.zip">
+                <p><i class="dl-icon fa fa-music"></i></p>
+                <p>Sound Mix</p>
+            </a> 
+
+            <a class="pure-button button-dl" href="data/SebisTextureMix1.8v1.zip">
+                <p><i class="dl-icon fa fa-download"></i></p>
+                <p>Texture Pack</p>
+            </a> 
+        <div>
+    </center>
 </div>
