@@ -1,26 +1,17 @@
 <style scoped>
-#minecraft-image-background {
-    background-image: url('img/minecraft.jpg');
-    height: 100%;
-    width: 100%;
-    display: table;
-}
-
-#valign-helper {
-    display: table-cell;
-    vertical-align: middle;
-}
-
 #minecraft-text-container {
     background-color: rgba(0, 0, 0, 0.7);
-    width: 40%;
+    width:40%;
+    min-width: 300px;
+    max-width: 650px;
 }
 
 .button-dl {
     margin: 20px;
     margin-top: 50px;
     margin-bottom: 50px;
-    width: 300px;
+    width: 250px;
+    height: 250px;
 }
 
 .button-dl p {
@@ -28,13 +19,17 @@
 }
 
 .dl-icon {
-    font-size: 300%;
+    font-size: 250%;
 }
 </style>
 
 
-<div id="minecraft-image-background">
-    <center id="valign-helper"> 
+<div id="contentbackground" style="background-image: url('img/minecraft.jpg');"> 
+
+</div>
+
+<div id="maincontent" class="vcenter-container">
+    <center class="vcenter">
         <div id="minecraft-text-container">
 
             <a class="pure-button button-dl" href="data/SebisSoundMix0.3.zip">

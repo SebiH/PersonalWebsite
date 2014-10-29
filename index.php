@@ -5,15 +5,22 @@
         <link rel="shortcut icon" type="image/ico" href="img/favicon.ico">
         <title> Sebastian Hubenschmid | Personal website </title>
 
+
+        <!-- Styles -->
         <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
         <link rel="stylesheet" href="css/sehub.css">
+        <link rel="stylesheet" href="css/pure.css">
         <link rel="stylesheet" href="css/dropzone.css">
         <link rel="stylesheet" href="css/loadingbar.css">
+
+
+        <!-- Fonts -->
         <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
         <!-- http://fortawesome.github.io/Font-Awesome/icons/ -->
-        <!--<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">-->
+        <!-- not loading in FF :( <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">-->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css" media="all" rel="stylesheet" type="text/css">
 
+        <!-- Scripts -->
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script type='text/javascript' src='js/sehub.js'></script>
         <script> loadContentFromAnchor(); </script>
@@ -68,37 +75,37 @@
             <!-- ICONS -->
            <div id="iconPanel" class="noselect active" ondragstart="return false;" ondrop="return false;">
                 <div id="iconTable" class="noselect">
-                <div class="row">
-                    <a class="icon" href="https://www.facebook.com/SebastianHubenschmid" >
-                        <p> <i class="fa fa-facebook icon"></i> </p>
-                    </a>
+                    <div class="row">
+                        <a class="icon" href="https://www.facebook.com/SebastianHubenschmid" >
+                            <p> <i class="fa fa-facebook icon"></i> </p>
+                        </a>
 
-                    <a class="icon" href="https://plus.google.com/+SebastianHubenschmid/" >
-                        <p> <i class="fa fa-google-plus"></i> </p>
-                    </a>
+                        <a class="icon" href="https://plus.google.com/+SebastianHubenschmid/" >
+                            <p> <i class="fa fa-google-plus"></i> </p>
+                        </a>
 
-                    <a class="icon" href="https://twitter.com/Sebi__H" >
-                        <p> <i class="fa fa-twitter"></i> </p>
-                    </a>
-                </div>
+                        <a class="icon" href="https://twitter.com/Sebi__H" >
+                            <p> <i class="fa fa-twitter"></i> </p>
+                        </a>
+                    </div>
 
-                <div class="row">
+                    <div class="row">
 
-                    <a class="icon" href="https://github.com/SebiH" >
-                        <p> <i class="fa fa-github"></i> </p>
-                    </a>
+                        <a class="icon" href="https://github.com/SebiH" >
+                            <p> <i class="fa fa-github"></i> </p>
+                        </a>
 
-                    <a class="icon" href="https://www.linkedin.com/in/sebastianhubenschmid" >
-                        <p> <i class="fa fa-linkedin"></i> </p>
-                    </a>
+                        <a class="icon" href="https://www.linkedin.com/in/sebastianhubenschmid" >
+                            <p> <i class="fa fa-linkedin"></i> </p>
+                        </a>
 
-                    <a class="icon" href="#contact" onclick="loadContent('contact');">
-                        <p> <i class="fa fa-envelope"></i> </p>
-                    </a>
+                        <a class="icon" href="#contact" onclick="loadContent('contact');">
+                            <p> <i class="fa fa-envelope"></i> </p>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-
         <!-- MAIN CONTAINER -->
         <div id="contentcontainer">
             <div class='demo'>
@@ -118,8 +125,6 @@
                 <div class='inner'></div>
               </div>
             </div>
-        </div>
-
         </div>
         <script src="js/pure.js"></script>
         <script type='text/javascript' src='js/lilithplugin.js'></script>
