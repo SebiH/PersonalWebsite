@@ -53,10 +53,6 @@
                                 onclick="loadContent('projects');">Past Projects</a>
                         </li>
                         <li>
-                            <a class="noselect menu-item-link" href="#publications"
-                                onclick="loadContent('publications')">Publications</a>
-                        </li>
-                        <li>
                         <a class="noselect menu-item-link" href="#CV"
                             onclick="loadContent('CV')">CV</a>
                         </li>
