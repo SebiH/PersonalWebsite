@@ -13,19 +13,19 @@
 
     function addOffset() {
         if(!offsetAdded)
-            document.styleSheets[0].insertRule(contentRule);
+            document.styleSheets[0].insertRule(contentRule, 0);
         offsetAdded = true;
     }
 
     function removeOffset() {
-        document.styleSheets[0].removeRule(contentRule);
+        document.styleSheets[0].removeRule(contentRule, 0);
         offsetAdded = false;
     }
 
     function toggleOffset() {
-        document.styleSheets[0].removeRule(contentRule);
+        document.styleSheets[0].removeRule(contentRule, 0);
         if (!offsetAdded)
-            document.styleSheets[0].insertRule(contentRule);
+            document.styleSheets[0].insertRule(contentRule, 0);
 
         offsetAdded = !offsetAdded;
     }
