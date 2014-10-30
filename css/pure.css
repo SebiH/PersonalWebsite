@@ -280,7 +280,7 @@ code {
 
 #menu {
     margin-left: -230px; /* "#menu" width */
-    margin-bottom: 200px; /* iconpanel height */
+    margin-bottom: 180px; /* iconpanel height */
     width: 230px;
     position: fixed;
     top: 0;

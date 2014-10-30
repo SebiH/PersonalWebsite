@@ -76,26 +76,26 @@
            <div id="iconPanel" class="noselect active" ondragstart="return false;" ondrop="return false;">
                 <div id="iconTable" class="noselect">
                     <div class="row">
-                        <a class="icon" href="https://www.facebook.com/SebastianHubenschmid" >
+                        <a class="icon" href="https://www.facebook.com/SebastianHubenschmid" target="_blank">
                             <p> <i class="fa fa-facebook icon"></i> </p>
                         </a>
 
-                        <a class="icon" href="https://plus.google.com/+SebastianHubenschmid/" >
+                        <a class="icon" href="https://plus.google.com/+SebastianHubenschmid/" target="_blank">
                             <p> <i class="fa fa-google-plus"></i> </p>
                         </a>
 
-                        <a class="icon" href="https://twitter.com/Sebi__H" >
+                        <a class="icon" href="https://twitter.com/Sebi__H" target="_blank">
                             <p> <i class="fa fa-twitter"></i> </p>
                         </a>
                     </div>
 
                     <div class="row">
 
-                        <a class="icon" href="https://github.com/SebiH" >
+                        <a class="icon" href="https://github.com/SebiH" target="_blank">
                             <p> <i class="fa fa-github"></i> </p>
                         </a>
 
-                        <a class="icon" href="https://www.linkedin.com/in/sebastianhubenschmid" >
+                        <a class="icon" href="https://www.linkedin.com/in/sebastianhubenschmid" target="_blank">
                             <p> <i class="fa fa-linkedin"></i> </p>
                         </a>
 

@@ -43,7 +43,7 @@ function loadContent(site) {
             format: 'json'
         },
         error: function() {
-            $('#contentcontainer').html('<p>An error has occurred</p>');
+            $('#contentcontainer').html('<div id="maincontent" class="vcenter-container"> <p class="vcenter header">An error has occurred =(</p></div>');
             setActiveMenu('');
         },
         dataType: 'json',

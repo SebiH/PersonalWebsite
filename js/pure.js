@@ -8,6 +8,28 @@
 
     var menuClicked = false;
 
+    var contentRule = "#maincontent { padding-left: 230px; }";
+    var offsetAdded = false;
+
+    function addOffset() {
+        if(!offsetAdded)
+            document.styleSheets[0].insertRule(contentRule);
+        offsetAdded = true;
+    }
+
+    function removeOffset() {
+        document.styleSheets[0].removeRule(contentRule);
+        offsetAdded = false;
+    }
+
+    function toggleOffset() {
+        document.styleSheets[0].removeRule(contentRule);
+        if (!offsetAdded)
+            document.styleSheets[0].insertRule(contentRule);
+
+        offsetAdded = !offsetAdded;
+    }
+
     function toggleClass(element, className) {
         var classes = element.className.split(/\s+/),
             length = classes.length,
@@ -25,6 +47,7 @@
         }
 
         element.className = classes.join(' ');
+        toggleOffset();
     }
 
     function addClass(element, className) {
@@ -38,6 +61,7 @@
         }
 
         element.className = classes.join(' ');
+        addOffset();
     }
 
     function removeClass(element, className) {
@@ -53,6 +77,7 @@
         }
 
         element.className = classes.join(' ');
+        removeOffset();
     }
 
     menuLink.onclick = function (e) {

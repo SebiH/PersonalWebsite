@@ -1,6 +1,8 @@
 html, body {
     height: 100%;
     width: 100%;
+    padding: 0;
+    margin: 0;
 }
 
 body {
@@ -66,8 +68,6 @@ a:active {
     z-index: 99; /* so the menu or its navicon stays above all content */
     background: #191818;
     overflow-y: hidden;
-    padding-bottom: 20px;
-
 }
 
 #iconPanel.active {
@@ -154,6 +154,12 @@ a:active {
     position: absolute;
     width: 100%;
     height: 100%;
+
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -ms-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
 }
 
 #contentbackground {
