@@ -1,1 +1,80 @@
-<p class="header"> <center> Maybe someday </center> </p>
+<style scoped>
+    .contactform {
+        min-width: 270px;
+    }
+
+    .label {
+        text-align: left;
+    }
+
+    textarea {
+        margin-bottom: 20px;
+        height: 200px;
+    }
+</style>
+
+<div id="#backgroundimage"> </div>
+
+<div id="#maincontent">
+
+    <div class="contactform content">
+        <p class="header">
+            Want to tell me something?
+        </p>
+
+        <div id="formcontainer">
+            <form id="contactform" class="pure-form" >
+
+                <label for="name">
+                    Name*: 
+                </label>
+                <input name="name" id="name" class="pure-input-1" required>
+
+                <label for="email">
+                    Email*:
+                </label>
+                <input name="email" id="email" class="pure-input-1" type="email" required>
+
+                <label for="subject">
+                    Subject: 
+                </label>
+                <input name="subject" id="subject" class="pure-input-1" >
+
+                <label for="message"> 
+                    Message*: 
+                </label>
+                <textarea name="message" id="message" class="pure-input-1" type="text" required></textarea>
+
+                <button id="submit" class="pure-button pure-button-primary" type="submit" onclick="sendmail(); return false;">
+                    Send!
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Sendmail script! -->
+<script>
+var mail_send = false;
+
+function sendmail()
+{
+    if (mail_send)
+        return false;
+
+    $.ajax({
+        url: 'scripts/send_mail.php',
+        type:'POST',
+        data: $('#contactform').serialize(),
+        error: function(jqXHR, textStatus, errorThrown) {
+            // TODO error
+        },
+        success: function(msg)
+        {
+            $('#formcontainer').html('<p> Thanks for the message! </p>');
+            mail_send = true;
+        },
+    });
+}
+</script>
+

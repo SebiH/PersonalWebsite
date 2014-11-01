@@ -20,16 +20,19 @@ function loadContent(site) {
 
     $.ajax({
         url: 'scripts/loadSite.php',
+
         data: {
             sitename: site,
             format: 'json'
         },
+
         error: function() {
             $('#contentcontainer').html('<div id="maincontent" class="vcenter-container"> <p class="vcenter header">An error has occurred =(</p></div>');
             setActiveMenu('');
-            $('#loadingcontainer').hide();
         },
+
         dataType: 'json',
+
         success: function(data) {
 
             $('#loadingcontainer').hide();
@@ -45,6 +48,12 @@ function loadContent(site) {
                 setActiveMenu(site);
             }
         },
+
+        complete: function(jqXHR, textstatus)
+        {
+            $('#loadingcontainer').hide();
+        },
+
         type: 'POST'
     });
 }

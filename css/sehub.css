@@ -181,6 +181,10 @@ a:active {
 .vcenter {
     display: table-cell;
     vertical-align: middle;
+
+    width:40%;
+    min-width: 300px;
+    max-width: 650px;
 }
 
 #menuTitle {
