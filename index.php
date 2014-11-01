@@ -108,7 +108,10 @@
         </div>
         <!-- MAIN CONTAINER -->
         <div id="contentcontainer">
-            <div class='demo'>
+        </div>
+
+        <div id="loadingcontainer">
+            <div class='loadinganimation'>
               <div class='circle'>
                 <div class='inner'></div>
               </div>
@@ -121,11 +124,13 @@
               <div class='circle'>
                 <div class='inner'></div>
               </div>
-              <div class='circle'>
+              <div class='circle-alt'>
                 <div class='inner'></div>
               </div>
             </div>
+            <p> Loading ... </p>
         </div>
+
         <script src="js/pure.js"></script>
         <script type='text/javascript' src='js/lilithplugin.js'></script>
         <script type='text/javascript' src='js/lilithmain.js'></script>

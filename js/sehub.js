@@ -1,24 +1,5 @@
 var currentActiveSite;
 
-var loadingSpinner = (function () {/*
-            <div class='demo'>
-              <div class='circle'>
-                <div class='inner'></div>
-              </div>
-              <div class='circle'>
-                <div class='inner'></div>
-              </div>
-              <div class='circle'>
-                <div class='inner'></div>
-              </div>
-              <div class='circle'>
-                <div class='inner'></div>
-              </div>
-              <div class='circle'>
-                <div class='inner'></div>
-              </div>
-            </div> */}).toString().match(/[^]*\/\*([^]*)\*\/\}$/)[1];
-
 function getAnchor()
 {
     var anchor = window.location.hash;
@@ -34,7 +15,8 @@ function loadContentFromAnchor() {
 function loadContent(site) {
     if (site == currentActiveSite)
         return;
-    $('#contentcontainer').html(loadingSpinner);
+    $('#contentcontainer').html('');
+    $('#loadingcontainer').show();
 
     $.ajax({
         url: 'scripts/loadSite.php',
@@ -45,9 +27,13 @@ function loadContent(site) {
         error: function() {
             $('#contentcontainer').html('<div id="maincontent" class="vcenter-container"> <p class="vcenter header">An error has occurred =(</p></div>');
             setActiveMenu('');
+            $('#loadingcontainer').hide();
         },
         dataType: 'json',
         success: function(data) {
+
+            $('#loadingcontainer').hide();
+
             if (data.error != null)
             {
                 $('#contentcontainer').html(data.error);

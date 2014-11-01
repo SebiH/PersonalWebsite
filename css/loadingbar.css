@@ -1,11 +1,18 @@
 /* All credit to http://codepen.io/Mattykins/pen/wfJqk */
-.demo {
+#loadingcontainer {
+  width: 100px;
+  height: 122px;
+  position: absolute;
+  top: 45%;
+  border-radius: 100%;
+  left: calc(50% - 50px);
+  text-align: center;
+}
+
+.loadinganimation {
   width: 100px;
   height: 102px;
   border-radius: 100%;
-  position: absolute;
-  top: 45%;
-  left: calc(50% - 50px);
 }
 
 .circle {
@@ -13,6 +20,7 @@
   height: 100%;
   position: absolute;
 }
+
 .circle .inner {
   width: 100%;
   height: 100%;
@@ -20,8 +28,25 @@
   border: 5px solid rgba(0, 255, 30, 0.7);
   border-right: none;
   border-top: none;
-  backgroudn-clip: padding;
-  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.15);
+  background-clip: padding;
+  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.25);
+}
+
+.circle-alt {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.circle-alt .inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  border: 5px solid rgba(0, 240, 70, 0.7);
+  border-right: none;
+  border-top: none;
+  background-clip: padding;
+  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
 @-webkit-keyframes spin {
@@ -61,8 +86,8 @@
           transform: rotate(70deg);
 }
 .circle:nth-of-type(1) .inner {
-  -webkit-animation: spin 2s infinite linear;
-          animation: spin 2s infinite linear;
+  -webkit-animation: spin 1s infinite linear;
+          animation: spin 1s infinite linear;
 }
 
 .circle:nth-of-type(2) {
@@ -71,12 +96,12 @@
           transform: rotate(140deg);
 }
 .circle:nth-of-type(2) .inner {
-  -webkit-animation: spin 2s infinite linear;
-          animation: spin 2s infinite linear;
+  -webkit-animation: spin 1s infinite linear;
+          animation: spin 1s infinite linear;
 }
 
-.demo {
-  -webkit-animation: spin 5s infinite linear;
-          animation: spin 5s infinite linear;
+.loadinganimation {
+  -webkit-animation: spin 2s infinite linear;
+          animation: spin 2s infinite linear;
 }
 
