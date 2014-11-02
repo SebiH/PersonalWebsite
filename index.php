@@ -107,7 +107,11 @@
             </div>
         </div>
         <!-- MAIN CONTAINER -->
-        <div id="contentcontainer">
+        <div id="contentcontainer0">
+        </div>
+
+        <!-- MAIN CONTAINER -->
+        <div id="contentcontainer1">
         </div>
 
         <div id="loadingcontainer">

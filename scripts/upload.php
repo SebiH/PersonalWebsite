@@ -1,20 +1,22 @@
 <?php
-$ds          = DIRECTORY_SEPARATOR;  //1
+$ds          = DIRECTORY_SEPARATOR;
  
 $storeFolder = '../uploads';
+
+echo $MAX_FILE_SIZE;
  
 if (!empty($_FILES)) {
-    $tempFile = $_FILES['file']['tmp_name'];          //3
-    $targetPath = dirname( __FILE__ ) . $ds. $storeFolder . $ds;  //4
-    $targetFile =  $targetPath. $_FILES['file']['name'];  //5
-    move_uploaded_file($tempFile,$targetFile); //6
+    $tempFile = $_FILES['file']['tmp_name'];
+    $targetPath = dirname( __FILE__ ) . $ds. $storeFolder . $ds;
+    $targetFile =  $targetPath. $_FILES['file']['name'];
+    move_uploaded_file($tempFile,$targetFile);
 } else {                                                           
     $result  = array();
  
-    $files = scandir($storeFolder);                 //1
+    $files = scandir($storeFolder);
     if ( false!==$files ) {
         foreach ( $files as $file ) {
-            if ( '.'!=$file && '..'!=$file) {       //2
+            if ( '.'!=$file && '..'!=$file) {
                 $obj['name'] = $file;
                 $obj['size'] = filesize($storeFolder.$ds.$file);
                 $result[] = $obj;
@@ -22,7 +24,7 @@ if (!empty($_FILES)) {
         }
     }
      
-    header('Content-type: text/json');              //3
+    header('Content-type: text/json');
     header('Content-type: application/json');
     echo json_encode($result);
 } 

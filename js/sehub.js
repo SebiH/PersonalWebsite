@@ -1,4 +1,9 @@
 var currentActiveSite;
+var fadeTime = 400;
+
+// number of currently active content container 
+var ccNumber = '0';
+var loadInProgress = false;
 
 function getAnchor()
 {
@@ -13,10 +18,17 @@ function loadContentFromAnchor() {
 }
 
 function loadContent(site) {
-    if (site == currentActiveSite)
+    if (site == currentActiveSite || loadInProgress)
         return;
-    $('#contentcontainer').html('');
-    $('#loadingcontainer').show();
+
+    loadInProgress = true;
+
+    // unload current content container
+    $('#loadingcontainer').fadeIn(fadeTime/2);
+    $('#contentcontainer'.concat(ccNumber)).fadeOut(fadeTime);
+
+    // begin loading into new container while old content fades out
+    switchccNumber();
 
     $.ajax({
         url: 'scripts/loadSite.php',
@@ -27,6 +39,7 @@ function loadContent(site) {
         },
 
         error: function() {
+            $('#contentcontainer').fadeIn(fadeTime);
             $('#contentcontainer').html('<div id="maincontent" class="vcenter-container"> <p class="vcenter header">An error has occurred =(</p></div>');
             setActiveMenu('');
         },
@@ -34,32 +47,42 @@ function loadContent(site) {
         dataType: 'json',
 
         success: function(data) {
-
-            $('#loadingcontainer').hide();
-
             if (data.error != null)
             {
-                $('#contentcontainer').html(data.error);
+                $('#contentcontainer'.concat(ccNumber)).html(data.error);
                 setActiveMenu('');
             }
             else
             {
-                $('#contentcontainer').html(data.result);
+                $('#contentcontainer'.concat(ccNumber)).html(data.result);
                 setActiveMenu(site);
             }
         },
 
         complete: function(jqXHR, textstatus)
         {
-            $('#loadingcontainer').hide();
+            $('#loadingcontainer').fadeOut(fadeTime/2);
+            $('#contentcontainer'.concat(ccNumber)).fadeIn(fadeTime);
+            loadInProgress = false;
+
         },
 
         type: 'POST'
     });
 }
 
-function bla(site) {
+// returns active content container
+function getActiveCC()
+{
+    return $('#contentcontainer'.concat(ccNumber));
+}
 
+function switchccNumber()
+{
+    if (ccNumber == '0')
+        ccNumber = '1';
+    else
+        ccNumber = '0';
 }
 
 function setActiveMenu(site) {
