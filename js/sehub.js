@@ -26,7 +26,7 @@ function loadContent(site) {
     // unload current content container
     $('#loadingcontainer').fadeIn(fadeTime/2);
     var oldContainer = getActiveCC();
-    oldContainer.fadeOut(fadeTime, function() { oldContainer.html(' '); });
+    oldContainer.fadeOut(fadeTime);
 
     // begin loading into new container while old content fades out
     switchccNumber();

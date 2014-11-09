@@ -12,20 +12,23 @@
     var offsetAdded = false;
 
     function addOffset() {
+        return;
         if(!offsetAdded)
-            document.styleSheets[0].insertRule(contentRule, 0);
+            document.styleSheets[1].insertRule(contentRule, 0);
         offsetAdded = true;
     }
 
     function removeOffset() {
-        document.styleSheets[0].removeRule(contentRule, 0);
+        return;
+        document.styleSheets[1].deleteRule(contentRule);
         offsetAdded = false;
     }
 
     function toggleOffset() {
-        document.styleSheets[0].removeRule(contentRule, 0);
+        return;
+        document.styleSheets[1].deleteRule(contentRule);
         if (!offsetAdded)
-            document.styleSheets[0].insertRule(contentRule, 0);
+            document.styleSheets[1].insertRule(contentRule, 0);
 
         offsetAdded = !offsetAdded;
     }
