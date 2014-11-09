@@ -25,7 +25,8 @@ function loadContent(site) {
 
     // unload current content container
     $('#loadingcontainer').fadeIn(fadeTime/2);
-    $('#contentcontainer'.concat(ccNumber)).fadeOut(fadeTime);
+    var oldContainer = getActiveCC();
+    oldContainer.fadeOut(fadeTime, function() { oldContainer.html(' '); });
 
     // begin loading into new container while old content fades out
     switchccNumber();
@@ -39,8 +40,7 @@ function loadContent(site) {
         },
 
         error: function() {
-            $('#contentcontainer').fadeIn(fadeTime);
-            $('#contentcontainer').html('<div id="maincontent" class="vcenter-container"> <p class="vcenter header">An error has occurred =(</p></div>');
+            getActiveCC().html('<div id="maincontent" class="vcenter-container"> <p class="vcenter header">An error has occurred =(</p></div>');
             setActiveMenu('');
         },
 
@@ -49,12 +49,12 @@ function loadContent(site) {
         success: function(data) {
             if (data.error != null)
             {
-                $('#contentcontainer'.concat(ccNumber)).html(data.error);
+                getActiveCC().html(data.error);
                 setActiveMenu('');
             }
             else
             {
-                $('#contentcontainer'.concat(ccNumber)).html(data.result);
+                getActiveCC().html(data.result);
                 setActiveMenu(site);
             }
         },
@@ -62,7 +62,7 @@ function loadContent(site) {
         complete: function(jqXHR, textstatus)
         {
             $('#loadingcontainer').fadeOut(fadeTime/2);
-            $('#contentcontainer'.concat(ccNumber)).fadeIn(fadeTime);
+            getActiveCC().fadeIn(fadeTime);
             loadInProgress = false;
 
         },
