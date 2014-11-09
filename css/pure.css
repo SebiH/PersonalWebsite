@@ -30,7 +30,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
-    color: rgb(75, 75, 75);
+    color: black;
 }
 h3 {
     font-size: 1.25em;

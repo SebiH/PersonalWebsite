@@ -21,6 +21,11 @@
 .dl-icon {
     font-size: 250%;
 }
+
+.comment {
+    padding-bottom: 20px;
+    color: #CCC;
+}
 </style>
 
 
@@ -41,6 +46,8 @@
                 <p><i class="dl-icon fa fa-download"></i></p>
                 <p>Texture Pack</p>
             </a> 
+
+            <p class="comment"> Note: Downloadlinks work without password! </p>
         <div>
     </center>
 </div>
