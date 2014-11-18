@@ -62,6 +62,13 @@ a::selection {
     font-size: 48px;
 }
 
+#javascript-notification {
+    background: rgba(0, 255, 0, 0.4);
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+}
+
 #iconPanel {
     margin-left: -230px; /* "#menu" width */
     width: 230px;
@@ -202,6 +209,7 @@ a::selection {
 #menuTitle {
     background-color: black;
     height: 100%;
+    z-index: 5;
 }
 
 .logo-text {
@@ -215,11 +223,11 @@ a::selection {
     transform: rotate(90deg);
     transform-origin: 0px;
 
-    -webkit-transition: all 0.5s ease-out;
-    -moz-transition: all 0.5s ease-out;
-    -ms-transition: all 0.5s ease-out;
-    -o-transition: all 0.5s ease-out;
-    transition: all 0.5s ease-out;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+    transition: none;
 }
 
 .logo-text:hover,
