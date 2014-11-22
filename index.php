@@ -83,21 +83,29 @@
                         <a class="icon" href="https://twitter.com/Sebi__H" target="_blank">
                             <p> <i class="fa fa-twitter"></i> </p>
                         </a>
+
+                        <a class="icon" href="#contact" onclick="loadContent('contact');">
+                            <p> <i class="fa fa-envelope"></i> </p>
+                        </a>
                     </div>
 
                     <div class="row">
-
                         <a class="icon" href="https://github.com/SebiH" target="_blank">
                             <p> <i class="fa fa-github"></i> </p>
+                        </a>
+
+                        <a class="icon" href="http://stackoverflow.com/users/4090817/sebih" target="_blank">
+                            <p> <i class="fa fa-stack-overflow"></i> </p>
                         </a>
 
                         <a class="icon" href="https://www.linkedin.com/in/sebastianhubenschmid" target="_blank">
                             <p> <i class="fa fa-linkedin"></i> </p>
                         </a>
 
-                        <a class="icon" href="#contact" onclick="loadContent('contact');">
-                            <p> <i class="fa fa-envelope"></i> </p>
+                        <a class="icon" href="http://hci.uni-konstanz.de/index.php?a=staff&b=Hubenschmid&c=contact&lang=en" target="_blank">
+                            <p> <i class="fa fa-flask"></i> </p>
                         </a>
+
                     </div>
                 </div>
             </div>
