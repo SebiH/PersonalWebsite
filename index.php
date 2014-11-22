@@ -51,25 +51,17 @@
                             <a class="noselect menu-item-link" href="#home"
                                 onclick="loadContent('home');"> Home </a>
                         </li>
-                        <!--<li>
-                            <a class="menu-item-link" href="#friends" 
-                                onclick="loadContent('friend');">Friends</a>
-                            <ul>-->
-                                <li><a class="noselect menu-item-link" href="#minecraft" onclick="loadContent('minecraft');">Minecraft</a></li>
-                                <li><a class="noselect menu-item-link" href="#files" onclick="loadContent('files');">Files</a></li>
-                            <!--</ul>
-                        </li>-->
                         <li>
                             <a class="noselect menu-item-link" href="#projects" 
                                 onclick="loadContent('projects');">Past Projects</a>
                         </li>
                         <li>
-                        <a class="noselect menu-item-link" href="#CV"
-                            onclick="loadContent('CV')">CV</a>
+                            <a class="noselect menu-item-link" href="#CV"
+                                onclick="loadContent('CV')">CV</a>
                         </li>
                         <li>
-                        <a class="noselect menu-item-link" href="#aboutme"
-                            onclick="loadContent('aboutme')">About me</a>
+                            <a class="noselect menu-item-link" href="#aboutme"
+                                onclick="loadContent('aboutme')">About me</a>
                         </li>
                     </ul>
 
