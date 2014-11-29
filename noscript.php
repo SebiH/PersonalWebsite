@@ -39,80 +39,79 @@ if (empty($filename))
 ?>
 
         <div id="javascript-notification">
-            <center>
-                <h3> Please consider turning on JavaScript! </h3>
-            </center>
+            <h3> Please consider turning on JavaScript! </h3>
         </div>
 
         <div id="layout" class="active">
             <div id="menuTitle" class="noselect menu-link active">
-                <p class="selectable logo-text">Sebastian Hubenschmid</a>
+                <p class="selectable logo-text"> Sebastian Hubenschmid </p>
             </div>
             <a id="menuLink" class="noselect menu-link active"> 
                 <span></span> 
             </a>
-        <div id="menu-container">
-            <div id="menu" class="noselect active">
+            <div id="menu-container">
+                <div id="menu" class="noselect active">
 
-                <!-- MAIN MENU -->
-                <div class="noselect pure-menu pure-menu-open" id="menu-content">
-                    <a class="noselect pure-menu-heading" href="/">SSH</a>
-                    <ul>
-                        <li>
-                            <a class="noselect menu-item-link" href="?site=home" > Home </a>
-                        </li>
-                        <!--<li>
-                            <a class="menu-item-link" href="#friends" 
-                                onclick="loadContent('friend');">Friends</a>
-                            <ul>-->
-                                <li><a class="noselect menu-item-link" href="?site=minecraft" >Minecraft</a></li>
-                                <li><a class="noselect menu-item-link" href="?site=files" >Files</a></li>
-                            <!--</ul>
-                        </li>-->
-                        <li>
-                            <a class="noselect menu-item-link" href="?site=projects">Past Projects</a>
-                        </li>
-                        <li>
-                            <a class="noselect menu-item-link" href="?site=CV">CV</a>
-                        </li>
-                        <li>
-                            <a class="noselect menu-item-link" href="?site=aboutme">About me</a>
-                        </li>
-                    </ul>
+                    <!-- MAIN MENU -->
+                    <div class="noselect pure-menu pure-menu-open" id="menu-content">
+                        <a class="noselect pure-menu-heading" href="/">SSH</a>
+                        <ul>
+                            <li>
+                                <a class="noselect menu-item-link" href="?site=home" > Home </a>
+                            </li>
+                            <li>
+                                <a class="noselect menu-item-link" href="?site=projects">Past Projects</a>
+                            </li>
+                            <li>
+                                <a class="noselect menu-item-link" href="?site=CV">CV</a>
+                            </li>
+                            <li>
+                                <a class="noselect menu-item-link" href="?site=aboutme">About me</a>
+                            </li>
+                        </ul>
 
+                    </div>
                 </div>
-            </div>
 
-            <!-- ICONS -->
-           <div id="iconPanel" class="noselect active">
-                <div id="iconTable" class="noselect">
-                    <div class="row">
-                        <a class="icon" href="https://www.facebook.com/SebastianHubenschmid" target="_blank">
-                            <p> <i class="fa fa-facebook icon"></i> </p>
+                <!-- ICONS -->
+               <div id="iconPanel" class="noselect active">
+                    <div id="iconTable" class="noselect">
+                    <div class='row'>
+                        <a class='icon' href='https://www.facebook.com/SebastianHubenschmid' target='_blank'>
+                            <p> <span class='fa fa-facebook icon'></span> </p>
                         </a>
 
-                        <a class="icon" href="https://plus.google.com/+SebastianHubenschmid/" target="_blank">
-                            <p> <i class="fa fa-google-plus"></i> </p>
+                        <a class='icon' href='https://plus.google.com/+SebastianHubenschmid/' target='_blank'>
+                            <p> <span class='fa fa-google-plus'></span> </p>
                         </a>
 
-                        <a class="icon" href="https://twitter.com/Sebi__H" target="_blank">
-                            <p> <i class="fa fa-twitter"></i> </p>
+                        <a class='icon' href='https://twitter.com/Sebi__H' target='_blank'>
+                            <p> <span class='fa fa-twitter'></span> </p>
+                        </a>
+
+                        <a class='icon' href='#contact' onclick='loadContent("contact");'>
+                            <p> <span class='fa fa-envelope'></span> </p>
                         </a>
                     </div>
 
-                    <div class="row">
-
-                        <a class="icon" href="https://github.com/SebiH" target="_blank">
-                            <p> <i class="fa fa-github"></i> </p>
+                    <div class='row'>
+                        <a class='icon' href='https://github.com/SebiH' target='_blank'>
+                            <p> <span class='fa fa-github'></span> </p>
                         </a>
 
-                        <a class="icon" href="https://www.linkedin.com/in/sebastianhubenschmid" target="_blank">
-                            <p> <i class="fa fa-linkedin"></i> </p>
+                        <a class='icon' href='http://stackoverflow.com/users/4090817/sebih' target='_blank'>
+                            <p> <span class='fa fa-stack-overflow'></span> </p>
                         </a>
 
-                        <a class="icon" href="?site=contact" >
-                            <p> <i class="fa fa-envelope"></i> </p>
+                        <a class='icon' href='https://www.linkedin.com/in/sebastianhubenschmid' target='_blank'>
+                            <p> <span class='fa fa-linkedin'></span> </p>
                         </a>
+
+                        <a class='icon' href='http://hci.uni-konstanz.de/index.php?a=staff&amp;b=Hubenschmid&amp;c=contact&amp;lang=en' target='_blank'>
+                            <p> <span class='fa fa-flask'></span> </p>
+                            </a>
+
+                        </div>
                     </div>
                 </div>
             </div>
@@ -134,13 +133,13 @@ if (file_exists($filepath . ".html"))
     $filepath .= ".html";
 else if (file_exists($filepath . ".php"))
     $filepath .= ".php";
-else
-{
-    echo "<center><h1>An error has occured =(</h1></center>";
-    exit();
-}
 
 $contentfile = fopen($filepath, "r");
+
+if (!$contentfile) {
+    echo "<div class=\"hcenter\"><h1>An error has occured =(</h1></div>";
+}
+
 $content = fread($contentfile, filesize($filepath));
 fclose($contenfile);
 

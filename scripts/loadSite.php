@@ -1,6 +1,7 @@
 <?php
 $aResult = array();
 $filename = $_POST['sitename'];
+$renderPHP = false;
 
 // load home if no site specified
 if (empty($filename))
@@ -15,8 +16,10 @@ $filepath = "../content/" . $filename;
 
 if (file_exists($filepath . ".html"))
     $filepath .= ".html";
-else if (file_exists($filepath . ".php"))
+else if (file_exists($filepath . ".php")) {
     $filepath .= ".php";
+    $renderPHP = true;
+}
 else
 {
     $aResult['error'] = "<center><p>No such file</p><center>";
@@ -24,10 +27,18 @@ else
     return;
 }
 
-$contentfile = fopen($filepath, "r");
-$aResult['result'] = fread($contentfile, filesize($filepath));
-fclose($contenfile);
-
+if ($renderPHP)
+{
+    ob_start();
+    include($filepath);
+    $aResult['result'] = ob_get_clean();
+}
+else 
+{
+    $contentfile = fopen($filepath, "r");
+    $aResult['result'] = fread($contentfile, filesize($filepath));
+    fclose($contenfile);
+}
 
 echo json_encode($aResult);
 ?>

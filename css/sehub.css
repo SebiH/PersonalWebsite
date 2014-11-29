@@ -11,6 +11,10 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
+a:focus {
+    outline: 0;
+}
+
 /* unvisited link */
 a:link {
     color: #2AAF66;
@@ -67,6 +71,7 @@ a::selection {
     position: fixed;
     width: 100%;
     z-index: 3;
+    text-align: center;
 }
 
 #iconPanel {
@@ -190,20 +195,29 @@ a::selection {
     background-size: cover;
 }
 
-.vcenter-container {
-    height: 100%;
-    display: table;
-    margin-left: auto;
-    margin-right: auto;
+/* This parent can be any width and height */
+.centeredcontainer {
+    text-align: center;
 }
 
-.vcenter {
-    display: table-cell;
+/* The ghost, nudged to maintain perfect centering */
+.centeredcontainer:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
     vertical-align: middle;
+    margin-right: -0.25em; /* Adjusts for spacing */
+}
 
-    width:40%;
-    min-width: 300px;
-    max-width: 650px;
+.centered {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.hcenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #menuTitle {
@@ -220,14 +234,18 @@ a::selection {
     letter-spacing: 2px;
     color: white;
 
+    -ms-transform: rotate(90deg);
+    -ms-transform-origin: 0px;
+    -webkit-transform: rotate(90deg);
+    -webkit-transform-origin: 0px;
     transform: rotate(90deg);
     transform-origin: 0px;
 
-    -webkit-transition: none;
-    -moz-transition: none;
-    -ms-transition: none;
-    -o-transition: none;
-    transition: none;
+    -webkit-transition: color 0.5s ease-out;
+    -moz-transition: color 0.5s ease-out;
+    -ms-transition: color 0.5s ease-out;
+    -o-transition: color 0.5s ease-out;
+    transition: color 0.5s ease-out;
 }
 
 .logo-text:hover,

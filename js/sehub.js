@@ -100,3 +100,5 @@ function setActiveMenu(site) {
             element.className = element.className + " pure-menu-selected";
     }
 }
+
+loadContentFromAnchor();
