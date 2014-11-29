@@ -116,7 +116,7 @@ a::selection {
     transition: all 0.3s linear;
 }
 
-.icon i {
+.icon span {
     color: #777;
     font-size: 120%;
     -webkit-transition: all 0.3s linear;
@@ -130,7 +130,7 @@ a::selection {
     background: black;
 }
 
-.icon:hover i {
+.icon:hover span {
     color: #7D7;
 }
 
