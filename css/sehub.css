@@ -158,15 +158,7 @@ a::selection {
     user-select: initial;
 }
 
-#contentcontainer0 {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    left: 0px;
-    top: 0px;
-}
-
-#contentcontainer1 {
+#contentcontainer {
     height: 100%;
     width: 100%;
     position: absolute;
