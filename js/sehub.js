@@ -33,7 +33,23 @@ app.config(function($stateProvider, $urlRouterProvider) {
 });
 
 app.controller('NavigationController', function($scope) {
+    // TODO: https://github.com/angular-ui/ui-router/issues/456
+    var me = this;
 
+    me.showMenu = true;
+
+    me.toggleMenu = function() {
+        me.showMenu = !me.showMenu;
+    };
+
+
+
+    function init() {
+        // hide menu on small screens
+        if (window.innerWidth < 1000)
+            me.showMenu = false;
+    };
+    init();
 });
 
 

@@ -30,16 +30,16 @@
 
     <body ng-app="SeHub" ng-controller="NavigationController as NavCtrl">
 
-        <div id="layout" class="active">
+        <div id="layout" ng-class="{active: NavCtrl.showMenu}">
             <!-- TODO: http://codepen.io/sc8696/pen/xbKeGW -->
-            <div id="menuTitle" class="noselect menu-link active">
+            <div id="menuTitle" class="noselect menu-link" ng-class="{active: NavCtrl.showMenu}">
                 <p class="selectable logo-text">Sebastian Hubenschmid </p>
             </div>
-            <a href="#menu" id="menuLink" class="noselect menu-link active"> 
+            <a ng-click="NavCtrl.toggleMenu()" id="menuLink" class="noselect menu-link menu-toggle-button" ng-class="{active: NavCtrl.showMenu}"> 
                 <span></span> 
             </a>
             <div id="menu-container">
-                <div id="menu" class="noselect active">
+                <div id="menu" class="noselect" ng-class="{active: NavCtrl.showMenu}">
 
                     <!-- MAIN MENU -->
                     <nav id="mainmenu">
@@ -47,17 +47,18 @@
                         <a class="noselect pure-menu-heading" ui-sref="home">SSH</a>
                         <ul>
                             <li>
-                                <a class="noselect menu-item-link" ui-sref="home"> Home </a>
+                                <a class="noselect menu-item-link" ui-sref="home" ui-sref-active="pure-menu-selected"> Home </a>
                             </li>
                             <li>
-                                <a class="noselect menu-item-link" ui-sref="projects">Past Projects</a>
+                                <a class="noselect menu-item-link" ui-sref="projects" ui-sref-active="pure-menu-selected">Past Projects</a>
                             </li>
                             <li>
-                                <a class="noselect menu-item-link" ui-sref="CV">CV</a>
+                                <a class="noselect menu-item-link" ui-sref="CV" ui-sref-active="pure-menu-selected">CV</a>
                             </li>
                             <li>
-                                <a class="noselect menu-item-link" ui-sref="aboutme">About me</a>
+                                <a class="noselect menu-item-link" ui-sref="aboutme" ui-sref-active="pure-menu-selected">About me</a>
                             </li>
+                            <li> </li>
                         </ul>
 
                     </div>
@@ -65,7 +66,7 @@
                 </div>
 
                 <!-- ICONS -->
-               <div id="iconPanel" class="noselect active" ondragstart="return false;" ondrop="return false;">
+               <div id="iconPanel" class="noselect" ondragstart="return false;" ondrop="return false;" ng-class="{active: NavCtrl.showMenu}">
                     <div id="iconTable" class="noselect">
                         <div class="row">
                             <a class="icon" href="https://www.facebook.com/SebastianHubenschmid" target="_blank">

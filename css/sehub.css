@@ -53,12 +53,8 @@ a::selection {
     -moz-transition: all 0.3s linear;
 }
 
-.button-dl {
-    color: white;
-    border-radius: 4px;
-    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-    background: rgb(28, 184, 65);
-    font-size: 200%;
+.menu-toggle-button {
+    cursor: pointer;
 }
 
 .header {
