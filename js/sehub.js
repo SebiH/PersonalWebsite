@@ -53,4 +53,24 @@ app.controller('NavigationController', function($scope) {
 });
 
 
+app.controller('ContactController', function($scope, $http) {
+    $scope.data = { };
+    $scope.formSent = false;
+
+    $scope.send = function() {
+        window.alert('x');
+
+        $http.post('scripts/send_mail.php', $scope.data)
+            .success(function(result) {
+                if (result.success)
+                    $scope.formSent = true;
+                else
+                    window.alert(result.error);
+            })
+            .error(function() {
+                window.alert("Could not send form - is the website still reachable?");
+            });
+    };
+});
+
 

@@ -345,3 +345,16 @@ li a .cont.active .plus-icon {
     width: 100%;
     height: 100%;
 }
+
+
+.contactform {
+    
+}
+
+.contactform label {
+    width: 100%;
+}
+
+.contactform label .error {
+    color: red;
+}
