@@ -11,7 +11,6 @@
         <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
         <link rel="stylesheet" href="css/sehub.css">
         <link rel="stylesheet" href="css/pure.css">
-        <link rel="stylesheet" href="css/dropzone.css">
         <link rel="stylesheet" href="css/loadingbar.css">
 
 
@@ -23,7 +22,12 @@
         
         <!-- Try to switch back to javascript version -->
         <script>
-            window.location.replace("/");
+            var currentUrl = window.location.href;
+            var regex = /.*?\/.*?site=(.*)/;
+            var jsUrl = currentUrl.replace(regex, "$1");
+            if (!(regex.test(currentUrl)))
+                jsUrl = "";
+            window.location.replace("/#/" + jsUrl);
         </script>
 
     </head>
@@ -39,7 +43,8 @@ if (empty($filename))
 ?>
 
         <div id="javascript-notification">
-            <h3> Please consider turning on JavaScript! </h3>
+            <h3> This site was built with AngularJS in mind </h3>
+            <p> So please enable JavaScript? :) </p>
         </div>
 
         <div id="layout" class="active">
@@ -57,16 +62,16 @@ if (empty($filename))
                         <a class="noselect pure-menu-heading" href="/">SSH</a>
                         <ul>
                             <li>
-                                <a class="noselect menu-item-link" href="?site=home" > Home </a>
+                            <a class="noselect menu-item-link <? if ($filename === "home") echo "pure-menu-selected" ?>" href="?site=home" > Home </a>
                             </li>
                             <li>
-                                <a class="noselect menu-item-link" href="?site=projects">Past Projects</a>
+                                <a class="noselect menu-item-link <? if ($filename === "projects") echo "pure-menu-selected" ?>" href="?site=projects">Past Projects</a>
                             </li>
                             <li>
-                                <a class="noselect menu-item-link" href="?site=CV">CV</a>
+                                <a class="noselect menu-item-link <? if ($filename === "CV") echo "pure-menu-selected" ?>" href="?site=CV">CV</a>
                             </li>
                             <li>
-                                <a class="noselect menu-item-link" href="?site=aboutme">About me</a>
+                                <a class="noselect menu-item-link <? if ($filename === "aboutme") echo "pure-menu-selected" ?>" href="?site=aboutme">About me</a>
                             </li>
                         </ul>
 
@@ -89,7 +94,7 @@ if (empty($filename))
                             <p> <span class='fa fa-twitter'></span> </p>
                         </a>
 
-                        <a class='icon' href='#contact' onclick='loadContent("contact");'>
+                        <a class='icon' href='#contact'>
                             <p> <span class='fa fa-envelope'></span> </p>
                         </a>
                     </div>
@@ -117,7 +122,7 @@ if (empty($filename))
             </div>
         </div>
         <!-- MAIN CONTAINER -->
-        <div id="contentcontainer0">
+        <div id="contentcontainer">
             <main>
 <?php
 
@@ -133,17 +138,21 @@ if (file_exists($filepath . ".html"))
     $filepath .= ".html";
 else if (file_exists($filepath . ".php"))
     $filepath .= ".php";
+else
+    echo "Not found?";
 
 $contentfile = fopen($filepath, "r");
 
-if (!$contentfile) {
+if ($contentfile === null) {
     echo "<div class=\"hcenter\"><h1>An error has occured =(</h1></div>";
 }
+else
+{
+    $content = fread($contentfile, filesize($filepath));
+    fclose($contentfile);
 
-$content = fread($contentfile, filesize($filepath));
-fclose($contenfile);
-
-echo($content);
+    echo($content);
+}
 
 ?>
             </main>
