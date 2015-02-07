@@ -82,7 +82,7 @@ a::selection {
 
 
 #navbar {
-    width: 274px; /* menu and side-text */
+    width: 230px; 
 }
 
 #menu {
@@ -149,7 +149,9 @@ a::selection {
 
 
 #content {
-    width: calc(100% - 274px);
+    width: calc(100% - 230px);
+    box-shadow: 7px 7px 20px rgba(1,1,1,0.3);
+    z-index: 1;
 }
 
 .content-extended {
