@@ -29,7 +29,6 @@
     <body ng-app="SeHub" ng-controller="NavigationController" ng-cloak>
 
         <div id="layout" layout="row">
-            <!-- TODO https://github.com/homerjam/angular-ui-router-anim-in-out -->
 
             <!-- Menubar -->
             <div id="navbar" class="transition" ng-class="{'navbar-hidden': !showMenu}" layout="row" ng-cloak>
@@ -58,7 +57,6 @@
                                     <p> <span class="fa fa-twitter"></span> </p>
                                     <md-tooltip>Twitter</md-tooltip>
                                 </a>
-
                                 <a class="icon transition" ui-sref="contact">
                                     <p> <span class="fa fa-envelope"></span> </p>
                                     <md-tooltip>Contact me!</md-tooltip>
@@ -104,7 +102,7 @@
 
             <!-- Content --> 
             <div id="content" class="transition" ng-class="{'content-extended': !showMenu}">
-                <div ui-view style="width: 100%; height: 100%;">
+                <div ui-view class="ng-anim-fade transition-slow" style="width: 100%; height: 100%;">
                     <div id="loadingcontainer">
                         <div class="loadinganimation">
                           <div class="circle">

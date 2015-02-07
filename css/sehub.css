@@ -26,6 +26,7 @@ html, body {
 #content {
     height: 100%;
     overflow-y: auto;
+    position: relative;
 }
 
 
@@ -280,6 +281,10 @@ h1, h2, h3, h4, h5, h6 {
 #maincontent {
     height: 100%;
     width: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 
@@ -309,6 +314,15 @@ h1, h2, h3, h4, h5, h6 {
     user-select: initial;
 }
 
+
+.transition-slow {
+    -webkit-transition: all 0.6s linear;
+    -moz-transition: all 0.6s linear;
+    -ms-transition: all 0.6s linear;
+    -o-transition: all 0.6s linear;
+    transition: all 0.6s linear;
+}
+
 .transition {
     -webkit-transition: all 0.3s linear;
     -moz-transition: all 0.3s linear;
@@ -318,6 +332,28 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
+
+/* ================= */
+/* ngAnimate classes */
+/* ================= */
+
+
+.ng-anim-fade.ng-enter {
+  opacity: 0;
+}
+
+.ng-anim-fade.ng-enter.ng-enter-active {
+  opacity: 1;
+}
+
+
+.ng-anim-fade.ng-leave {
+  opacity: 1;
+}
+
+.ng-anim-fade.ng-leave.ng-leave-active {
+  opacity: 0;
+}
 
 
 
@@ -346,6 +382,8 @@ h1, h2, h3, h4, h5, h6 {
 .home-comment {
     padding-left: 12em;
 }
+
+
 
 
 
