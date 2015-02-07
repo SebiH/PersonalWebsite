@@ -41,14 +41,14 @@ app.controller('NavigationController', function($scope) {
     $scope.showMenu = true;
 
     $scope.toggleMenu = function() {
-        me.showMenu = !me.showMenu;
+        $scope.showMenu = !me.showMenu;
     };
 
 
     function init() {
         // hide menu on small screens
         if (window.innerWidth < 1000)
-            me.showMenu = false;
+            $scope.showMenu = false;
     };
     init();
 });
