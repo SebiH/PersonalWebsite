@@ -1,13 +1,37 @@
-* {
-    text-rendering: optimizeLegibility;
-}
+/* =========== */
+/* Page Layout */
+/* =========== */ 
 
 html, body {
     height: 100%;
     width: 100%;
     padding: 0;
     margin: 0;
+    text-rendering: optimizeLegibility;
+    overflow: hidden;
 }
+
+
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+}
+
+#layout {
+    width: 100%;
+    height: 100%;
+}
+
+
+#content {
+    height: 100%;
+    overflow-y: auto;
+}
+
+
+/* ============= */
+/* General style */
+/* ============= */
 
 body {
     background-color: #FFFFFF;
@@ -45,180 +69,105 @@ a::selection {
 
 ::selection {
     background: #01AF31; /* WebKit/Blink Browsers */
-    -webkit-transition: all 0.3s linear;
-    -moz-transition: all 0.3s linear;
-    -ms-transition: all 0.3s linear;
-    -o-transition: all 0.3s linear;
-    transition: all 0.3s linear;
 }
 
 ::-moz-selection {
     background: #01AF31; /* Gecko Browsers */
-    -moz-transition: all 0.3s linear;
 }
 
-.menu-toggle-button {
-    cursor: pointer;
+
+/* ====== */
+/* NavBar */
+/* ====== */
+
+
+#navbar {
+    width: 274px; /* menu and side-text */
 }
 
-.header {
-    vertical-align: center;
-    font-size: 48px;
-}
-
-#javascript-notification {
-    background: rgba(0, 255, 0, 0.4);
-    position: fixed;
-    width: 100%;
-    z-index: 3;
-    text-align: center;
-}
-
-#iconPanel {
-    margin-left: -230px; /* "#menu" width */
-    width: 230px;
-    height: 200px;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    z-index: 99; /* so the menu or its navicon stays above all content */
+#menu {
+    width: 230px; 
+    position: relative;
     background: #191818;
-    overflow-y: hidden;
 }
 
-#iconPanel.active {
-    left: 230px;
-}
-
-#iconTable {
-    display: table;
-    width: 100%;
-    height: 100%;
-    border-top: 1px solid #333;
-}
-
-.row {
-    display: table-row;
-}
-
-.icon {
-    width: 25%;
-    height: 50%;
-    color: #777;
-    display: table-cell;
-    vertical-align: middle;
-    text-align: center;
-
-    -webkit-transition: all 0.3s linear;
-    -moz-transition: all 0.3s linear;
-    -ms-transition: all 0.3s linear;
-    -o-transition: all 0.3s linear;
-    transition: all 0.3s linear;
-}
-
-.icon span {
-    color: #777;
-    font-size: 120%;
-    -webkit-transition: all 0.3s linear;
-    -moz-transition: all 0.3s linear;
-    -ms-transition: all 0.3s linear;
-    -o-transition: all 0.3s linear;
-    transition: all 0.3s linear;
-}
-
-.icon:hover {
-    background: black;
-}
-
-.icon:hover span {
-    color: #7D7;
-}
-
-.icontext {
-    color: #777;
-    font-size: 60%;
-    font-family: "omnes-pro", sans-serif;
-}
-
-.noselect {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-.selectable {
-    -webkit-touch-callout: initial;
-    -webkit-user-select: initial;
-    -khtml-user-select: initial;
-    -moz-user-select: initial;
-    -ms-user-select: initial;
-    user-select: initial;
-}
-
-#contentcontainer {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    left: 0px;
-    top: 0px;
-}
-
-#maincontent {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-
-    -webkit-transition: all 0.25s ease-out;
-    -moz-transition: all 0.25s ease-out;
-    -ms-transition: all 0.25s ease-out;
-    -o-transition: all 0.25s ease-out;
-    transition: all 0.25s ease-out;
-}
-
-#contentbackground {
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    left: 0px;
-    top: 0px;
-    background-size: cover;
-}
-
-/* This parent can be any width and height */
-.centeredcontainer {
-    text-align: center;
-}
-
-/* The ghost, nudged to maintain perfect centering */
-.centeredcontainer:before {
-    content: '';
-    display: inline-block;
-    height: 100%;
-    vertical-align: middle;
-    margin-right: -0.25em; /* Adjusts for spacing */
-}
-
-.centered {
-    display: inline-block;
-    vertical-align: middle;
-}
-
-.hcenter {
+.nav-header {
+    font-size: 125%;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    margin-top: 0;
+    padding: 0.5em 0.8em;
+    left: 100px;
+    text-transform; uppercase;
+    line-height: 1.5em;
+    text-decoration: none;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    color: white !important;
 }
 
-#menuTitle {
-    background-color: black;
-    height: 100%;
-    z-index: 5;
+.nav-header:hover {
+    color: #0f0 !important;
 }
 
-.logo-text {
+.nav-item {
+    min-height: 3em;
+    max-height: 5em;
+    
+    vertical-align: middle;
+    padding: 1.125em 2em;
+
+    color: #777 !important;
+
+    text-outline: none;
+    text-decoration: none;
+}
+
+.nav-item-selected {
+    background-color: #1f8d18;
+    color: white !important;
+    text-shadow: 1px 1px black;
+}
+
+.nav-item:hover {
+    background-color: #020202;
+    color: white;
+}
+
+
+.nav-item-selected:hover {
+    background-color: #014001;
+}
+
+
+/* =========== */
+/* Menu toggle */
+/* =========== */
+
+.navbar-hidden {
+    margin-left: -230px;
+}
+
+
+#content {
+    width: calc(100% - 274px);
+}
+
+.content-extended {
+    width: calc(100% - 44px) !important;
+}
+
+
+/* ============ */
+/* Menu sidebar */
+/* ============ */
+
+#title-bar {
+    color: white;
+    background: black;
+    width: 44px;
+}
+
+.title-bar-logo {
     height: 60px;
     width: 300px;
     text-align: left;
@@ -240,125 +189,370 @@ a::selection {
     transition: color 0.5s ease-out;
 }
 
-.logo-text:hover,
-.logo-text:active,
-.logo-text:focus {
-    color: #01CF01;
-}
-/* override yahoos pure-menu */
-.pure-menu ul {
-    visibility: visible;
-    position: initial;
+.hamburger {
+    width: 100%;
+    height: 44px;
 }
 
-/* todo */
-li .cont {
-    height: 32px;
+
+
+/* ========== */
+/* Icon panel */
+/* ========== */
+#iconPanel {
+    width: 100%;
     position: absolute;
-    right: 32px;
-    top: 4px;
-    width: 32px;
-}
-
-li a .plus-icon {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    margin: -8px 0 0 -8px;
-    width: 16px;
-    height: 16px;
-    background-image: url(sprite-menu.svg);
-    background-repeat: no-repeat;
-    background-position: 0 -48px;
-    opacity: 0.35;
-    z-index: 5;
-
-    -webkit-transition: -webkit-transform 0.250s ease-out 0s, opacity 0.215s ease-in-out 0s;
-    transition: transform 0.250s ease-out 0s, opacity 0.215s ease-in-out 0s;
-    -webkit-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    transform: rotate(0deg);
-}
-
-    li a .cont {
-        width: 48px;
-        height: 48px;
-        right: 8px;
-        top: 6px;
-    }
-.no-svg li a .plus-icon {
-    background-image: url(sprite-menu.svg);
-}
-
-li a .cont:hover .plus-icon {
-    opacity: 1;
-}
-
-li a .cont.active .plus-icon {
-    opacity: 1;
-    -webkit-transition: -webkit-transform 0.250s ease-out 0s;
-    transition: transform 0.250s ease-out 0s;
-    -webkit-transform: rotate(135deg);
-    -ms-transform: rotate(135deg);
-    transform: rotate(135deg);
-}
-
-    .header-menu {
-        position: relative;
-        height: px;
-        width: 10%;
-    -webkit-transform: rotate(-90deg);
-    -ms-transform: rotate(-90deg);
-    transform: rotate(-90deg);
-    -webkit-transform-origin: 0px 0px;
-    -ms-transform-origin: 0px 0px;
-    transform-origin: 0px 0px;
-    }
-
-#my-menu,
-.header-menu,
-.wrap_all {
-    -webkit-transition: left 0.215s cubic-bezier(0.785, 0.135, 0.150, 0.860);
-    transition: left 0.215s cubic-bezier(0.785, 0.135, 0.150, 0.860);
-}
-
-.header-menu.moveNowLeft,
-.wrap_all.moveNowLeft {
-    left: 300px;
-}
-
-#my-menu.moveNowLeft {
-    left: 0px;
-}
-
-/* responsive youtube videos */
-.video-container {
-    position: relative;
-    padding-bottom: 56.25%;
-    padding-top: 30px; 
-    height: 0; 
-    overflow: hidden;
-}
-
-.video-container iframe,
-.video-container object,
-.video-container embed {
-    position: absolute;
-    top: 0;
     left: 0;
+    bottom: 0;
+    z-index: 99; /* so the menu or its navicon stays above all content */
+    background: #191818;
+    overflow-y: hidden;
+}
+
+#iconPanel.active {
+    left: 230px;
+}
+
+#iconTable {
     width: 100%;
     height: 100%;
+    border-top: 1px solid #333;
 }
 
 
-.contactform {
-    
+.icon {
+    width: 25%;
+    height: 50%;
+    color: #777;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
 }
 
-.contactform label {
+.icon span {
+    color: #777;
+    font-size: 120%;
+}
+
+.icon:hover {
+    background: black;
+}
+
+.icon:hover span {
+    color: #7D7;
+}
+
+.icontext {
+    color: #777;
+    font-size: 60%;
+    font-family: "omnes-pro", sans-serif;
+}
+
+/* ============== */
+/* Content styles */
+/* ============== */
+
+.centeredcontainer {
+    text-align: center;
+    display: table;
+}
+
+.centered {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.hcenter-container {
+    text-align: center;
+}
+
+.hcenter {
+    display: inline-block;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    color: black;
+}
+
+#maincontent {
+    height: 100%;
     width: 100%;
 }
 
-.contactform label .error {
-    color: red;
+
+
+
+
+/* ================= */
+/* Functional styles */
+/* ================= */
+
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
+
+.selectable {
+    -webkit-touch-callout: initial;
+    -webkit-user-select: initial;
+    -khtml-user-select: initial;
+    -moz-user-select: initial;
+    -ms-user-select: initial;
+    user-select: initial;
+}
+
+.transition {
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+}
+
+
+
+
+
+/* ============================================================== */
+/* ============================================================== */
+/* ============================================================== */
+/*                          PAGE STYLES                           */
+/* ============================================================== */
+/* ============================================================== */
+/* ============================================================== */
+
+/* ==== */
+/* Home */
+/* ==== */
+
+.home-mainheader {
+    font-size: 1000%;
+    line-height: 0.2;
+}
+
+.home-subheader {
+    font-size: 200%;
+    line-height: 0;
+}
+
+.home-comment {
+    padding-left: 12em;
+}
+
+
+
+
+
+/* ==================================================== */
+/* Loading bar by http://codepen.io/Mattykins/pen/wfJqk */
+/* ==================================================== */
+
+#loadingcontainer {
+  width: 100px;
+  height: 122px;
+  position: absolute;
+  top: 45%;
+  border-radius: 100%;
+  left: calc(50% - 50px);
+  text-align: center;
+}
+
+.loadinganimation {
+  width: 100px;
+  height: 102px;
+  border-radius: 100%;
+}
+
+.circle {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.circle .inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  border: 5px solid rgba(0, 255, 30, 0.7);
+  border-right: none;
+  border-top: none;
+  background-clip: padding;
+  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.25);
+}
+
+.circle-alt {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.circle-alt .inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  border: 5px solid rgba(0, 240, 70, 0.7);
+  border-right: none;
+  border-top: none;
+  background-clip: padding;
+  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+.circle:nth-of-type(0) {
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+.circle:nth-of-type(0) .inner {
+  -webkit-animation: spin 2s infinite linear;
+          animation: spin 2s infinite linear;
+}
+
+.circle:nth-of-type(1) {
+  -webkit-transform: rotate(70deg);
+      -ms-transform: rotate(70deg);
+          transform: rotate(70deg);
+}
+.circle:nth-of-type(1) .inner {
+  -webkit-animation: spin 1s infinite linear;
+          animation: spin 1s infinite linear;
+}
+
+.circle:nth-of-type(2) {
+  -webkit-transform: rotate(140deg);
+      -ms-transform: rotate(140deg);
+          transform: rotate(140deg);
+}
+.circle:nth-of-type(2) .inner {
+  -webkit-animation: spin 1s infinite linear;
+          animation: spin 1s infinite linear;
+}
+
+.loadinganimation {
+  -webkit-animation: spin 2s infinite linear;
+          animation: spin 2s infinite linear;
+}
+
+
+
+
+/* ================================================================= */
+/* Google Play store icon by http://codepen.io/jackfilose/pen/qEEQpa */
+/* ================================================================= */
+
+
+.hamburger {
+    display: block;
+    width: 3em;
+    height: 3em;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    outline: none;
+    transform: rotate(180deg);
+
+    -moz-transition: -moz-transform 0.3s ease-out;
+    -o-transition: -o-transform 0.3s ease-out;
+    -webkit-transition: -webkit-transform 0.3s ease-out;
+    transition: transform 0.3s ease-out;
+}
+.hamburger:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.hamburger i {
+    display: inline-block;
+    width: 50%;
+    height: 5%;
+    background-color: white;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.hamburger i:before, .hamburger i:after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    position: absolute;
+
+    -moz-transition: -moz-transform 0.3s ease-out;
+    -o-transition: -o-transform 0.3s ease-out;
+    -webkit-transition: -webkit-transform 0.3s ease-out;
+    transition: transform 0.3s ease-out;
+}
+.hamburger i:before {
+    top: -200%;
+}
+.hamburger i:after {
+    bottom: -200%;
+}
+
+.hamburger.spin {
+}
+
+.spin180 .hamburger i:before, .spin180 .hamburger i:after {
+    width: 50%;
+    top: initial;
+    right: 0;
+    bottom: initial;
+}
+.spin180 .hamburger i:before {
+    -moz-transform-origin: 100% 50%;
+    -ms-transform-origin: 100% 50%;
+    -webkit-transform-origin: 100% 50%;
+    transform-origin: 100% 50%;
+    -moz-transform: rotate(45deg) translateX(6%);
+    -ms-transform: rotate(45deg) translateX(6%);
+    -webkit-transform: rotate(45deg) translateX(6%);
+    transform: rotate(45deg) translateX(6%);
+    top: 0;
+}
+.spin180 .hamburger i:after {
+    -moz-transform-origin: 100% 50%;
+    -ms-transform-origin: 100% 50%;
+    -webkit-transform-origin: 100% 50%;
+    transform-origin: 100% 50%;
+    -moz-transform: rotate(-45deg) translateX(6%);
+    -ms-transform: rotate(-45deg) translateX(6%);
+    -webkit-transform: rotate(-45deg) translateX(6%);
+    transform: rotate(-45deg) translateX(6%);
+}
+
+
