@@ -1,25 +1,34 @@
 <style scoped>
     .contactform {
         margin-top: 7%;
-        width: 70%;
+        width: 60%;
         min-width: 270px;
     }
 
     .label {
         text-align: left;
+        width: 100%;
     }
 
     textarea {
         margin-bottom: 20px;
         height: 200px;
     }
+
+    .error {
+        color: red;
+    }
+
+    #submit {
+        width: 20em;
+    }
 </style>
 
 <div id="backgroundimage"> </div>
 
-<div id="maincontent" ng-controller="ContactController">
+<div id="maincontent" class="hcenter-container" ng-controller="ContactController">
 
-    <div class="contactform content" ng-hide="formSent">
+    <div class="contactform hcenter" ng-hide="formSent">
         <h1>
             Want to tell me something?
         </h1>
@@ -44,8 +53,8 @@
                 </label>
                 <input ng-model="data.email" name="email" class="pure-input-1" type="email" required>
 
-                <label for="subject">
-                    Subject: 
+                <label for="subject" layout="row">
+                    <span> Subject: </span>
                 </label>
                 <input ng-model="data.subject" name="subject" class="pure-input-1">
 
@@ -57,9 +66,11 @@
                 </label>
                 <textarea ng-model="data.message" name="message" class="pure-input-1" type="text" required></textarea>
 
-                <button id="submit" class="pure-button pure-button-primary" type="submit">
-                    Send!
-                </button>
+                <div layout="row" layout-align="end end">
+                    <button id="submit" class="pure-button pure-button-primary" type="submit">
+                        Send!
+                    </button>
+                </div>
             </form>
         </div>
     </div>

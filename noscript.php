@@ -9,7 +9,7 @@
 
         <!-- Styles -->
         <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
-        <link rel="stylesheet" href="css/sehub.css">
+        <link rel="stylesheet" href="css/sehub_noscript.css">
         <link rel="stylesheet" href="css/pure.css">
         <link rel="stylesheet" href="css/loadingbar.css">
 

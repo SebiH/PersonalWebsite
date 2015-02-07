@@ -1,7 +1,11 @@
-var app = angular.module('SeHub', ['ui.router']);
+var app = angular.module('SeHub', ['ui.router', 'ngMaterial']);
 
-app.config(function($stateProvider, $urlRouterProvider) {
-
+app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
+  // It's 2015. I think we can start dropping non-html5 browser support now.
+  $locationProvider.html5Mode({
+      enabled: true,
+      requireBase: false
+  });
   // For any unmatched url, redirect to /home
   $urlRouterProvider.otherwise("/home");
 
@@ -34,14 +38,11 @@ app.config(function($stateProvider, $urlRouterProvider) {
 
 app.controller('NavigationController', function($scope) {
     // TODO: https://github.com/angular-ui/ui-router/issues/456
-    var me = this;
+    $scope.showMenu = true;
 
-    me.showMenu = true;
-
-    me.toggleMenu = function() {
+    $scope.toggleMenu = function() {
         me.showMenu = !me.showMenu;
     };
-
 
 
     function init() {
