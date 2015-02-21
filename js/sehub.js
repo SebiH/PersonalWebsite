@@ -1,4 +1,4 @@
-var app = angular.module('SeHub', ['ui.router', 'ngMaterial']);
+var app = angular.module('SeHub', ['ui.router']);
 
 app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
   // It's 2015. I think we can start dropping non-html5 browser support now.
