@@ -50,7 +50,6 @@ app.controller('NavigationController', function($scope, $window) {
     }; 
 
     $scope.width = $window.innerWidth;
-    console.log("starting with: " + $scope.width);
 
     // angularjs won't update innerwidth automatically..
     var win = angular.element($window);
