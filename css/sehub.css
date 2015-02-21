@@ -34,9 +34,11 @@ html, body {
 /* General style */
 /* ============= */
 
+/* Firefox jumps around with fonts */
 * {
-    font-family: 'Lato', sans-serif !important;
+    font-family: 'Lato', sans-serif;
 }
+
 
 body {
     background-color: #FFFFFF;
