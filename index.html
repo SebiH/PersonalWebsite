@@ -31,15 +31,29 @@
             <div id="navbar" class="transition" ng-class="{'navbar-hidden': !showMenu}" layout="row" ng-cloak>
                 <!-- Menu items -->
                 <div id="menu" layout="column">
-                    <a class="nav-header noselect transition" ui-sref="home">Sebastian Hubenschmid</a>
-                    <a class="nav-item noselect transition" ui-sref="home" ui-sref-active="nav-item-selected"> Home </a>
-                    <a class="nav-item noselect transition" ui-sref="projects" ui-sref-active="nav-item-selected">Past Projects</a>
-                    <a class="nav-item noselect transition" ui-sref="CV" ui-sref-active="nav-item-selected">CV</a>
-                    <a class="nav-item noselect transition" ui-sref="aboutme" ui-sref-active="nav-item-selected">About me</a>
+                    <a ui-sref="home" class="nav-header noselect transition">
+                        Sebastian Hubenschmid
+                    </a>
+
+                    <a ui-sref="home" class="nav-item noselect transition" ui-sref-active="nav-item-selected">
+                        Home
+                    </a>
+
+                    <a ui-sref="projects" class="nav-item noselect transition" ui-sref-active="nav-item-selected">
+                        Projects
+                    </a>
+
+                    <a ui-sref="CV" class="nav-item noselect transition" ui-sref-active="nav-item-selected">
+                        CV
+                    </a>
+
+                    <a ui-sref="aboutme" class="nav-item noselect transition" ui-sref-active="nav-item-selected">
+                        About me
+                    </a>
 
                     <div id="iconPanel" class="noselect" ondragstart="return false;" ondrop="return false;">
                         <div id="iconTable" class="noselect">
-                            <div layout="row">
+                            <div>
                                 <a class="icon transition" href="https://www.facebook.com/SebastianHubenschmid" target="_blank">
                                     <p> <span class="fa fa-facebook icon"></span> </p>
                                 </a>
@@ -54,9 +68,8 @@
                                 <a class="icon transition" ui-sref="contact">
                                     <p> <span class="fa fa-envelope"></span> </p>
                                 </a>
-                            </div>
 
-                            <div layout="row">
+                            <div>
                                 <a class="icon transition" href="https://github.com/SebiH" target="_blank">
                                     <p> <span class="fa fa-github"></span> </p>
                                 </a>
@@ -77,15 +90,6 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Titlebar -->
-                <!--<div id="title-bar" layout="column" >
-                    <div class="burgerwrapper noselect" ng-click="showMenu = !showMenu" ng-class="{spin180: showMenu, spin360: !showMenu }">
-                        <div class="hamburger" ng-class="{spin: showMenu}">
-                            <i></i>
-                        </div>
-                    </div> 
-                </div> -->
             </div>
 
 

@@ -84,10 +84,12 @@ a::selection {
 
 #navbar {
     width: 230px; 
+    height: 100%;
 }
 
 #menu {
     width: 230px; 
+    height: 100%;
     position: relative;
     background: #191818;
 }
@@ -98,11 +100,12 @@ a::selection {
     letter-spacing: 0.1em;
     margin-top: 0;
     padding: 0.5em 0.8em;
+    line-height: 1.5em;
+    display: block;
+
     left: 100px;
     text-transform; uppercase;
-    line-height: 1.5em;
     text-decoration: none;
-    display: block;
     color: white !important;
 }
 
@@ -111,8 +114,8 @@ a::selection {
 }
 
 .nav-item {
-    min-height: 3em;
-    max-height: 5em;
+    height: 3em;
+    width: 100%;
     
     vertical-align: middle;
     padding: 1.125em 2em;
@@ -121,6 +124,8 @@ a::selection {
 
     text-outline: none;
     text-decoration: none;
+    box-sizing: border-box;
+    display: block;
 }
 
 .nav-item-selected {
@@ -150,13 +155,18 @@ a::selection {
 
 
 #content {
+    position: absolute;
+    top: 0;
+    left: 230px;
     width: calc(100% - 230px);
+    height: 100%;
     box-shadow: 7px 7px 20px rgba(1,1,1,0.3);
     z-index: 1;
 }
 
 .content-extended {
-    width: calc(100% - 44px) !important;
+    left: 0px !important;
+    width: calc(100%) !important;
 }
 
 
