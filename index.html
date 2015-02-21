@@ -25,12 +25,12 @@
 
     <body ng-app="SeHub" ng-controller="NavigationController" ng-cloak>
 
-        <div id="layout" layout="row">
+        <div id="layout">
 
             <!-- Menubar -->
-            <div id="navbar" class="transition" ng-class="{'navbar-hidden': !showMenu}" layout="row" ng-cloak>
+            <div id="navbar" class="transition" ng-class="{'navbar-hidden': !showMenu}" ng-cloak>
                 <!-- Menu items -->
-                <div id="menu" layout="column">
+                <div id="menu">
                     <a ui-sref="home" class="nav-header noselect transition">
                         Sebastian Hubenschmid
                     </a>

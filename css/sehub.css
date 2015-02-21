@@ -34,6 +34,10 @@ html, body {
 /* General style */
 /* ============= */
 
+* {
+    font-family: 'Lato', sans-serif !important;
+}
+
 body {
     background-color: #FFFFFF;
     color: #111111;
@@ -208,6 +212,20 @@ a::selection {
 }
 
 
+/* ===================== */
+/* NoScript notification */
+/* ===================== */
+
+#javascript-notification {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+    background: rgba(0, 255, 0, 0.5);
+    text-align: center;
+}
+
 
 /* ========== */
 /* Icon panel */
@@ -296,6 +314,7 @@ h1, h2, h3, h4, h5, h6 {
     top: 0;
     left: 0;
     overflow-y: auto;
+    overflox-x: auto;
 }
 
 
@@ -349,6 +368,17 @@ h1, h2, h3, h4, h5, h6 {
 /* ================= */
 
 
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .ng-anim-fade.ng-enter,
+    .ng-anim-fade.ng-enter.ng-enter-active,
+    .ng-anim-fade.ng-leave,
+    .ng-anim-fade.ng-leave.ng-leave-active {
+        position: relative !important;
+    }
+}
+
+
+
 .ng-anim-fade.ng-enter {
   opacity: 0;
 }
@@ -379,6 +409,10 @@ h1, h2, h3, h4, h5, h6 {
 /* ==== */
 /* Home */
 /* ==== */
+
+.home-container {
+    min-width: 640px;
+}
 
 .home-mainheader {
     font-size: 1000%;
@@ -465,8 +499,88 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
+/* ======== */
+/* About me */
+/* ======== */
+
+.about-profilepic {
+    box-sizing: border-box;
+    margin-top: 2em;
+    padding-right: 2em;
+}
+
+.about-container {
+    width: 60%;
+    min-width: 640px;
+    max-width: 1024px;
+    text-align: left;
+}
+
+.about-text {
+}
+
+.about-text h1 {
+    font-family: 'Lato', sans-serif; 
+    font-size: 250%;
+}
+
+.about-text p {
+    font-family: 'Lato', sans-serif; 
+    font-size: 125%;
+}
 
 
+/* ======== */
+/* Projects */
+/* ======== */
+
+
+.proj-maincontainer {
+    padding-top: 0px;
+    min-width: 700px;
+    width: 70%;
+}
+
+.proj-maintitle {
+    margin-top: 5%;
+    font-size: 300%;
+    line-height: 0.2;
+}
+
+.proj-container {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    min-width: 640px;
+    max-width: 1024px;
+}
+
+.proj-image {
+    margin-top: 1.5em;
+}
+
+.proj-text {
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+
+.proj-title {
+    text-align: left;
+}
+
+.proj-data p {
+    font-family: "Lato", sans-serif;
+    font-size: 70%;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.proj-data a {
+    text-transform: none;
+}
+
+.proj-description {
+    text-align: justify;
+}
 
 
 
