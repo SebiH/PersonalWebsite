@@ -703,6 +703,14 @@ h1, h2, h3, h4, h5, h6 {
 /* Google Play store icon by http://codepen.io/jackfilose/pen/qEEQpa */
 /* ================================================================= */
 
+.burgerwrapper {
+    position: absolute;
+    left: 230px;
+    top: 0px;
+    background: #191818;
+    cursor: pointer;
+    z-index: 20;
+}
 
 .hamburger {
     display: block;
@@ -710,7 +718,6 @@ h1, h2, h3, h4, h5, h6 {
     height: 3em;
     position: relative;
     overflow: hidden;
-    cursor: pointer;
     outline: none;
     transform: rotate(180deg);
 

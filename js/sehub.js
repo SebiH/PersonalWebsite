@@ -42,10 +42,11 @@ app.controller('NavigationController', function($scope, $window) {
 
     $scope.showMenu = true;
     // to prevent automatic window opening/closing
-    $scope.manuallyToggledWindow = false;
+    var manuallyToggledWindow = false;
+    $scope.burgerVisible = false;
 
     $scope.toggleMenu = function() {
-        $scope.manuallyToggledWindow = true;
+        manuallyToggledWindow = true;
         $scope.showMenu = !$scope.showMenu;
     }; 
 
@@ -61,14 +62,16 @@ app.controller('NavigationController', function($scope, $window) {
 
     // hide menu if window is too small
     function updateMenuVisibility() {
-        // respect user preference
-        if ($scope.manuallyToggledWindow)
-            return;
-
         if ($scope.width < MIN_WIDTH_FOR_VISIBLE_MENU) {
-            $scope.showMenu = false;
+            // respect user preference when window is too small
+            if (!(manuallyToggledWindow)) {
+                $scope.showMenu = false;
+            }
+
+            $scope.burgerVisible = true;
         } else {
             $scope.showMenu = true;
+            $scope.burgerVisible = false;
         }
     };
     // trigger on load with initial window size
