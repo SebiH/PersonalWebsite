@@ -1,19 +1,33 @@
+<?php
+$filename = $_GET['site'];
 
+// load home if no site specified
+if (empty($filename))
+    $filename = "home";
+?>
 <!DOCTYPE HTML>
 <html>
     <head>
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" type="image/ico" href="img/favicon.ico">
         <title> Sebastian Hubenschmid | Personal website </title>
 
 
         <!-- Styles -->
-        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
-        <link rel="stylesheet" href="css/sehub.css">
+        <link type="text/css" rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+        <link type="text/css" rel="stylesheet" href="css/sehub.css">
 
+        <!-- Noscript styles -->
+        <style>
+
+        #menu {
+            z-index: 5;
+        }
+        </style>
 
         <!-- Fonts -->
-        <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+        <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
         <!-- http://fortawesome.github.io/Font-Awesome/icons/ -->
         <!-- not loading in FF :( <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">-->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css" media="all" rel="stylesheet" type="text/css">
@@ -32,86 +46,69 @@
 
     <body>
 
-<?
-$filename = $_GET['site'];
-
-// load home if no site specified
-if (empty($filename))
-    $filename = "home";
-?>
-
+    <div id="layout">
         <div id="javascript-notification">
             <h3> Please enable JavaScript </h3>
             <p> This site was built with AngularJS in mind </p>
-        </div>
+        </div> 
 
-        <div id="layout" class="active">
-            <div id="menuTitle" class="noselect menu-link active">
-                <p class="selectable logo-text"> Sebastian Hubenschmid </p>
-            </div>
-            <a id="menuLink" class="noselect menu-link active"> 
-                <span></span> 
-            </a>
-            <div id="menu-container">
-                <div id="menu" class="noselect active">
+        <!-- Menubar -->
+        <div id="navbar" class="transition">
+            <!-- Menu items -->
+            <div id="menu">
+                <a href="/noscript.php" class="nav-header noselect transition">
+                    Sebastian Hubenschmid
+                </a>
 
-                    <!-- MAIN MENU -->
-                    <div class="noselect pure-menu pure-menu-open" id="menu-content">
-                        <a class="noselect pure-menu-heading" href="/">SSH</a>
-                        <ul>
-                            <li>
-                            <a class="noselect menu-item-link <? if ($filename === "home") echo "pure-menu-selected" ?>" href="?site=home" > Home </a>
-                            </li>
-                            <li>
-                                <a class="noselect menu-item-link <? if ($filename === "projects") echo "pure-menu-selected" ?>" href="?site=projects">Past Projects</a>
-                            </li>
-                            <li>
-                                <a class="noselect menu-item-link <? if ($filename === "CV") echo "pure-menu-selected" ?>" href="?site=CV">CV</a>
-                            </li>
-                            <li>
-                                <a class="noselect menu-item-link <? if ($filename === "aboutme") echo "pure-menu-selected" ?>" href="?site=aboutme">About me</a>
-                            </li>
-                        </ul>
+                <a href="?site=home" class="nav-item noselect transition <?php if($filename === "home") echo 'nav-item-selected'; ?>">
+                    Home
+                </a>
 
-                    </div>
-                </div>
+                <a href="?site=projects" class="nav-item noselect transition <?php if($filename === "projects") echo 'nav-item-selected'; ?>">
+                    Projects
+                </a>
 
-                <!-- ICONS -->
-               <div id="iconPanel" class="noselect active">
+                <a href="?site=CV" class="nav-item noselect transition <?php if($filename === "CV") echo 'nav-item-selected'; ?>">
+                    CV
+                </a>
+
+                <a href="?site=aboutme" class="nav-item noselect transition <?php if($filename === "aboutme") echo 'nav-item-selected'; ?>">
+                    About me
+                </a>
+
+                <div id="iconPanel" class="noselect" ondragstart="return false;" ondrop="return false;">
                     <div id="iconTable" class="noselect">
-                    <div class='row'>
-                        <a class='icon' href='https://www.facebook.com/SebastianHubenschmid' target='_blank'>
-                            <p> <span class='fa fa-facebook icon'></span> </p>
-                        </a>
+                        <div>
+                            <a class="icon transition" href="https://www.facebook.com/SebastianHubenschmid" target="_blank">
+                                <p> <span class="fa fa-facebook icon"></span> </p>
+                            </a>
 
-                        <a class='icon' href='https://plus.google.com/+SebastianHubenschmid/' target='_blank'>
-                            <p> <span class='fa fa-google-plus'></span> </p>
-                        </a>
+                            <a class="icon transition" href="https://plus.google.com/+SebastianHubenschmid/" target="_blank">
+                                <p> <span class="fa fa-google-plus"></span> </p>
+                            </a>
 
-                        <a class='icon' href='https://twitter.com/Sebi__H' target='_blank'>
-                            <p> <span class='fa fa-twitter'></span> </p>
-                        </a>
+                            <a class="icon transition" href="https://twitter.com/Sebi__H" target="_blank">
+                                <p> <span class="fa fa-twitter"></span> </p>
+                            </a>
+                            <a class="icon transition <?php if ($filename === "contact") echo'nav-item-selected'; ?>" href="?site=contact">
+                                <p> <span class="fa fa-envelope"></span> </p>
+                            </a>
 
-                        <a class='icon' href='#contact'>
-                            <p> <span class='fa fa-envelope'></span> </p>
-                        </a>
-                    </div>
+                        <div>
+                            <a class="icon transition" href="https://github.com/SebiH" target="_blank">
+                                <p> <span class="fa fa-github"></span> </p>
+                            </a>
 
-                    <div class='row'>
-                        <a class='icon' href='https://github.com/SebiH' target='_blank'>
-                            <p> <span class='fa fa-github'></span> </p>
-                        </a>
+                            <a class="icon transition" href="http://stackoverflow.com/users/4090817/sebih" target="_blank">
+                                <p> <span class="fa fa-stack-overflow"></span></p>
+                            </a>
 
-                        <a class='icon' href='http://stackoverflow.com/users/4090817/sebih' target='_blank'>
-                            <p> <span class='fa fa-stack-overflow'></span> </p>
-                        </a>
+                            <a class="icon transition" href="https://www.linkedin.com/in/sebastianhubenschmid" target="_blank">
+                                <p> <span class="fa fa-linkedin"></span> </p>
+                            </a>
 
-                        <a class='icon' href='https://www.linkedin.com/in/sebastianhubenschmid' target='_blank'>
-                            <p> <span class='fa fa-linkedin'></span> </p>
-                        </a>
-
-                        <a class='icon' href='http://hci.uni-konstanz.de/index.php?a=staff&amp;b=Hubenschmid&amp;c=contact&amp;lang=en' target='_blank'>
-                            <p> <span class='fa fa-flask'></span> </p>
+                            <a class="icon transition" href="http://hci.uni-konstanz.de/index.php?a=staff&amp;b=Hubenschmid&amp;c=contact&amp;lang=en" target="_blank">
+                                <p> <span class="fa fa-flask"></span> </p>
                             </a>
 
                         </div>
