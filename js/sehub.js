@@ -59,8 +59,6 @@ app.controller('ContactController', function($scope, $http) {
     $scope.formSent = false;
 
     $scope.send = function() {
-        window.alert('x');
-
         $http.post('scripts/send_mail.php', $scope.data)
             .success(function(result) {
                 if (result.success)
