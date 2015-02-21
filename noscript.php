@@ -9,9 +9,7 @@
 
         <!-- Styles -->
         <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
-        <link rel="stylesheet" href="css/sehub_noscript.css">
-        <link rel="stylesheet" href="css/pure.css">
-        <link rel="stylesheet" href="css/loadingbar.css">
+        <link rel="stylesheet" href="css/sehub.css">
 
 
         <!-- Fonts -->
@@ -43,8 +41,8 @@ if (empty($filename))
 ?>
 
         <div id="javascript-notification">
-            <h3> This site was built with AngularJS in mind </h3>
-            <p> So please enable JavaScript? :) </p>
+            <h3> Please enable JavaScript </h3>
+            <p> This site was built with AngularJS in mind </p>
         </div>
 
         <div id="layout" class="active">
