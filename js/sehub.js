@@ -36,21 +36,45 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
     });
 });
 
-app.controller('NavigationController', function($scope) {
-    // TODO: https://github.com/angular-ui/ui-router/issues/456
+
+app.controller('NavigationController', function($scope, $window) {
+    var MIN_WIDTH_FOR_VISIBLE_MENU = 1000;
+
     $scope.showMenu = true;
+    // to prevent automatic window opening/closing
+    $scope.manuallyToggledWindow = false;
 
     $scope.toggleMenu = function() {
-        $scope.showMenu = !me.showMenu;
-    };
+        $scope.manuallyToggledWindow = true;
+        $scope.showMenu = !$scope.showMenu;
+    }; 
 
+    $scope.width = $window.innerWidth;
+    console.log("starting with: " + $scope.width);
 
-    function init() {
-        // hide menu on small screens
-        if (window.innerWidth < 1000)
+    // angularjs won't update innerwidth automatically..
+    var win = angular.element($window);
+    win.bind("resize", function(e) {
+        $scope.width = $window.innerWidth;
+        updateMenuVisibility();
+        $scope.$apply();
+    });
+
+    // hide menu if window is too small
+    function updateMenuVisibility() {
+        // respect user preference
+        if ($scope.manuallyToggledWindow)
+            return;
+
+        if ($scope.width < MIN_WIDTH_FOR_VISIBLE_MENU) {
             $scope.showMenu = false;
+        } else {
+            $scope.showMenu = true;
+        }
     };
-    init();
+    // trigger on load with initial window size
+    updateMenuVisibility();
+
 });
 
 
