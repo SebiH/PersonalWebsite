@@ -386,6 +386,76 @@ h1, h2, h3, h4, h5, h6 {
 
 
 
+/* ===== */
+/* CV    */
+/* ===== */
+
+.cvcontainer {
+    margin-top: 3%;
+    width: 50%;
+    min-width: 640px;
+}
+
+.cvcategory {
+    text-align: left;
+    line-height: 0;
+    margin-top: 80px;
+}
+
+.cventry {
+    margin-bottom: 30px;
+}
+
+.cvtable {
+    display: table;
+    width: 100%;
+}
+
+.cvrow {
+    display: table-row;
+    width: 100%;
+}
+
+.cvcell {
+    display: table-cell;
+}
+
+.cvcell.left {
+    text-align: left;
+
+}
+
+.cvcell.right {
+    text-align: right;
+}
+
+.cvcell.cvcenter {
+    text-align: justify;
+}
+
+.cvcell.title {
+    text-transform: uppercase;
+    font-size: 125%;
+    color: black;
+}
+
+.cvcell.subtitle {
+
+}
+
+.cvcell.location {
+
+}
+
+.cvcell.description {
+
+}
+
+.cvcell.year {
+}
+
+
+
 
 
 
