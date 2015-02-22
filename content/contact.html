@@ -1,73 +1,47 @@
-<style scoped>
-    .contactform {
-        margin-top: 7%;
-        width: 60%;
-        min-width: 270px;
-    }
-
-    .label {
-        text-align: left;
-        width: 100%;
-    }
-
-    textarea {
-        margin-bottom: 20px;
-        height: 200px;
-    }
-
-    .error {
-        color: red;
-    }
-
-    #submit {
-        width: 20em;
-    }
-</style>
-
 <div id="backgroundimage"> </div>
 
 <div id="maincontent" class="hcenter-container" ng-controller="ContactController">
 
-    <div class="contactform hcenter" ng-hide="formSent">
+    <div class="contact-form-container hcenter" ng-hide="formSent">
         <h1>
             Want to tell me something?
         </h1>
 
         <div>
-            <form name="form" class="pure-form" novalidate ng-submit="form.$valid && send()">
+            <form name="form" class="pure-form contact-form" novalidate ng-submit="form.$valid && send()">
 
-                <label for="name" layout="row" layout-align="space-between center">
+                <label for="name">
                     <span> Name*: </span>
-                    <span class="error" ng-if="(form.$submitted || form.name.$touched) && form.name.$error.required"> 
+                    <span class="form-error" ng-if="(form.$submitted || form.name.$touched) && form.name.$error.required"> 
                         Please tell me your name 
                     </span>
                 </label>
                 <input ng-model="data.name" name="name" class="pure-input-1" required>
 
 
-                <label for="email" layout="row" layout-align="space-between center">
+                <label for="email">
                     <span> Email*: </span>
-                    <span class="error" ng-if="(form.$submitted || form.email.$touched) && (form.email.$error.required || form.email.$error.email)">
+                    <span class="form-error" ng-if="(form.$submitted || form.email.$touched) && (form.email.$error.required || form.email.$error.email)">
                         Please enter a valid Email address 
                     </span>
                 </label>
                 <input ng-model="data.email" name="email" class="pure-input-1" type="email" required>
 
-                <label for="subject" layout="row">
+                <label for="subject">
                     <span> Subject: </span>
                 </label>
                 <input ng-model="data.subject" name="subject" class="pure-input-1">
 
-                <label for="message" layout="row" layout-align="space-between center">
+                <label for="message">
                     <span> Message*: </span>
-                    <span class="error" ng-if="(form.$submitted || form.message.$touched) && form.message.$error.required"> 
+                    <span class="form-error" ng-if="(form.$submitted || form.message.$touched) && form.message.$error.required"> 
                         You need to enter a message 
                     </span>
                 </label>
-                <textarea ng-model="data.message" name="message" class="pure-input-1" type="text" required></textarea>
+                <textarea class="pure-input-1 form-textarea" ng-model="data.message" name="message" type="text" required></textarea>
 
-                <div layout="row" layout-align="end end">
-                    <button id="submit" class="pure-button pure-button-primary" type="submit">
+                <div>
+                    <button id="form-submit" class="pure-button pure-button-primary" type="submit">
                         Send!
                     </button>
                 </div>
@@ -76,7 +50,7 @@
     </div>
 
     <div class="content" ng-show="formSent">
-        <p> Thanks for the message! </p>
+        <h1> Thanks for the message! </h1>
     </div>
 </div>
 
