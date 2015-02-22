@@ -4,11 +4,11 @@
 
 <IfModule mod_expires.c>
 # Enable expirations
-ExpiresActive On 
+ExpiresActive Off 
 # Default directive
-ExpiresDefault "access plus 1 week"
+ExpiresDefault "access plus 1 day"
 # My favicon
-ExpiresByType image/x-icon "access plus 1 week"
+ExpiresByType image/x-icon "access plus 1 day"
 # Images
 ExpiresByType image/gif "access plus 1 week"
 ExpiresByType image/png "access plus 1 week"
