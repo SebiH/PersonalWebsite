@@ -1,13 +1,13 @@
 <div id="backgroundimage"> </div>
 
-<div id="maincontent" class="hcenter-container" ng-controller="ContactController">
+<div id="maincontent" class="centeredcontainer" ng-controller="ContactController">
 
-    <div class="contact-form-container hcenter" ng-hide="formSent">
+    <div class="contact-form-container centered" ng-hide="formSent">
         <h1>
             Want to tell me something?
         </h1>
 
-        <div>
+        <div class="hcenter">
             <form name="form" class="pure-form contact-form" novalidate ng-submit="form.$valid && send()">
 
                 <label for="name">
@@ -49,8 +49,10 @@
         </div>
     </div>
 
-    <div class="content" ng-show="formSent">
-        <h1> Thanks for the message! </h1>
+    <div class="centered" ng-show="formSent">
+        <div class="hcenter">
+            <h1> Thanks for the message! </h1>
+        </div>
     </div>
 </div>
 
