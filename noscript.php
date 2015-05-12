@@ -56,7 +56,7 @@ if (empty($filename))
 
     <div id="layout">
         <div id="javascript-notification">
-            <h3> Please enable JavaScript </h3>
+            <h3> Please enable JavaScript! </h3>
             <p> This site was built with AngularJS in mind </p>
         </div> 
 

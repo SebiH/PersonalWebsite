@@ -24,7 +24,19 @@
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css" media="all" rel="stylesheet" type="text/css">
 
         <noscript>
-            <meta http-equiv="refresh" content="0; url=/noscript.php" />
+            <style>
+                #javascript-notification {
+                    display: initial !important;
+                }
+
+                [ng-cloak] {
+                    display: initial !important;
+                }
+
+                #menu {
+                    z-index: 5;
+                }
+            </style>
         </noscript>
 
     </head>
@@ -32,6 +44,10 @@
     <body ng-app="SeHub" ng-controller="NavigationController" ng-cloak>
 
         <div id="layout">
+            <div id="javascript-notification" style="display: none;">
+                <h3> Please enable JavaScript! </h3>
+                <p> This site was built with AngularJS in mind. <a href="/noscript.php"> Click here for a no-script version </a> </p>
+            </div> 
 
             <!-- Menubar -->
             <div id="navbar" class="transition" ng-class="{'navbar-hidden': !showMenu}" ng-cloak>
