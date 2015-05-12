@@ -1,5 +1,5 @@
 <?php
-$filename = $_GET['site'];
+$filename = $_GET['site']; 
 
 // load home if no site specified
 if (empty($filename))
@@ -10,6 +10,14 @@ if (empty($filename))
     <head>
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+
+        <meta name="description" content="CompScience student and Software Developer">
+        <meta name="keywords" content="personal website, hubenschmid">
+        <meta name="author" content="Sebastian Hubenschmid">
+
+
         <link rel="shortcut icon" type="image/ico" href="img/favicon.ico">
         <title> Sebastian Hubenschmid | Personal website </title>
 
