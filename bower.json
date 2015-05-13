@@ -1,0 +1,25 @@
+{
+  "name": "SeHub.de",
+  "version": "1.0.0",
+  "homepage": "https://github.com/SebiH/SebiH.github.io",
+  "authors": [
+    "Sebastian Hubenschmid <SebastianHubenschmid@gmail.com>"
+  ],
+  "description": "Personal Website for Sebastian Hubenschmid",
+  "main": "index.html",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "libs"
+  ],
+  "dependencies": {
+    "font-awesome": "~4.3.0",
+    "pure": "~0.6.0",
+    "ui-router": "~0.2.14"
+  }
+}
