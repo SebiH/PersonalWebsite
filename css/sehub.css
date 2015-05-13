@@ -17,13 +17,13 @@ html, body {
     display: none !important;
 }
 
-#layout {
+.layout {
     width: 100%;
     height: 100%;
 }
 
 
-#content {
+.content {
     height: 100%;
     overflow: hidden;
     position: relative;
@@ -103,12 +103,12 @@ a::selection {
 /* ====== */
 
 
-#navbar {
+.navbar {
     width: 230px; 
     height: 100%;
 }
 
-#menu {
+.menu {
     width: 230px; 
     height: 100%;
     position: relative;
@@ -137,7 +137,7 @@ a::selection {
 .nav-item {
     height: 3em;
     width: 100%;
-    
+
     vertical-align: middle;
     padding: 1.125em 2em;
 
@@ -179,7 +179,7 @@ a::selection {
 }
 
 
-#content {
+.content {
     position: absolute;
     top: 0;
     left: 230px;
@@ -199,7 +199,7 @@ a::selection {
 /* Menu sidebar */
 /* ============ */
 
-#title-bar {
+.title-bar {
     color: white;
     background: black;
     width: 44px;
@@ -233,25 +233,10 @@ a::selection {
 }
 
 
-/* ===================== */
-/* NoScript notification */
-/* ===================== */
-
-#javascript-notification {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    z-index: 2;
-    background: rgba(0, 255, 0, 0.5);
-    text-align: center;
-}
-
-
 /* ========== */
 /* Icon panel */
 /* ========== */
-#iconPanel {
+.icon-panel {
     width: 100%;
     position: absolute;
     left: 0;
@@ -261,11 +246,11 @@ a::selection {
     overflow-y: hidden;
 }
 
-#iconPanel.active {
+.icon-panel.active {
     left: 230px;
 }
 
-#iconTable {
+.icon-panel > div {
     width: 100%;
     height: 100%;
     border-top: 1px solid #333;
@@ -327,7 +312,7 @@ h1, h2, h3, h4, h5, h6 {
     color: black;
 }
 
-#maincontent {
+.main-content {
     height: 100%;
     width: 100%;
 
@@ -401,20 +386,20 @@ h1, h2, h3, h4, h5, h6 {
 
 
 .ng-anim-fade.ng-enter {
-  opacity: 0;
+    opacity: 0;
 }
 
 .ng-anim-fade.ng-enter.ng-enter-active {
-  opacity: 1;
+    opacity: 1;
 }
 
 
 .ng-anim-fade.ng-leave {
-  opacity: 1;
+    opacity: 1;
 }
 
 .ng-anim-fade.ng-leave.ng-leave-active {
-  opacity: 0;
+    opacity: 0;
 }
 
 
@@ -632,7 +617,7 @@ h1, h2, h3, h4, h5, h6 {
     float: right;
 }
 
-#form-submit {
+.form-submit {
     width: 20em;
 }
 
@@ -640,110 +625,115 @@ h1, h2, h3, h4, h5, h6 {
 /* Loading bar by http://codepen.io/Mattykins/pen/wfJqk */
 /* ==================================================== */
 
-#loadingcontainer {
-  width: 100px;
-  height: 122px;
-  position: absolute;
-  top: 45%;
-  border-radius: 100%;
-  left: calc(50% - 50px);
-  text-align: center;
+.loading-container {
+    width: 100px;
+    height: 122px;
+    position: absolute;
+    top: 45%;
+    border-radius: 100%;
+    left: calc(50% - 50px);
+    text-align: center;
 }
 
-.loadinganimation {
-  width: 100px;
-  height: 102px;
-  border-radius: 100%;
+.loading-container > .animation {
+    width: 100px;
+    height: 102px;
+    border-radius: 100%;
+}
+
+.loading-container > .text {
+    width: 200px;
+    margin-left: -50px;
 }
 
 .circle {
-  width: 100%;
-  height: 100%;
-  position: absolute;
+    width: 100%;
+    height: 100%;
+    position: absolute;
 }
 
 .circle .inner {
-  width: 100%;
-  height: 100%;
-  border-radius: 100%;
-  border: 5px solid rgba(0, 255, 30, 0.7);
-  border-right: none;
-  border-top: none;
-  background-clip: padding;
-  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    border: 5px solid rgba(0, 255, 30, 0.7);
+    border-right: none;
+    border-top: none;
+    background-clip: padding;
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.25);
 }
 
 .circle-alt {
-  width: 100%;
-  height: 100%;
-  position: absolute;
+    width: 100%;
+    height: 100%;
+    position: absolute;
 }
 
 .circle-alt .inner {
-  width: 100%;
-  height: 100%;
-  border-radius: 100%;
-  border: 5px solid rgba(0, 240, 70, 0.7);
-  border-right: none;
-  border-top: none;
-  background-clip: padding;
-  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    border: 5px solid rgba(0, 240, 70, 0.7);
+    border-right: none;
+    border-top: none;
+    background-clip: padding;
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
 @-webkit-keyframes spin {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
+    from {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
 }
 
 @keyframes spin {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
+    from {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
 }
 .circle:nth-of-type(0) {
-  -webkit-transform: rotate(0deg);
-      -ms-transform: rotate(0deg);
-          transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
 }
 .circle:nth-of-type(0) .inner {
-  -webkit-animation: spin 2s infinite linear;
-          animation: spin 2s infinite linear;
+    -webkit-animation: spin 2s infinite linear;
+    animation: spin 2s infinite linear;
 }
 
 .circle:nth-of-type(1) {
-  -webkit-transform: rotate(70deg);
-      -ms-transform: rotate(70deg);
-          transform: rotate(70deg);
+    -webkit-transform: rotate(70deg);
+    -ms-transform: rotate(70deg);
+    transform: rotate(70deg);
 }
 .circle:nth-of-type(1) .inner {
-  -webkit-animation: spin 1s infinite linear;
-          animation: spin 1s infinite linear;
+    -webkit-animation: spin 1s infinite linear;
+    animation: spin 1s infinite linear;
 }
 
 .circle:nth-of-type(2) {
-  -webkit-transform: rotate(140deg);
-      -ms-transform: rotate(140deg);
-          transform: rotate(140deg);
+    -webkit-transform: rotate(140deg);
+    -ms-transform: rotate(140deg);
+    transform: rotate(140deg);
 }
 .circle:nth-of-type(2) .inner {
-  -webkit-animation: spin 1s infinite linear;
-          animation: spin 1s infinite linear;
+    -webkit-animation: spin 1s infinite linear;
+    animation: spin 1s infinite linear;
 }
 
-.loadinganimation {
-  -webkit-animation: spin 2s infinite linear;
-          animation: spin 2s infinite linear;
+.loading-container > .animation {
+    -webkit-animation: spin 2s infinite linear;
+    animation: spin 2s infinite linear;
 }
 
 

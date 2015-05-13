@@ -25,35 +25,22 @@
 
         <noscript>
             <style>
-                #javascript-notification {
-                    display: initial !important;
-                }
-
-                [ng-cloak] {
-                    display: initial !important;
-                }
-
-                #menu {
-                    z-index: 5;
+                [ng-cloak], .show-noscript {
+                    display: initial;
                 }
             </style>
         </noscript>
-
     </head>
 
-    <body ng-app="SeHub" ng-controller="NavigationController" ng-cloak>
+    <body ng-app="SeHub" ng-controller="NavigationController">
 
-        <div id="layout">
-            <div id="javascript-notification" style="display: none;">
-                <h3> Please enable JavaScript! </h3>
-                <p> This site was built with AngularJS in mind. <a href="/noscript.php"> Click here for a no-script version </a> </p>
-            </div> 
+        <div class="layout">
 
             <!-- Menubar -->
-            <div id="navbar" class="transition" ng-class="{'navbar-hidden': !showMenu}" ng-cloak>
+            <div class="navbar transition" ng-class="{'navbar-hidden': !showMenu}">
                 <!-- Menu items -->
-                <div id="menu">
-                    <div class="burgerwrapper noselect" ng-click="toggleMenu()" ng-class="{spin180: showMenu, spin360: !showMenu }" ng-if="burgerVisible">
+                <div class="menu">
+                    <div class="burgerwrapper noselect" ng-click="toggleMenu()" ng-class="{spin180: showMenu, spin360: !showMenu }" ng-if="burgerVisible" ng-cloak>
                         <div class="hamburger" ng-class="{spin: showMenu}">
                             <i></i>
                         </div>
@@ -78,8 +65,8 @@
                         About me
                     </a>
 
-                    <div id="iconPanel" class="noselect" ondragstart="return false;" ondrop="return false;">
-                        <div id="iconTable" class="noselect">
+                    <div class="ion-panel noselect" ondragstart="return false;" ondrop="return false;">
+                        <div class="noselect">
                             <div>
                                 <a class="icon transition" href="https://www.facebook.com/SebastianHubenschmid" target="_blank">
                                     <p> <span class="fa fa-facebook icon"></span> </p>
@@ -95,6 +82,7 @@
                                 <a class="icon transition" ui-sref="contact" ui-sref-active="nav-item-selected">
                                     <span class="fa fa-envelope"></span>
                                 </a>
+                            </div>
 
                             <div>
                                 <a class="icon transition" href="https://github.com/SebiH" target="_blank">
@@ -121,10 +109,10 @@
 
 
             <!-- Content --> 
-            <div id="content" class="transition" ng-class="{'content-extended': !showMenu}">
+            <div class="content transition" ng-class="{'content-extended': !showMenu}">
                 <div ui-view class="ng-anim-fade transition" style="width: 100%; height: 100%;">
-                    <div id="loadingcontainer">
-                        <div class="loadinganimation">
+                    <div class="loading-container">
+                        <div class="animation">
                           <div class="circle">
                             <div class="inner"></div>
                           </div>
@@ -141,7 +129,10 @@
                             <div class="inner"></div>
                           </div>
                         </div>
-                        <p> Loading ... </p>
+                        <div class="text">
+                            <p> Loading ... </p>
+                            <p class="show-noscript"> (You must have JavaScript enabled) </p>
+                        </div>
                     </div>
                 </div>
 

@@ -15,7 +15,7 @@
 </style>
 
 
-<div id="maincontent" class="centeredcontainer">
+<div class="centeredcontainer">
     <div class="centered">
         <h1 class="error-mainheader"> Error =( </h1>
 <?php 
