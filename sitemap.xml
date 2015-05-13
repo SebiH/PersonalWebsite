@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+    http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+    <url>
+        <loc>http://sehub.de/</loc>
+        <lastmod>2015-05-12T21:53:39+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>1.00</priority>
+    </url>
+    <url>
+        <loc>http://sehub.de/home</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.64</priority>
+    </url>
+    <url>
+        <loc>http://sehub.de/projects</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.64</priority>
+    </url>
+    <url>
+        <loc>http://sehub.de/CV</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.64</priority>
+    </url>
+    <url>
+        <loc>http://sehub.de/aboutme</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.64</priority>
+    </url>
+    <url>
+        <loc>http://sehub.de/contact</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.64</priority>
+    </url>
+</urlset>
