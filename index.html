@@ -34,6 +34,15 @@
 
     <body ng-app="SeHub" ng-controller="NavigationController">
 
+        <!-- invisible navbar because webcrawlers don't like angularjs/ui-router navigation -->
+        <nav style="display: none !important;">
+            <a href="/home">Home</a>
+            <a href="/projects">Projects</a>
+            <a href="/CV">CV</a>
+            <a href="/aboutme">About me</a>
+            <a href="/contact">Contact</a>
+        </nav>
+
         <div class="layout">
 
             <!-- Menubar -->
