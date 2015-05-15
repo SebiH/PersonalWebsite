@@ -1,0 +1,18 @@
+<FilesMatch ".(eot|ttf|otf|woff)">
+    Header set Access-Control-Allow-Origin "*"
+</FilesMatch>
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # Nicer URLs for Phalcon
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^(.*)$ index.php?_url=/$1 [QSA,L]
+
+    # Redirect to the proper domain
+    #RewriteCond %{HTTP_HOST} ^www.sehub.de$ [NC]
+    #RewriteRule ^(.*)$ http://example.com/$1 [R=301,L]
+
+</IfModule>
+

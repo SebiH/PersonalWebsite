@@ -1,14 +1,6 @@
-<FilesMatch ".(eot|ttf|otf|woff)">
-    Header set Access-Control-Allow-Origin "*"
-</FilesMatch>
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^$ public/     [L]
+    RewriteRule (.*) public/$1 [L]
+</IfModule>
 
-RewriteEngine   On
-RewriteBase     /
-RewriteCond     %{REQUEST_URI} !^(/img|/js|/css)
-RewriteCond     %{REQUEST_FILENAME} !-f
-RewriteCond     %{REQUEST_FILENAME} !-d
-RewriteRule     .               /index.html              [L]
-
-#ErrorDocument 500 /home
-#ErrorDocument 404 /home
-#ErrorDocument 401 /home

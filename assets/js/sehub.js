@@ -12,27 +12,23 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
   $stateProvider
     .state('home', {
       url: "/home",
-      templateUrl: "content/home.html"
+      templateUrl: "/content/load/index"
     })
     .state('CV', {
       url: "/CV",
-      templateUrl: "content/CV.html"
+      templateUrl: "/content/load/cv"
     })
     .state('contact', {
       url: "/contact",
-      templateUrl: "content/contact.html"
-    })
-    .state('error', {
-      url: "/error",
-      templateUrl: "content/error.html"
+      templateUrl: "/content/load/contact"
     })
     .state('aboutme', {
       url: "/aboutme",
-      templateUrl: "content/aboutme.html"
+      templateUrl: "/content/load/aboutme"
     })
     .state('projects', {
       url: "/projects",
-      templateUrl: "content/projects.html"
+      templateUrl: "/content/load/projects"
     });
 });
 

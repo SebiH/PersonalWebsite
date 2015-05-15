@@ -46,6 +46,32 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
+
+/* 
+ * Replace some elements in the noscript version, e.g. links:
+ * ui-sref with JS,
+ * normal href without JS
+ */
+.show-noscript {
+    display: none !important;
+}
+
+/* activated in <noscript> block */
+.hide-noscript {
+
+}
+
+.noscript-warning {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 300px;
+    background-color: #4F9FCF;
+    padding: 20px;
+}
+
+
+
 a:focus {
     outline: 0;
 }
@@ -126,6 +152,7 @@ a::selection {
     position: relative;
     background: #191818;
 }
+
 
 .nav-header {
     font-size: 125%;
@@ -268,7 +295,6 @@ a::selection {
     border-top: 1px solid #333;
 }
 
-
 .icon {
     width: 57.5px;
     height: 50%;
@@ -291,10 +317,10 @@ a::selection {
     color: #7D7;
 }
 
-.icontext {
-    color: #777;
-    font-size: 60%;
-    font-family: "omnes-pro", sans-serif;
+/* show some invisible text to satisfy a few validators */
+.icon .text {
+    color: transparent;
+    display: none;
 }
 
 /* ============== */
