@@ -67,16 +67,16 @@
                     <a data-ui-sref="home" class="nav-header noselect transition hide-noscript">Sebastian Hubenschmid</a>
 
                     <a href="/home" class="nav-item noselect show-noscript {{ index_class }}"> Home </a>
-                    <a data-ui-sref="home" class="nav-item noselect transition hide-noscript" data-ui-sref-active="nav-item-selected"> Home </a>
+                    <a data-ui-sref="home" class="nav-item noselect transition hide-noscript" data-ng-class="{ 'nav-item-selected': $state.name === 'home' }"> Home </a>
 
                     <a href="/projects" class="nav-item noselect show-noscript {{ projects_class }}"> Projects </a>
-                    <a data-ui-sref="projects" class="nav-item noselect transition hide-noscript" data-ui-sref-active="nav-item-selected"> Projects </a>
+                    <a data-ui-sref="projects" class="nav-item noselect transition hide-noscript" data-ng-class="{ 'nav-item-selected': $state.name === 'projects' }"> Projects </a>
 
                     <a href="/CV" class="nav-item noselect show-noscript {{ cv_class }}"> CV </a>
-                    <a data-ui-sref="CV" class="nav-item noselect transition hide-noscript" data-ui-sref-active="nav-item-selected"> CV </a>
+                    <a data-ui-sref="CV" class="nav-item noselect transition hide-noscript" data-ng-class="{ 'nav-item-selected': $state.name === 'CV' }"> CV </a>
 
                     <a href="/aboutme" class="nav-item noselect show-noscript {{ aboutme_class }}"> About me </a>
-                    <a data-ui-sref="aboutme" class="nav-item noselect transition hide-noscript" data-ui-sref-active="nav-item-selected"> About me </a>
+                    <a data-ui-sref="aboutme" class="nav-item noselect transition hide-noscript" data-ng-class="{ 'nav-item-selected': $state.name === 'aboutme' }"> About me </a>
 
                     <div class="icon-panel noselect" ondragstart="return false;" ondrop="return false;">
                         <div class="noselect">
@@ -96,7 +96,7 @@
                                 <a class="icon show-noscript {{ contact_class }}" href="/contact">
                                     <span class="fa fa-envelope"></span> <span class="text"> Send me a message </span>
                                 </a>
-                                <a class="icon transition hide-noscript" data-ui-sref="contact" data-ui-sref-active="nav-item-selected">
+                                <a class="icon transition hide-noscript" data-ui-sref="contact" data-ng-class="{ 'nav-item-selected': $state.name === 'contact' }">
                                     <span class="fa fa-envelope"></span> <span class="text"> Send me a message </span>
                                 </a>
                             </div>

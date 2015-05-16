@@ -3,7 +3,6 @@ var app = angular.module('SeHub', ['ui.router', 'ngAnimate']);
 app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
     'use strict';
 
-    // It's 2015. I think we can start dropping non-html5 browser support now.
     $locationProvider.html5Mode({
         enabled: true,
         requireBase: false
@@ -35,7 +34,7 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
 });
 
 
-app.controller('NavigationController', function($scope, $window) {
+app.controller('NavigationController', function($scope, $window, $rootScope) {
     'use strict';
 
     var MIN_WIDTH_FOR_VISIBLE_MENU = 1000;
@@ -77,6 +76,21 @@ app.controller('NavigationController', function($scope, $window) {
     // trigger on load with initial window size
     updateMenuVisibility();
 
+
+
+    // block the first state change: content is already loaded by phalcon,
+    // triggering another statechange loads unnecessary content and triggers
+    // slightly noticable animation
+    var firstTransition = true;
+    $rootScope.$on('$stateChangeStart', function(event, toState) {
+        // update ui-sref-active classes manually
+        $scope.$state = toState;
+
+        if (firstTransition) {
+            event.preventDefault();
+            firstTransition = false;
+        }
+    });
 });
 
 
