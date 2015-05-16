@@ -10,7 +10,6 @@ use Phalcon\Mvc\Model\Metadata\Memory as MetaData;
 use Phalcon\Session\Adapter\Files as SessionAdapter;
 use Phalcon\Flash\Session as FlashSession;
 use Phalcon\Events\Manager as EventsManager;
-use Phalcon\Mvc\Router;
 use Phalcon\Logger\Adapter\File as FileAdapter;
 
 use Sehub\Plugins\NotFoundPlugin;
@@ -23,7 +22,7 @@ $di = new DI();
 
 //Registering a router
 $di->set('router', function() use ($config) {
-    require_once APP_PATH . 'app/config/routing.php';
+    require_once APP_PATH . 'app/config/routes.php';
 
     return $router;
 });
