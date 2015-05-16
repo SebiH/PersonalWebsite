@@ -23,22 +23,7 @@ $di = new DI();
 
 //Registering a router
 $di->set('router', function() use ($config) {
-    $router = new Router();
-    $router->setDefaultNamespace($config->application->controllerNamespace);
-
-    $router->notFound(array(
-        'controller' => 'error',
-        'action' => 'show404'
-    ));
-
-    $router->removeExtraSlashes(true);
-
-    $router->add('/', 'Index::index');
-    $router->add('/aboutme', 'Index::aboutme');
-    $router->add('/CV', 'Index::cv');
-    $router->add('/contact', 'Index::contact');
-    $router->add('/projects', 'Index::projects');
-    $router->add('/home', 'Index::index');
+    require_once APP_PATH . 'app/config/routing.php';
 
     return $router;
 });
