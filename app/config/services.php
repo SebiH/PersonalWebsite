@@ -13,6 +13,7 @@ use Phalcon\Events\Manager as EventsManager;
 use Phalcon\Logger\Adapter\File as FileAdapter;
 
 use Sehub\Plugins\NotFoundPlugin;
+use Sehub\Plugins\TrackingPlugin;
 use Sehub\Libraries\LiveVolt;
 
 /**
@@ -33,6 +34,11 @@ $di->set('router', function() use ($config) {
 $di->set('dispatcher', function() use ($config) {
 
     $eventsManager = new EventsManager;
+
+    /**
+     * Backend user tracking
+     */
+    $eventsManager->attach('dispatch:beforeDispatch', new TrackingPlugin);
 
     /**
      * Handle exceptions and not-found exceptions using NotFoundPlugin
