@@ -30,7 +30,7 @@ class NotFoundPlugin extends Plugin
                 case Dispatcher::EXCEPTION_HANDLER_NOT_FOUND:
                 case Dispatcher::EXCEPTION_ACTION_NOT_FOUND:
                     $dispatcher->forward(array(
-                        'namespace' => 'Sehub\Controllers',
+                        'namespace' => $this->config->application->controllerNamespace,
                         'controller' => 'error',
                         'action' => 'show404'
                     ));
@@ -39,7 +39,7 @@ class NotFoundPlugin extends Plugin
         }
 
         $dispatcher->forward(array(
-            'namespace' => 'Sehub\Controllers',
+            'namespace' => $this->config->application->controllerNamespace,
             'controller' => 'error',
             'action'     => 'show500'
         ));

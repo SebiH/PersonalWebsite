@@ -22,22 +22,22 @@ use Sehub\Libraries\LiveVolt;
 $di = new DI();
 
 //Registering a router
-$di->set('router', function() {
+$di->set('router', function() use ($config) {
     $router = new Router();
-    $router->setDefaultNamespace('Sehub\Controllers');
+    $router->setDefaultNamespace($config->controllerNamespace);
 
     $router->notFound(array(
-        'namespace' => 'Sehub\Controllers',
+        'namespace' => $config->application->controllerNamespace,
         'controller' => 'error',
         'action' => 'show404'
     ));
 
-    $router->add('/', 'Sehub\Controllers\Index::index');
-    $router->add('/aboutme', 'Sehub\Controllers\Index::aboutme');
-    $router->add('/CV', 'Sehub\Controllers\Index::cv');
-    $router->add('/contact', 'Sehub\Controllers\Index::contact');
-    $router->add('/projects', 'Sehub\Controllers\Index::projects');
-    $router->add('/home', 'Sehub\Controllers\Index::index');
+    $router->add('/', $config->application->controllerNamespace . '\Index::index');
+    $router->add('/aboutme', $config->application->controllerNamespace . '\Index::aboutme');
+    $router->add('/CV', $config->application->controllerNamespace . '\Index::cv');
+    $router->add('/contact', $config->application->controllerNamespace . '\Index::contact');
+    $router->add('/projects', $config->application->controllerNamespace . '\Index::projects');
+    $router->add('/home', $config->application->controllerNamespace . '\Index::index');
 
     return $router;
 });     
@@ -45,7 +45,7 @@ $di->set('router', function() {
 /**
  * We register the events manager
  */
-$di->set('dispatcher', function() use ($di) {
+$di->set('dispatcher', function() use ($config) {
 
     $eventsManager = new EventsManager;
 
@@ -56,7 +56,7 @@ $di->set('dispatcher', function() use ($di) {
 
     $dispatcher = new Dispatcher;
     $dispatcher->setEventsManager($eventsManager);
-    $dispatcher->setDefaultNamespace('Sehub\Controllers');
+    $dispatcher->setDefaultNamespace($config->application->controllerNamespace);
 
     return $dispatcher;
 });
@@ -152,5 +152,9 @@ $di->set('assets', function() {
 
 $di->set('escaper', function() {
     return new Escaper();
+});
+
+$di->set('config', function() use ($config) {
+    return $config;
 });
 
