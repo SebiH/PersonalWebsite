@@ -34,12 +34,6 @@ html, body {
 /* General style */
 /* ============= */
 
-/* Firefox jumps around with fonts */
-* {
-    font-family: 'Open Sans', sans-serif;
-}
-
-
 body {
     background-color: #eee;
     color: #111111;
