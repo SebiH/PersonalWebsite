@@ -8,7 +8,7 @@
         <div class="hcenter">
             <form name="form" class="pure-form contact-form" novalidate data-ng-submit="form.$valid && send()">
 
-                <label for="name">
+                <label>
                     <span> Name*: </span>
                     <span class="form-error" data-ng-if="(form.$submitted || form.name.$touched) && form.name.$error.required"> 
                         Please tell me your name 
@@ -17,7 +17,7 @@
                 <input data-ng-model="data.name" name="name" class="pure-input-1" required>
 
 
-                <label for="email">
+                <label>
                     <span> Email*: </span>
                     <span class="form-error" data-ng-if="(form.$submitted || form.email.$touched) && (form.email.$error.required || form.email.$error.email)">
                         Please enter a valid Email address 
@@ -25,18 +25,18 @@
                 </label>
                 <input data-ng-model="data.email" name="email" class="pure-input-1" type="email" required>
 
-                <label for="subject">
+                <label>
                     <span> Subject: </span>
                 </label>
                 <input data-ng-model="data.subject" name="subject" class="pure-input-1">
 
-                <label for="message">
+                <label>
                     <span> Message*: </span>
                     <span class="form-error" data-ng-if="(form.$submitted || form.message.$touched) && form.message.$error.required"> 
                         You need to enter a message 
                     </span>
                 </label>
-                <textarea class="pure-input-1 form-textarea" data-ng-model="data.message" name="message" type="text" required></textarea>
+                <textarea class="pure-input-1 form-textarea" data-ng-model="data.message" name="message" required></textarea>
 
                 <div>
                     <button class="form-submit pure-button pure-button-primary" type="submit">

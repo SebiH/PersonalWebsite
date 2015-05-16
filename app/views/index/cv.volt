@@ -148,7 +148,7 @@
                 <div class="cvtable">
                     <div class="cvrow">
                         <div class="cvcell cvcenter description">
-                            Working as software developer on research prototypes, see <a ui-sref="projects">Projects</a>.
+                            Working as software developer on research prototypes, see <a data-ui-sref="projects">Projects</a>.
                         </div>
                     </div>
                 </div>

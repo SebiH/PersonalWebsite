@@ -62,7 +62,7 @@
                 </div>
             </div>
 
-            
+
 
 
 
@@ -108,7 +108,7 @@
 
 
 
-            
+
 
 
 
@@ -155,13 +155,13 @@
 
                 <div class="proj-description">
                     <p> FacetStream++ enables a group of users to collaboratively and simultaneously search in large amounts of data - for example for books in a library. The results are visualized in a HyperGrid - offering both an overview of the selected data, as well as detailled information by tapping the entry. </p> 
-                    </p> FacetStream++ and the HyperGrid are now part of librOS, standing in the Central Library of Cologne, as well as in the library of the University of Konstanz. </p>
+                    <p> FacetStream++ and the HyperGrid are now part of librOS, standing in the Central Library of Cologne, as well as in the library of the University of Konstanz. </p>
                 </div>
             </div>
-            
 
 
-            
+
+
 
 
 
