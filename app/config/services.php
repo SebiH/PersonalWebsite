@@ -26,6 +26,13 @@ $di->set('router', function() {
     $router = new Router();
     $router->setDefaultNamespace('Sehub\Controllers');
 
+    $router->notFound(array(
+        'namespace' => 'Sehub\Controllers',
+        'controller' => 'error',
+        'action' => 'show404'
+    ));
+
+    $router->add('/', 'Sehub\Controllers\Index::index');
     $router->add('/aboutme', 'Sehub\Controllers\Index::aboutme');
     $router->add('/CV', 'Sehub\Controllers\Index::cv');
     $router->add('/contact', 'Sehub\Controllers\Index::contact');
