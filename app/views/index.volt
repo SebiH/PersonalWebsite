@@ -66,7 +66,7 @@
                     <a href="/home" class="nav-header noselect show-noscript">Sebastian Hubenschmid</a>
                     <a data-ui-sref="home" class="nav-header noselect transition hide-noscript">Sebastian Hubenschmid</a>
 
-                    <a href="/home" class="nav-item noselect show-noscript {{ home_class }}"> Home </a>
+                    <a href="/home" class="nav-item noselect show-noscript {{ index_class }}"> Home </a>
                     <a data-ui-sref="home" class="nav-item noselect transition hide-noscript" data-ui-sref-active="nav-item-selected"> Home </a>
 
                     <a href="/projects" class="nav-item noselect show-noscript {{ projects_class }}"> Projects </a>
@@ -93,7 +93,7 @@
                                         <p> <span class="fa fa-twitter"></span> <span class="text"> Find me on Twitter </span> </p>
                                 </a>
 
-                                <a class="icon show-noscript" href="/contact" data-ui-sref-active="nav-item-selected">
+                                <a class="icon show-noscript {{ contact_class }}" href="/contact">
                                     <span class="fa fa-envelope"></span> <span class="text"> Send me a message </span>
                                 </a>
                                 <a class="icon transition hide-noscript" data-ui-sref="contact" data-ui-sref-active="nav-item-selected">
