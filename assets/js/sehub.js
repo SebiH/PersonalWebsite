@@ -1,39 +1,43 @@
 var app = angular.module('SeHub', ['ui.router', 'ngAnimate']);
 
 app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
-  // It's 2015. I think we can start dropping non-html5 browser support now.
-  $locationProvider.html5Mode({
-      enabled: true,
-      requireBase: false
-  });
-  // For any unmatched url, redirect to /home
-  $urlRouterProvider.otherwise("/home");
+    'use strict';
 
-  $stateProvider
+    // It's 2015. I think we can start dropping non-html5 browser support now.
+    $locationProvider.html5Mode({
+        enabled: true,
+        requireBase: false
+    });
+    // For any unmatched url, redirect to /home
+    $urlRouterProvider.otherwise("/home");
+
+    $stateProvider
     .state('home', {
-      url: "/home",
-      templateUrl: "/content/load/index"
+        url: "/home",
+        templateUrl: "/content/load/index"
     })
     .state('CV', {
-      url: "/CV",
-      templateUrl: "/content/load/cv"
+        url: "/CV",
+        templateUrl: "/content/load/cv"
     })
     .state('contact', {
-      url: "/contact",
-      templateUrl: "/content/load/contact"
+        url: "/contact",
+        templateUrl: "/content/load/contact"
     })
     .state('aboutme', {
-      url: "/aboutme",
-      templateUrl: "/content/load/aboutme"
+        url: "/aboutme",
+        templateUrl: "/content/load/aboutme"
     })
     .state('projects', {
-      url: "/projects",
-      templateUrl: "/content/load/projects"
+        url: "/projects",
+        templateUrl: "/content/load/projects"
     });
 });
 
 
 app.controller('NavigationController', function($scope, $window) {
+    'use strict';
+
     var MIN_WIDTH_FOR_VISIBLE_MENU = 1000;
 
     $scope.showMenu = true;
@@ -69,7 +73,7 @@ app.controller('NavigationController', function($scope, $window) {
             $scope.showMenu = true;
             $scope.burgerVisible = false;
         }
-    };
+    }
     // trigger on load with initial window size
     updateMenuVisibility();
 
@@ -77,20 +81,23 @@ app.controller('NavigationController', function($scope, $window) {
 
 
 app.controller('ContactController', function($scope, $http) {
+    'use strict';
+
     $scope.data = { };
     $scope.formSent = false;
 
     $scope.send = function() {
-        $http.post('scripts/send_mail.php', $scope.data)
-            .success(function(result) {
-                if (result.success)
-                    $scope.formSent = true;
-                else
-                    window.alert(result.error);
-            })
-            .error(function() {
-                window.alert("Could not send form - is the website still reachable?");
-            });
+        $http.post('/mail/send', $scope.data)
+        .success(function(result) {
+            if (result.success) {
+                $scope.formSent = true;
+            } else {
+                window.alert(result.error);
+            }
+        })
+        .error(function() {
+            window.alert("Could not send form - is the website still reachable?");
+        });
     };
 });
 
