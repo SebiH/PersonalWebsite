@@ -71,7 +71,7 @@
             <div class="proj-container">
                 <div class="pure-g">
                     <div class="pure-u-1 pure-u-md-1-2">
-                        <img class="proj-image pure-img" src="img/MediaRoomControl.jpg" alt="Project screenshot"/>
+                        <img class="proj-image pure-img" src="/img/MediaRoomControl.jpg" alt="Project screenshot"/>
                     </div>
 
                     <div class="proj-text pure-u-1 pure-u-md-1-2">
@@ -117,7 +117,7 @@
             <div class="proj-container">
                 <div class="pure-g">
                     <div class="pure-u-1 pure-u-md-1-2">
-                        <img class="proj-image pure-img" src="img/HyperGrid.jpg" alt="Project screenshot"/>
+                        <img class="proj-image pure-img" src="/img/HyperGrid.jpg" alt="Project screenshot"/>
                     </div>
 
                     <div class="proj-text pure-u-1 pure-u-md-1-2">
@@ -170,7 +170,7 @@
             <div class="proj-container">
                 <div class="pure-g">
                     <div class="pure-u-1 pure-u-md-1-2">
-                        <img class="proj-image pure-img" src="img/ISGCI.jpg" alt="Project screenshot"/>
+                        <img class="proj-image pure-img" src="/img/ISGCI.jpg" alt="Project screenshot"/>
                     </div>
 
                     <div class="proj-text pure-u-1 pure-u-md-1-2">

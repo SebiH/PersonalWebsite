@@ -2,7 +2,7 @@
     <div class="hcenter about-container">
         <div class="pure-g">
             <div class="pure-u-1-4">
-                <img class="about-profilepic pure-img" src="img/profilepic.jpg" alt="Profile picture"/>
+                <img class="about-profilepic pure-img" src="/img/profilepic.jpg" alt="Profile picture"/>
             </div>
 
             <div class="about-text pure-u-3-4">

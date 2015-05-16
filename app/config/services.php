@@ -32,6 +32,8 @@ $di->set('router', function() use ($config) {
         'action' => 'show404'
     ));
 
+    $router->removeExtraSlashes(true);
+
     $router->add('/', $config->application->controllerNamespace . '\Index::index');
     $router->add('/aboutme', $config->application->controllerNamespace . '\Index::aboutme');
     $router->add('/CV', $config->application->controllerNamespace . '\Index::cv');
