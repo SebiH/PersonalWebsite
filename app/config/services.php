@@ -24,25 +24,24 @@ $di = new DI();
 //Registering a router
 $di->set('router', function() use ($config) {
     $router = new Router();
-    $router->setDefaultNamespace($config->controllerNamespace);
+    $router->setDefaultNamespace($config->application->controllerNamespace);
 
     $router->notFound(array(
-        'namespace' => $config->application->controllerNamespace,
         'controller' => 'error',
         'action' => 'show404'
     ));
 
     $router->removeExtraSlashes(true);
 
-    $router->add('/', $config->application->controllerNamespace . '\Index::index');
-    $router->add('/aboutme', $config->application->controllerNamespace . '\Index::aboutme');
-    $router->add('/CV', $config->application->controllerNamespace . '\Index::cv');
-    $router->add('/contact', $config->application->controllerNamespace . '\Index::contact');
-    $router->add('/projects', $config->application->controllerNamespace . '\Index::projects');
-    $router->add('/home', $config->application->controllerNamespace . '\Index::index');
+    $router->add('/', 'Index::index');
+    $router->add('/aboutme', 'Index::aboutme');
+    $router->add('/CV', 'Index::cv');
+    $router->add('/contact', 'Index::contact');
+    $router->add('/projects', 'Index::projects');
+    $router->add('/home', 'Index::index');
 
     return $router;
-});     
+});
 
 /**
  * We register the events manager
@@ -63,7 +62,7 @@ $di->set('dispatcher', function() use ($config) {
     return $dispatcher;
 });
 
-//Registering a Http\Response 
+//Registering a Http\Response
 $di->set('response', function(){
     return new \Phalcon\Http\Response();
 });

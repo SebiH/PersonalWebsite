@@ -15,8 +15,8 @@
     RewriteRule ^(.*)/?$ index.php?_url=/$1 [QSA,L]
 
     # Redirect to the proper domain
-    RewriteCond %{HTTP_HOST} !^sebi\.sh$ [NC]
-    RewriteRule ^(.*)$ http://sebi.sh/ [R=301,L]
+    #RewriteCond %{HTTP_HOST} !^sebi\.sh$ [NC]
+    #RewriteRule ^(.*)$ http://sebi.sh/ [R=301,L]
 
 </IfModule>
 
