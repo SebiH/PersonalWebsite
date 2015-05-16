@@ -4,6 +4,10 @@
 
 <IfModule mod_rewrite.c>
     RewriteEngine On
+
+    # Remove trailing slashes
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)/$ /$1 [L,R=301]
     
     # Nicer URLs for Phalcon
     RewriteCond %{REQUEST_FILENAME} !-d
