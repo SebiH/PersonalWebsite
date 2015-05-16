@@ -20,7 +20,7 @@
         <link type="text/css" rel="stylesheet" href="/libs/pure/pure-min.css">
 
         <!-- Fonts -->
-        <link type="text/css" rel="stylesheet" media="all" href="/libs/lato/css/lato.min.css">
+        <link type="text/css" rel="stylesheet" media="all" href="/libs/open-sans-fontface/open-sans.css">
         <link type="text/css" rel="stylesheet" media="all" href="/libs/font-awesome/css/font-awesome.min.css">
 
         <noscript>

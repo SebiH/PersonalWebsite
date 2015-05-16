@@ -36,14 +36,14 @@ html, body {
 
 /* Firefox jumps around with fonts */
 * {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 
 body {
-    background-color: #FFFFFF;
+    background-color: #eee;
     color: #111111;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 
@@ -174,7 +174,6 @@ a::selection {
 }
 
 .nav-item {
-    height: 3em;
     width: 100%;
 
     vertical-align: middle;
@@ -608,12 +607,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .about-text h1 {
-    font-family: 'Lato', sans-serif; 
+    font-family: 'Open Sans', sans-serif; 
     font-size: 250%;
 }
 
 .about-text p {
-    font-family: 'Lato', sans-serif; 
+    font-family: 'Open Sans', sans-serif; 
     font-size: 125%;
 }
 
@@ -669,7 +668,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .proj-data p {
-    font-family: "Lato", sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-size: 70%;
     text-align: left;
     text-transform: uppercase;
