@@ -18,6 +18,7 @@
         <!-- Styles -->
         {{ assets.outputCss('css') }}
         <link type="text/css" rel="stylesheet" href="/libs/pure/pure-min.css">
+        <link type="text/css" rel="stylesheet" href="/libs/pure/grids-responsive-min.css">
 
         <!-- Fonts -->
         <link type="text/css" rel="stylesheet" media="all" href="/libs/open-sans-fontface/open-sans.css">
@@ -25,6 +26,10 @@
 
         <noscript>
             <style>
+                [class*="fa-"]:before {
+                    content:"+";
+                }
+
                 [data-ng-cloak], .show-noscript {
                     display: initial !important;
                 }
@@ -54,7 +59,7 @@
         <div class="layout">
 
             <!-- Menubar -->
-            <div class="navbar transition" data-ng-class="{'navbar-hidden': !showMenu}">
+            <nav class="navbar transition" data-ng-class="{'navbar-hidden': !showMenu}">
                 <!-- Menu items -->
                 <div class="menu">
                     <div class="burgerwrapper noselect hide-noscript" data-ng-click="toggleMenu()" data-ng-class="{spin180: showMenu, spin360: !showMenu }" data-ng-if="burgerVisible" data-ng-cloak>
@@ -71,9 +76,6 @@
 
                     <a href="/projects" class="nav-item noselect show-noscript {{ projects_class }}"> Projects </a>
                     <a data-ui-sref="projects" class="nav-item noselect transition hide-noscript" data-ng-class="{ 'nav-item-selected': $state.name === 'projects' }"> Projects </a>
-
-                    <a href="/CV" class="nav-item noselect show-noscript {{ cv_class }}"> CV </a>
-                    <a data-ui-sref="CV" class="nav-item noselect transition hide-noscript" data-ng-class="{ 'nav-item-selected': $state.name === 'CV' }"> CV </a>
 
                     <a href="/aboutme" class="nav-item noselect show-noscript {{ aboutme_class }}"> About me </a>
                     <a data-ui-sref="aboutme" class="nav-item noselect transition hide-noscript" data-ng-class="{ 'nav-item-selected': $state.name === 'aboutme' }"> About me </a>
@@ -122,11 +124,11 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </nav>
 
 
             <!-- Content -->
-            <div class="content transition" data-ng-class="{'content-extended': !showMenu}">
+            <main class="content transition" data-ng-class="{'content-extended': !showMenu}">
                 <div data-ui-view class="ng-anim-fade transition" style="width: 100%; height: 100%;">
                     {{ content() }}
                     {#
@@ -156,7 +158,7 @@
                     #}
                 </div>
 
-            </div>
+            </main>
 
         </div>
 

@@ -1,85 +1,88 @@
+{% set projects = jsonloader.fromFile("projects.json")  %}
+
+
+
+
 <div class="main-content hcenter-container">
     <div class="hcenter proj-maincontainer">
             <h1 class="proj-maintitle"> Completed Projects </h1>
 
-            <!-- Quellentaucher -->
-            <div class="proj-container">
-                <div class="pure-g">
-                    <div class="pure-u-1 pure-u-md-1-2">
-                        <div class="video-wrapper proj-image">
-                            <iframe style="border:0;" width="500" height="275" src="http://www.youtube.com/embed/H9adDld22HE" allowfullscreen></iframe>
+            {% for project in projects %}
+
+                <div class="proj-container">
+
+
+                    {# Project image #}
+                    <div class="pure-g">
+                        {% if project.highlight %}
+                        <div class="pure-u-1">
+                        {% else %}
+                        <div class="pure-u-1 pure-u-sm-1-2">
+                        {% endif %}
+                            {{ project.picture }}
+                        </div>
+
+                        {% if project.highlight %}
+                        <div class="proj-text pure-u-1">
+                        {% else %}
+                        <div class="proj-text pure-u-1 pure-u-sm-1-2">
+                        {% endif %}
+
+                            <h2 class="proj-title"> {{ project.title }} </h2>
+                            <hr/>
+                            <div class="proj-data pure-g">
+                    
+                                {% for name, statistic in project.statistics %}
+
+                                <div class="pure-u-1-2">
+                                    <p> {{ name }} </p>
+                                </div>
+                                <div class="pure-u-1-2">
+                                    <p> {{ statistic }} </p>
+                                </div>
+
+                                {% endfor %}
+
+                            </div>
                         </div>
                     </div>
 
-                    <div class="proj-text pure-u-1 pure-u-md-1-2">
-                        <h2 class="proj-title"> Quellentaucher </h2>
-                        <hr/>
-                        <div class="proj-data pure-g">
-                            <div class="pure-u-1-2">
-                                <p> Programming languages </p>
-                            </div>
-                            <div class="pure-u-1-2">
-                                <p> C#, JavaScript </p>
-                            </div>
-                        </div>
 
-                        <div class="proj-data pure-g">
-                            <div class="pure-u-1-2">
-                                <p> Timeframe </p>
-                            </div>
-                            <div class="pure-u-1-2">
-                                <p> Sep 2013 - Oct 2014 </p>
-                            </div>
-                        </div>
-
-                        <div class="proj-data pure-g">
-                            <div class="pure-u-1-2">
-                                <p> Project homepage </p>
-                            </div>
-                            <div class="pure-u-1-2">
-                                <p> <a href="http://hci.uni-konstanz.de/libros" target="_blank">http://hci.uni-konstanz.de/libros</a></p>
-                            </div>
-                        </div>
-
-                        <div class="proj-data pure-g">
-                            <div class="pure-u-1-2">
-                                <p> Project blog: </p>
-                            </div>
-                            <div class="pure-u-1-2">
-                                <p> <a href="http://hci.uni-konstanz.de/libros-blog/" target="_blank">http://hci.uni-konstanz.de/libros-blog/</a> </p>
-                            </div>
-                        </div>
-
+                    <div class="proj-description">
+                        {% for description in project.descriptions %}    
+                        <p> {{ description }} </p>
+                        {% endfor %}    
                     </div>
+
                 </div>
 
-                <div class="proj-description">
-                    <p> Quellentaucher is part of the librOS project and merges digitial and real aspects for researching information in public libaries. </p>
+                <br/>
+                <br/>
+                <br/>
 
-                    <p> When entering the library, users are invited to approach the installation by a motion tracking camera. Visitors are presented up-to-date news from a local news agency, which can be brought up with a tap on the display. Quellentaucher searches automatically for related information, such as Wikipedia entries, pictures and Twitter feeds. In addition, relevant books are displayed on an adopted version of the 'Blended Shelf' next to the main screen. The user can choose from the available selection of books for a more detailled view, and is given more information about the author, book, ratings as well as the approximate location in the library. When a user finds a suitable book, the print button will produce a small information receipt with all essential information. </p>
-
-                    <p> librOS is funded by the federal state of North Rhine Westphalia, Germany, and is currently standing in the Central Library Cologne. </p>
-                </div>
-            </div>
-
+            {% endfor %}
+    </div>
+</div>
 
 
 
+
+{#
 
 
             <!-- MediaRoomControl -->
             <div class="proj-container">
                 <div class="pure-g">
-                    <div class="pure-u-1 pure-u-md-1-2">
+                    <div class="pure-u-1 pure-u-sm-1-2">
                         <img class="proj-image pure-img" src="/img/MediaRoomControl.jpg" alt="Project screenshot"/>
                     </div>
 
-                    <div class="proj-text pure-u-1 pure-u-md-1-2">
+                    <div class="proj-text pure-u-1 pure-u-sm-1-2">
                         <h2 class="proj-title"> MediaRoomControl </h2>
                         <hr/>
                         <div class="proj-data pure-g">
                             <div class="pure-u-1-2">
-                                <p> Programming languages </p>
+                                <p> Technologies used </p>
                             </div>
                             <div class="pure-u-1-2">
                                 <p> C, C# </p>
@@ -116,16 +119,16 @@
             <!-- FacetStream++ - Result Visualization -->
             <div class="proj-container">
                 <div class="pure-g">
-                    <div class="pure-u-1 pure-u-md-1-2">
+                    <div class="pure-u-1 pure-u-sm-1-2">
                         <img class="proj-image pure-img" src="/img/HyperGrid.jpg" alt="Project screenshot"/>
                     </div>
 
-                    <div class="proj-text pure-u-1 pure-u-md-1-2">
+                    <div class="proj-text pure-u-1 pure-u-sm-1-2">
                         <h2 class="proj-title"> FacetStream++ - HyperGrid </h2>
                         <hr/>
                         <div class="proj-data pure-g">
                             <div class="pure-u-1-2">
-                                <p> Programming languages </p>
+                                <p> Technologies used </p>
                             </div>
                             <div class="pure-u-1-2">
                                 <p> C# </p>
@@ -169,16 +172,16 @@
             <!-- ISGCI -->
             <div class="proj-container">
                 <div class="pure-g">
-                    <div class="pure-u-1 pure-u-md-1-2">
+                    <div class="pure-u-1 pure-u-sm-1-2">
                         <img class="proj-image pure-img" src="/img/ISGCI.jpg" alt="Project screenshot"/>
                     </div>
 
-                    <div class="proj-text pure-u-1 pure-u-md-1-2">
+                    <div class="proj-text pure-u-1 pure-u-sm-1-2">
                         <h2 class="proj-title"> ISGCI </h2>
                         <hr/>
                         <div class="proj-data pure-g">
                             <div class="pure-u-1-2">
-                                <p> Programming languages </p>
+                                <p> Technologies used </p>
                             </div>
                             <div class="pure-u-1-2">
                                 <p> Java </p>
@@ -233,3 +236,4 @@
 
     </div>
 </div>
+#}

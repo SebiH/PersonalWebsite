@@ -15,10 +15,6 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
         url: "/home",
         templateUrl: "/content/load/index"
     })
-    .state('CV', {
-        url: "/CV",
-        templateUrl: "/content/load/cv"
-    })
     .state('contact', {
         url: "/contact",
         templateUrl: "/content/load/contact"

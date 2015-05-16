@@ -34,5 +34,6 @@ catch(\Exception $e)
     echo $error_page;
 
     error_log("PhalconException: " . $e->getMessage());
+    error_log($e->getTraceAsString());
 }
 

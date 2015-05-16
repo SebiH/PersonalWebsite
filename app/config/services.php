@@ -15,6 +15,7 @@ use Phalcon\Logger\Adapter\File as FileAdapter;
 use Sehub\Plugins\NotFoundPlugin;
 use Sehub\Plugins\TrackingPlugin;
 use Sehub\Libraries\LiveVolt;
+use Sehub\Libraries\JsonLoader;
 
 /**
  *  Dependency Injector
@@ -87,13 +88,12 @@ $di->set('view', function() use ($config) {
 /**
  * Setting up volt
  */
-$di->set('volt', function($view, $di) {
+$di->set('volt', function($view, $di) use ($config) {
 
     $volt = new LiveVolt($view, $di);
 
     $volt->setOptions(array(
         "compiledPath" => APP_PATH . "cache/volt/",
-        'compileAlways' => true // TODO remove!! just in dev
     ));
 
     $compiler = $volt->getCompiler();
@@ -147,5 +147,9 @@ $di->set('escaper', function() {
 
 $di->set('config', function() use ($config) {
     return $config;
+});
+
+$di->set('jsonloader', function() {
+    return new JsonLoader;
 });
 

@@ -1,0 +1,87 @@
+[
+    {
+        "title": "Quellentaucher",
+
+        "picture": "<div class=\"video-wrapper proj-image\"> <iframe style=\"border:0;\" width=\"500\" height=\"275\" src=\"http://www.youtube.com/embed/H9adDld22HE\" allowfullscreen></iframe> </div>",
+
+        "highlight": true,
+
+        "statistics": {
+            "Technologies used": "C#, JavaScript, WPF, Heavy Webscraping, Numerous Web APIs (Twitter, Wikipedia, Wikimedia, WDR Digit...)",
+            "Timeframe": "<p> Sep 2013 - Oct 2014 </p>",
+            "Project Homepage": "<a href=\"http://hci.uni-konstanz.de/libros\" target=\"_blank\">http://hci.uni-konstanz.de/libros</a>",
+            "Project Blog": "<a href=\"http://hci.uni-konstanz.de/libros-blog/\" target=\"_blank\">http://hci.uni-konstanz.de/libros-blog/</a> "
+        },
+        "descriptions": [
+            "Quellentaucher is part of the librOS project and merges digitial and real aspects for researching information in public libaries.",
+            "When entering the library, users are invited to approach the installation by a motion tracking camera. Visitors are presented up-to-date news from a local news agency, which can be brought up with a tap on the display. Quellentaucher searches automatically for related information, such as Wikipedia entries, pictures and Twitter feeds. In addition, relevant books are displayed on an adopted version of the 'Blended Shelf' next to the main screen. The user can choose from the available selection of books for a more detailled view, and is given more information about the author, book, ratings as well as the approximate location in the library. When a user finds a suitable book, the print button will produce a small information receipt with all essential information.",
+            "librOS is funded by the federal state of North Rhine Westphalia, Germany, and is currently standing in the Central Library Cologne."
+        ]
+    },
+
+
+    {
+        "title": "MediaRoomControl",
+
+        "picture": "<img class=\"proj-image pure-img\" src=\"/img/MediaRoomControl.jpg\" alt=\"Project screenshot\"/>",
+
+        "highlight": false,
+
+        "statistics": {
+            "Technologies used": "C#, WPF, C (for intercepting input on a RaspberryPi), OptiTrack, TCP, UDP",
+            "Timeframe": "Oct 2013 - Feb 2014"
+        },
+
+        "descriptions": [
+            "Created for the course of \"Blended Interaction\" at the University of Konstanz, MediaRoomControl offers intuitive keyboard and mouse controls in multi-computer systems.",
+            "Using spatial data from an OptiTrack / Proximity Toolkit system, the system is able to track different input devices in a room; with this the system can detect different interactions with monitors, such as touching the monitor with an input device. This action binds the user's input device to the touched monitor, redirecting all input to the monitor's corresponding machine. This allows for easy and intuitive switching between different machines and removes the tedious searching for the correct input device.",
+            "The system is able to run as startup daemon, and does not need any special configuration due to IPv4 address discovery via UDP. Input is currently intercepted on a RaspberryPi / Debian system, and sent to a central server using TCP. With remote procedure calling, the server can relay the relevant commands to the corresponding client."
+        ]
+    },
+
+
+
+    {
+        "title": "FacetStream++ - HyperGrid",
+
+        "picture": "<img class=\"proj-image pure-img\" src=\"/img/HyperGrid.jpg\" alt=\"Project screenshot\"/>",
+
+        "highlight": false,
+
+        "statistics": {
+            "Technologies used": "C#, WPF",
+            "Timeframe": "Jan 2013 - Apr 2013",
+            "Featured in": "<a href=\"https://www.youtube.com/watch?v=_dv4KxkNCKI\" target=\"_blank\">Blended Library</a>" 
+        },
+        "descriptions": [
+            "FacetStream++ enables a group of users to collaboratively and simultaneously search in large amounts of data - for example for books in a library. The results are visualized in a HyperGrid - offering both an overview of the selected data, as well as detailled information by tapping the entry.",
+            "FacetStream++ and the HyperGrid are now part of librOS, standing in the Central Library of Cologne, as well as in the library of the University of Konstanz."
+        ]
+    },
+
+
+
+
+
+
+    {
+        "title": "ISGCI",
+
+        "picture": "<img class=\"proj-image pure-img\" src=\"/img/ISGCI.jpg\" alt=\"Project screenshot\"/>",
+
+        "highlight": false,
+
+        "statistics": {
+            "Technologies used": "Java, JUnit, JGraphX",
+            "Timeframe": "May 2013 - Jul 2013",
+            "Original Project": "<a href=\"http://www.graphclasses.org/\" target=\"_blank\">http://www.graphclasses.org/</a>",
+            "Source Code": "<a href=\"https://github.com/Konsteirama/KonDrawer-JGraphX-Integration\" target=\"_blank\">Available on GitHub!</a> "
+        },
+        "descriptions": [
+            "ISGCI is an open-source graph-visualisation application. Since it has been in development for over a decade (started in 1999), its code-base is ancient, relying on out-of-date Java features.",
+            "As part of the 'Software Engineering' course at the University of Konstanz, the codebase was partially refactored, extended and adapted to use an up-to-date graph-drawing library - in this case JGraphX.",
+            "The project received the second-highest grade possible and was named the best project of the course."
+        ]
+    }
+]
+

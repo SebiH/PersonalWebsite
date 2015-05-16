@@ -43,10 +43,6 @@ class IndexController extends Controller
     {
     }
 
-    public function cvAction()
-    {
-    }
-
     public function projectsAction()
     {
     }
