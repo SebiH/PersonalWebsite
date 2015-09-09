@@ -8,15 +8,15 @@
     # Remove trailing slashes
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteRule ^(.*)/$ /$1 [L,R=301]
-    
+
     # Nicer URLs for Phalcon
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^(.*)/?$ index.php?_url=/$1 [QSA,L]
 
     # Redirect to the proper domain
-    #RewriteCond %{HTTP_HOST} !^sebi\.sh$ [NC]
-    #RewriteRule ^(.*)$ http://sebi.sh/ [R=301,L]
+    RewriteCond %{HTTP_HOST} !^sebi\.sh$ [NC]
+    RewriteRule ^(.*)$ http://sebi.sh/ [R=301,L]
 
 </IfModule>
 
