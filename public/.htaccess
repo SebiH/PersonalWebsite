@@ -18,5 +18,8 @@
     RewriteCond %{HTTP_HOST} !^sebi\.sh$ [NC]
     RewriteRule ^(.*)$ http://sebi.sh/ [R=301,L]
 
+    # Disallow access to some files
+    RewriteRule (.bowerrc|bower.json)$ 404 [L]
+
 </IfModule>
 
