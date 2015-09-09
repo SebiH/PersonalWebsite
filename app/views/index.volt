@@ -11,7 +11,7 @@
         <meta name="author" content="Sebastian Hubenschmid">
 
 
-        <link rel="shortcut icon" type="image/ico" href="/img/favicon.ico">
+        <link rel="shortcut icon" type="image/ico" href="/favicon.ico">
         <title> Sebastian Hubenschmid | Personal website </title>
 
 
