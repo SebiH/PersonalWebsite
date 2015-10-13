@@ -12,8 +12,7 @@
                 <ul> 
                     <li> Computer Science (B.Sc.) student at the University of Konstanz, Germany </li>
                     <li> Student Researcher for the Human-Computer Interaction Lab, University of Konstanz, Germany </li>
-                    <li> Junior Student Software Developer for ionCube Ltd., Canterbury, UK </li>
-                    <li> Preferably working on modern high-performance backends and applications </li>
+                    <li> Senior Software Developer for ionCube Ltd., Canterbury, UK </li>
                 </ul>
 
                 <h2> Contact </h2>
