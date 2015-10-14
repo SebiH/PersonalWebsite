@@ -84,7 +84,7 @@
                         <div class="noselect">
                             <div>
                                 <a class="icon transition" href="https://www.facebook.com/SebastianHubenschmid" target="_blank">
-                                    <p> <span class="fa fa-facebook icon"></span> <span class="text"> Find me on Facebook </span> </p>
+                                    <p> <span class="fa fa-facebook"></span> <span class="text"> Find me on Facebook </span> </p>
                                 </a>
 
                                 <a class="icon transition" href="https://plus.google.com/+SebastianHubenschmid/" target="_blank">
