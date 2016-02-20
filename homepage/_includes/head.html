@@ -12,14 +12,11 @@
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
     <link rel="shortcut icon" type="image/ico" href="/favicon.ico">
 
-    <!-- Styles -->
-    <link type="text/css" rel="stylesheet" href="/css/main.min.css">
-    <link type="text/css" rel="stylesheet" href="/css/pure/pure-min.css">
-    <link type="text/css" rel="stylesheet" href="/css/pure/grids-responsive-min.css">
-
-    <!-- Fonts -->
-    <link type="text/css" rel="stylesheet" media="all" href="/css/open-sans-fontface/open-sans.css">
-    <link type="text/css" rel="stylesheet" media="all" href="/css/font-awesome/css/font-awesome.min.css">
+    <style>
+        {% include css/main.min.css %}
+        {% include css/pure/pure-min.css %}
+        {% include css/pure/grids-responsive-min.css %}
+    </style>
 
     <noscript>
         <style>

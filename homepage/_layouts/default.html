@@ -1,5 +1,5 @@
 ---
-layout: compress
+xlayout: compress
 ---
 
 <!DOCTYPE html>
@@ -58,15 +58,16 @@ layout: compress
 
 
         <!-- AngularJS -->
-        <script src="/js/angular/angular.min.js"></script>
-        <script src="/js/angular-animate/angular-animate.min.js"></script>
+        <script> {% include js/angular/angular.min.js %} </script>
+        <script> {% include js/angular-animate/angular-animate.min.js %} </script>
 
         <!-- UI-Router -->
-        <script src="/js/ui-router/release/angular-ui-router.min.js"></script>
+        <script> {% include js/ui-router/release/angular-ui-router.min.js %}</script>
 
         <!-- Custom app -->
-        <script src="/js/sebi.min.js"></script>
+        <script> {% include js/sebi.min.js %} </script>
 
     </body>
 
 </html>
+
