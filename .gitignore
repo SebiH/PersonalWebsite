@@ -1,4 +1,2 @@
-cache/volt/*
-public/production/*
-public/libs/*
-logs/*
+_site
+.sass-cache

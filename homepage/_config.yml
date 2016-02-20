@@ -1,0 +1,12 @@
+# Site settings
+title: Sebastian Hubenschmid Homepage
+email: me@sebi.sh
+description: >
+    Personal homepage of Sebastian Hubenschmid
+baseurl: ""
+url: "https://sebi.sh"
+twitter_username: Sebi__H
+github_username:  SebiH
+
+# Build settings
+markdown: kramdown
