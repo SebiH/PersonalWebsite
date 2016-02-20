@@ -7,18 +7,66 @@ layout: compress
 
   {% include head.html %}
 
-  <body>
+    <body data-ng-app="SeHub" data-ng-controller="NavigationController" data-ng-cloak>
 
-    {% include header.html %}
+        <div class="layout">
 
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </div>
+            <!-- Menubar -->
+            {% include menu.html %}
 
-    {% include footer.html %}
 
-  </body>
+            <!-- Content -->
+            <main class="content transition" data-ng-class="{'content-extended': !showMenu}">
+                <div data-ui-view class="ng-anim-fade transition" style="width: 100%; height: 100%;">
+                    {{ content() }}
+
+                    <!--
+                    <div class="loading-container">
+                        <div class="animation">
+                          <div class="circle">
+                            <div class="inner"></div>
+                          </div>
+                          <div class="circle">
+                            <div class="inner"></div>
+                          </div>
+                          <div class="circle">
+                            <div class="inner"></div>
+                          </div>
+                          <div class="circle">
+                            <div class="inner"></div>
+                          </div>
+                          <div class="circle-alt">
+                            <div class="inner"></div>
+                          </div>
+                        </div>
+                        <div class="text">
+                            <p> Loading ... </p>
+                            <p class="show-noscript"> (You must have JavaScript enabled) </p>
+                        </div>
+                    </div>
+                    -->
+                </div>
+
+            </main>
+
+        </div>
+
+
+        <div class="show-noscript noscript-warning">
+            Please enable JavaScript, as some things on this site rely on AngularJS.
+        </div>
+
+
+        <!-- AngularJS -->
+        <script src="/js/angular/angular.min.js"></script>
+        <script src="/js/angular-animate/angular-animate.min.js"></script>
+
+        <!-- UI-Router -->
+        <script src="/js/ui-router/release/angular-ui-router.min.js"></script>
+
+        <!-- Custom app -->
+        <script src="/js/sebi.min.js"></script>
+
+    </body>
 
 </html>
