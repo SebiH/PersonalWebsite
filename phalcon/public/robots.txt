@@ -1,3 +1,0 @@
-Sitemap: http://sebi.sh/sitemap.xml
-User-agent: *
-Disallow:
