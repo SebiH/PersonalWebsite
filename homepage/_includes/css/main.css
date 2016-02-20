@@ -37,11 +37,11 @@ html, body {
 body {
     background-color: white;
     color: #333;
-    font-family: 'Open Sans', sans-serif;
+    font-family: sans-serif;
 }
 
 body, h1, h2, h3, h4, h5, p, a, span, div, li {
-    font-family: 'Open Sans', sans-serif;
+    font-family: sans-serif;
 }
 
 
@@ -317,6 +317,12 @@ a::selection {
 .icon .text {
     color: transparent;
     display: none;
+}
+
+.icon svg {
+    width: 16px;
+    height: 16px;
+    fill: #777;
 }
 
 /* ============== */
@@ -627,12 +633,11 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.7em;
 }
 
-.about-text li::before {
-    content: "\f101";
-    font-family: FontAwesome;
-    margin-right: 5px;
-}
 
+.about-text li > svg {
+    width: 1em;
+    height: 1em;
+}
 
 /* ======== */
 /* Projects */

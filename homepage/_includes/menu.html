@@ -23,40 +23,40 @@
             <div class="noselect">
                 <div>
                     <a class="icon transition" href="https://www.facebook.com/SebastianHubenschmid" target="_blank">
-                        <p> <span class="fa fa-facebook"></span> <span class="text"> Find me on Facebook </span> </p>
+                        {% include sprites/fontawesome/facebook.svg %}
                     </a>
 
                     <a class="icon transition" href="https://plus.google.com/+SebastianHubenschmid/" target="_blank">
-                        <p> <span class="fa fa-google-plus"></span> <span class="text"> Find me on Google+ </span>  </p>
+                        {% include sprites/fontawesome/google-plus.svg %}
                     </a>
 
                     <a class="icon transition" href="https://twitter.com/Sebi__H" target="_blank">
-                        <p> <span class="fa fa-twitter"></span> <span class="text"> Find me on Twitter </span> </p>
+                        {% include sprites/fontawesome/twitter.svg %}
                     </a>
 
-                    <a class="icon show-noscript" href="/contact">
-                        <span class="fa fa-envelope"></span> <span class="text"> Send me a message </span>
+                    <a class="icon show-noscript" href="/aboutme">
+                        {% include sprites/fontawesome/envelope.svg %}
                     </a>
-                    <a class="icon transition hide-noscript" data-ui-sref="contact" data-ng-class="{ 'nav-item-selected': $state.name === 'contact' }">
-                        <span class="fa fa-envelope"></span> <span class="text"> Send me a message </span>
+                    <a class="icon transition hide-noscript" data-ui-sref="aboutme" data-ng-class="{ 'nav-item-selected': $state.name === 'contact' }">
+                        {% include sprites/fontawesome/envelope.svg %}
                     </a>
                 </div>
 
                 <div>
                     <a class="icon transition" href="https://github.com/SebiH" target="_blank">
-                        <p> <span class="fa fa-github"></span> <span class="text"> View GitHub Profile </span> </p>
+                        {% include sprites/fontawesome/github.svg %}
                     </a>
 
                     <a class="icon transition" href="http://stackoverflow.com/users/4090817/sebih" target="_blank">
-                        <p> <span class="fa fa-stack-overflow"></span> <span class="text"> View StackOverflow Profile </span></p>
+                        {% include sprites/fontawesome/stack-overflow.svg %}
                     </a>
 
                     <a class="icon transition" href="https://www.linkedin.com/in/sebastianhubenschmid" target="_blank">
-                        <p> <span class="fa fa-linkedin"></span> <span class="text"> View LinkedIn Profile </span></p>
+                        {% include sprites/fontawesome/linkedin.svg %}
                     </a>
 
-                    <a class="icon transition" href="http://hci.uni-konstanz.de/index.php?a=staff&amp;b=Hubenschmid&amp;c=contact&amp;lang=en" target="_blank">
-                        <p> <span class="fa fa-flask"></span><span class="text"> Academics </span> </p>
+                    <a class="icon transition" href="http://hci.uni.kn/staff/Hubenschmid" target="_blank">
+                        {% include sprites/fontawesome/flask.svg %}
                     </a>
 
                 </div>
