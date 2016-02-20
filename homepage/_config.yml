@@ -9,4 +9,9 @@ twitter_username: Sebi__H
 github_username:  SebiH
 
 # Build settings
+env: production
 markdown: kramdown
+gems:
+    - jekyll-angular
+    - jekyll_image_encode
+
