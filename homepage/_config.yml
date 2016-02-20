@@ -1,6 +1,6 @@
 # Site settings
-title: Sebastian Hubenschmid Homepage
-email: me@sebi.sh
+title: Sebastian Hubenschmid | Personal website
+email: contact@sebi.sh
 description: >
     Personal homepage of Sebastian Hubenschmid
 baseurl: ""
@@ -10,6 +10,7 @@ github_username:  SebiH
 
 # Build settings
 env: production
+destination: ../_site/
 markdown: kramdown
 gems:
     - jekyll-angular
