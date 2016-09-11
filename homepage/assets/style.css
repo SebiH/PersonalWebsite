@@ -1,0 +1,140 @@
+/* --------------
+ * General styles
+ * -------------- */
+html {
+    color: #222;
+    font: normal normal 105%/1.7 sans-serif;
+}
+
+::selection {
+    background: #BBB; /* WebKit/Blink Browsers */
+}
+
+::-moz-selection {
+    background: #BBB; /* Gecko Browsers */
+}
+
+
+
+a:focus {
+    outline: 0;
+}
+
+/* unvisited link */
+a:link {
+    color: #000;
+}
+
+/* visited link */
+a:visited {
+    color: #000;
+}
+
+/* mouse over link */
+a:hover {
+    color: #222;
+}
+
+/* selected link */
+a:active {
+    color: #222;
+}
+
+a::selection {
+    color: #777;
+}
+
+p {
+    text-align: justify;
+}
+
+
+/* -----------
+ * Site layout
+ * ----------- */
+
+#layout {
+    position: relative;
+    max-width:1120px;
+    margin:0 auto;
+    padding:0 30px;
+    padding:0 1.5rem;
+
+    /* Transition smoothly on resize */
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+
+#title {
+}
+
+#menu {
+    vertical-align: top;
+}
+
+#content {
+    vertical-align: top;
+    margin-top: -15px;
+}
+
+
+@media screen and (min-width: 48em) {
+    #layout {
+        padding-left: 10px;
+    }
+}
+
+
+/* ----
+ * Menu
+ * ---- */
+
+/* Transform menu into horizontal menu */
+@media screen and (max-width: 48em) {
+    .custom-menu {
+        width: 100%;
+        white-space: nowrap;
+    }
+
+    .menu-item {
+        display: inline-block;
+    }
+}
+
+.custom-menu-item {
+    width: 120px;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    position: relative;
+}
+
+
+.custom-menu-link {
+    color: #222;
+    text-decoration: none;
+    line-height: 2.2;
+}
+
+.custom-menu-link:before {
+    content: "//";
+}
+
+.custom-menu-link.selected {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+
+/* -----
+ * Other
+ * ----- */
+
+.title-name {
+    font-size: 42px;
+}
+

@@ -6,45 +6,17 @@
     <meta name="MobileOptimized" content="320">
 
     <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
-    <meta name="keywords" content="personal website, hubenschmid, computer science, student, software development">
+    <meta name="keywords" content="Sebastian, Hubenschmid, University of Konstanz, Computer Science, software development">
     <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
     <link rel="shortcut icon" type="image/ico" href="/favicon.ico">
 
-    <style>
-        {% include css/main.css %}
-        {% include css/pure/pure-min.css %}
-        {% include css/pure/grids-responsive-min.css %}
-    </style>
+    <link rel="stylesheet" href="/assets/style.css">
 
-    <noscript>
-        <style>
-            [class*="fa-"]:before {
-                content:"+";
-            }
+    <link rel="stylesheet" href="/libs/pure/pure-min.css">
+    <link rel="stylesheet" href="/libs/pure/grids-responsive-min.css">
 
-            [data-ng-cloak], .show-noscript {
-                display: initial !important;
-            }
-
-            .nav-header.show-noscript {
-                display: block !important;
-            }
-
-            .nav-item.show-noscript {
-                display: block !important;
-            }
-
-            .icon.show-noscript {
-                display: table-cell !important;
-            }
-
-
-            .hide-noscript {
-                display: none !important;
-            }
-        </style>
-    </noscript>
+    <script> window.setTimeout(function() { window.location.reload(); }, 1000); </script>
 </head>
 

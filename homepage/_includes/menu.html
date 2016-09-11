@@ -1,67 +1,22 @@
-<nav class="navbar transition" data-ng-class="{'navbar-hidden': !showMenu}">
-    <!-- Menu items -->
-    <div class="menu">
-        <div class="burgerwrapper noselect hide-noscript" data-ng-click="toggleMenu()" data-ng-class="{spin180: showMenu, spin360: !showMenu }" data-ng-if="burgerVisible" data-ng-cloak>
-            <div class="hamburger" data-ng-class="{spin: showMenu}">
-                <span></span>
-            </div>
-        </div>
+<div class="pure-menu custom-menu">
+        <ul class="pure-menu-list">
+            <li class="custom-menu-item menu-item">
+                <a href="index.html" class="custom-menu-link selected">
+                    Home
+                </a>
+            </li>
 
-        <a href="/" class="nav-header noselect show-noscript">Sebastian Hubenschmid</a>
-        <a data-ui-sref="home" class="nav-header noselect transition hide-noscript">Sebastian Hubenschmid</a>
+            <li class="custom-menu-item menu-item">
+                <a href="index.html" class="custom-menu-link">
+                    Projects
+                </a>
+            </li>
 
-        <a href="/" class="nav-item noselect show-noscript"> Home </a>
-        <a data-ui-sref="home" class="nav-item noselect transition hide-noscript" data-ng-class="{ 'nav-item-selected': $state.name === 'home' }"> Home </a>
-
-        <a href="/projects" class="nav-item noselect show-noscript"> Projects </a>
-        <a data-ui-sref="projects" class="nav-item noselect transition hide-noscript" data-ng-class="{ 'nav-item-selected': $state.name === 'projects' }"> Projects </a>
-
-        <a href="/aboutme" class="nav-item noselect show-noscript"> About me </a>
-        <a data-ui-sref="aboutme" class="nav-item noselect transition hide-noscript" data-ng-class="{ 'nav-item-selected': $state.name === 'aboutme' }"> About me </a>
-
-        <div class="icon-panel noselect" ondragstart="return false;" ondrop="return false;">
-            <div class="noselect">
-                <div>
-                    <a class="icon transition" href="https://www.facebook.com/SebastianHubenschmid" target="_blank">
-                        {% include sprites/fontawesome/facebook.svg %}
-                    </a>
-
-                    <a class="icon transition" href="https://plus.google.com/+SebastianHubenschmid/" target="_blank">
-                        {% include sprites/fontawesome/google-plus.svg %}
-                    </a>
-
-                    <a class="icon transition" href="https://twitter.com/Sebi__H" target="_blank">
-                        {% include sprites/fontawesome/twitter.svg %}
-                    </a>
-
-                    <a class="icon show-noscript" href="/aboutme">
-                        {% include sprites/fontawesome/envelope.svg %}
-                    </a>
-                    <a class="icon transition hide-noscript" data-ui-sref="aboutme" data-ng-class="{ 'nav-item-selected': $state.name === 'contact' }">
-                        {% include sprites/fontawesome/envelope.svg %}
-                    </a>
-                </div>
-
-                <div>
-                    <a class="icon transition" href="https://github.com/SebiH" target="_blank">
-                        {% include sprites/fontawesome/github.svg %}
-                    </a>
-
-                    <a class="icon transition" href="http://stackoverflow.com/users/4090817/sebih" target="_blank">
-                        {% include sprites/fontawesome/stack-overflow.svg %}
-                    </a>
-
-                    <a class="icon transition" href="https://www.linkedin.com/in/sebastianhubenschmid" target="_blank">
-                        {% include sprites/fontawesome/linkedin.svg %}
-                    </a>
-
-                    <a class="icon transition" href="http://hci.uni.kn/staff/Hubenschmid" target="_blank">
-                        {% include sprites/fontawesome/flask.svg %}
-                    </a>
-
-                </div>
-            </div>
-        </div>
-    </div>
-</nav>
+            <li class="custom-menu-item menu-item">
+                <a href="index.html" class="custom-menu-link">
+                    Contact
+                </a>
+            </li>
+        </ul>
+</div>
 
