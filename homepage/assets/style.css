@@ -32,23 +32,28 @@ a:focus {
 
 a:link {
     color: #000;
+    fill: #000;
 }
 
 a:visited {
     color: #666;
+    fill: #666;
 }
 
 a:hover {
     color: #666;
+    fill: #666;
     text-decoration: underline;
 }
 
 a:active {
     color: #888;
+    fill: #888;
 }
 
 a::selection {
     color: #777;
+    fill: #777;
 }
 
 p {
@@ -77,13 +82,16 @@ p {
 
 
 #title {
+    position: relative;
 }
 
 #menu {
+    position: relative;
     vertical-align: top;
 }
 
 #content {
+    position: relative;
     vertical-align: top;
     margin-top: -15px;
 }
@@ -138,6 +146,7 @@ p {
 
 .custom-menu-link:link {
     color: #666;
+    fill: #666;
 }
 
 .custom-menu-link:visited {
@@ -179,9 +188,37 @@ p {
     margin-top: -5px;
 }
 
+.title-social {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.icon {
+    max-width: 64px;
+    max-height: 64px;
+    display: inline-block;
+    margin: 10px;
+}
+
+.icon a:link,
+.icon a:visited,
+.icon a:active {
+    fill: #888;
+}
+
+.icon a:focus,
+.icon a:hover {
+    fill: #444;
+}
+
 @media screen and (max-width: 48em) {
     .title-name {
         font-size: 22px;
+    }
+
+    .icon {
+        margin: 3px;
     }
 }
 
