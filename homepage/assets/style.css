@@ -55,7 +55,7 @@ p {
 
 #layout {
     position: relative;
-    max-width:1120px;
+    max-width:1020px;
     margin:0 auto;
     padding:0 30px;
     padding:0 1.5rem;
@@ -138,3 +138,13 @@ p {
     font-size: 42px;
 }
 
+.title-line {
+    border-top: 3px double #666;
+    margin-top: -5px;
+}
+
+@media screen and (max-width: 48em) {
+    .title-name {
+        font-size: 22px;
+    }
+}
