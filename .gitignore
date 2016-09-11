@@ -1,3 +1,7 @@
 _site
 .sass-cache
 homepage/libs/
+homepage/node_modules/
+homepage/typings/
+homepage/app/**/*.js
+
