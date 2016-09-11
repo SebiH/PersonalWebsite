@@ -181,17 +181,14 @@ p {
     line-height: 2;
 }
 
-.title-line {
-    border: 0;
-    height: 1px;
-    background-image: linear-gradient(to right, rgba(200, 200, 200, 1), rgba(200, 200, 200, 0));
-    margin-top: -5px;
-}
-
 .title-social {
     position: absolute;
     right: 0;
     bottom: 0;
+}
+
+.title-line {
+    margin-top: -5px;
 }
 
 .icon {
@@ -254,6 +251,25 @@ p {
     box-sizing: border-box;
 }
 
+/* --------
+ * Projects
+ * -------- */
+
+.project-entry {
+    height: 300px;
+}
+
+.project-img {
+    margin-top: 1.5em;
+}
+
+.project-text {
+    padding: 0 10px;
+}
+
+.project-text > h1 {
+    font-size: 1.5em;
+}
 
 /* -------
  * Utility
@@ -267,4 +283,11 @@ p {
     -ms-user-select: none;
     user-select: none;
 }
+
+.separator {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(200, 200, 200, 1), rgba(200, 200, 200, 0));
+}
+
 

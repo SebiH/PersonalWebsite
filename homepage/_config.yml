@@ -22,5 +22,6 @@ exclude:
     - tsconfig.json
     - typings.json
     - typings/
+    - "node_modules/**/*.html"
     - "**/*.ts"
 
