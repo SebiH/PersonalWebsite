@@ -1,5 +1,5 @@
 Personal Website
 ================
 
-Complete source code for my personal website. Written with [PhalconPHP](http://phalconphp.com/en/) and [AngularJS](https://angularjs.org/).
+Complete source code for my personal website. Written with [Jekyll](https://jekyllrb.com/) and [AngularJS](https://angularjs.org/).
 
