@@ -2,8 +2,20 @@
  * General styles
  * -------------- */
 html {
-    color: #222;
-    font: normal normal 105%/1.7 sans-serif;
+    color: #444;
+    font-weight: lighter;
+    font-size: 105%;
+    line-height: 1.7;
+}
+
+div, p {
+    font-family: monospace;
+}
+
+h1, h2, h3 {
+    color: #666;
+    font-family: 'Pavanam', sans-serif;
+    font-weight: lighter;
 }
 
 ::selection {
@@ -14,29 +26,25 @@ html {
     background: #BBB; /* Gecko Browsers */
 }
 
-
 a:focus {
     outline: 0;
 }
 
-/* unvisited link */
 a:link {
     color: #000;
 }
 
-/* visited link */
 a:visited {
-    color: #000;
+    color: #666;
 }
 
-/* mouse over link */
 a:hover {
-    color: #222;
+    color: #666;
+    text-decoration: underline;
 }
 
-/* selected link */
 a:active {
-    color: #222;
+    color: #888;
 }
 
 a::selection {
@@ -85,6 +93,10 @@ p {
     #layout {
         padding-left: 10px;
     }
+
+    #menu {
+        margin-top: 15px;
+    }
 }
 
 
@@ -114,13 +126,33 @@ p {
 
 
 .custom-menu-link {
-    color: #222;
+    font-family: monospace;
+    color: #444;
     text-decoration: none;
     line-height: 2.2;
 }
 
+.custom-menu-link:focus {
+
+}
+
+.custom-menu-link:link {
+    color: #666;
+}
+
+.custom-menu-link:visited {
+}
+
+.custom-menu-link:hover {
+    font-weight: bold;
+}
+
+.custom-menu-link:active {
+
+}
+
 .custom-menu-link:before {
-    content: "//";
+    content: "// ";
 }
 
 .custom-menu-link.selected {
@@ -130,15 +162,20 @@ p {
 
 
 /* -----
- * Other
+ * Title
  * ----- */
 
 .title-name {
-    font-size: 42px;
+    font-size: 38px;
+    font-family: 'Pavanam', sans-serif;
+    color: #666;
+    line-height: 2;
 }
 
 .title-line {
-    border-top: 3px double #666;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(200, 200, 200, 1), rgba(200, 200, 200, 0));
     margin-top: -5px;
 }
 
@@ -147,6 +184,11 @@ p {
         font-size: 22px;
     }
 }
+
+/* ------
+ * Index
+ * ------ */
+
 
 .profile-picture {
     box-sizing: border-box;
@@ -167,7 +209,7 @@ p {
 }
 
 .gallery {
-    
+
 }
 
 .gallery > div {
