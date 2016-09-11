@@ -15,7 +15,6 @@ html {
 }
 
 
-
 a:focus {
     outline: 0;
 }
@@ -148,3 +147,45 @@ p {
         font-size: 22px;
     }
 }
+
+.profile-picture {
+    box-sizing: border-box;
+    padding-right: 2em;
+}
+
+.bullet-list {
+}
+
+.bullet-list > div {
+    padding-left: 2em;
+}
+
+.bullet-list > div:before {
+    content: ">";
+    position: absolute;
+    margin-left: -1em;
+}
+
+.gallery {
+    
+}
+
+.gallery > div {
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+
+/* -------
+ * Utility
+ * ------- */
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
