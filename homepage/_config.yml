@@ -25,3 +25,6 @@ exclude:
     - "node_modules/**/*.html"
     - "**/*.ts"
 
+compress_html:
+    comments: all
+
