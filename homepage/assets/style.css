@@ -6,6 +6,8 @@ html {
     font-weight: lighter;
     font-size: 105%;
     line-height: 1.7;
+    /* Prevents page from jumping / moving when scrollbar appears */
+    margin-left: calc(100vw - 100%);
 }
 
 div, p {
