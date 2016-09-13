@@ -114,18 +114,6 @@ p {
  * Menu
  * ---- */
 
-/* Transform menu into horizontal menu */
-@media screen and (max-width: 48em) {
-    .custom-menu {
-        width: 100%;
-        white-space: nowrap;
-    }
-
-    .menu-item {
-        display: inline-block;
-    }
-}
-
 .custom-menu-item {
     width: 120px;
     padding: 0;
@@ -170,6 +158,26 @@ p {
     font-weight: bold;
     text-decoration: underline;
 }
+
+/* Transform menu into horizontal menu */
+@media screen and (max-width: 48em) {
+    .custom-menu {
+        width: 100%;
+        white-space: nowrap;
+    }
+
+    .menu-item {
+        display: inline-block;
+    }
+}
+
+@media screen and (max-width: 28em) {
+    .custom-menu-item {
+        width: inherit;
+        padding: 5px;
+    }
+}
+
 
 
 /* -----
@@ -221,6 +229,17 @@ p {
     }
 }
 
+@media screen and (max-width: 28em) {
+    .title-social {
+        position: relative;
+        text-align: center;
+    }
+
+    .title-name {
+        text-align: center;
+    }
+}
+
 /* ------
  * Index
  * ------ */
@@ -258,7 +277,7 @@ p {
  * -------- */
 
 .project-entry {
-    height: 300px;
+    min-height: 300px;
 }
 
 .project-img {
