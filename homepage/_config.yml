@@ -18,12 +18,6 @@ gems:
 
 exclude:
     - bower.json
-    - package.json
-    - tsconfig.json
-    - typings.json
-    - typings/
-    - "node_modules/**/*.html"
-    - "**/*.ts"
 
 compress_html:
     comments: all
