@@ -18,7 +18,8 @@ gems:
 
 exclude:
     - bower.json
+    - libs
 
-compress_html:
-    comments: all
+keep_files:
+    - libs
 
