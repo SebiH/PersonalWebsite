@@ -18,7 +18,6 @@ gems:
 
 exclude:
     - bower.json
-    - libs
 
 keep_files:
     - libs
