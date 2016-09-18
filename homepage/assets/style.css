@@ -208,6 +208,10 @@ p {
     margin: 10px;
 }
 
+.icon a {
+    transition: fill 0.2s linear;
+}
+
 .icon a:link,
 .icon a:visited,
 .icon a:active {
