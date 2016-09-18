@@ -73,7 +73,7 @@ module Jekyll
                 'foot' => foot,
             }
 
-            response
+            response.to_json
         end
 
     end
