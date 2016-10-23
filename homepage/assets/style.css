@@ -18,6 +18,7 @@ h1, h2, h3 {
     color: #666;
     font-family: 'Pavanam', sans-serif;
     font-weight: lighter;
+    margin-bottom: 0;
 }
 
 ::selection {
@@ -325,4 +326,16 @@ p {
     background-image: linear-gradient(to right, rgba(200, 200, 200, 1), rgba(200, 200, 200, 0));
 }
 
+
+@media screen and (min-width: 48em) {
+    .pre-container {
+        display: inline-block;
+    }
+}
+
+pre {
+    background: #ddd;
+    padding: 10px;
+    font-size: 12px;
+}
 
