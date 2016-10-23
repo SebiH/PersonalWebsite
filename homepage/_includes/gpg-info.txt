@@ -1,0 +1,6 @@
+pub   rsa4096 2016-10-18 [SCA] [expires: 2021-10-17]
+      B142 8550 05B6 948F AA51  D8EB 2FD4 4459 8888 3214
+uid           Sebastian Hubenschmid &lt;info@sebi.sh&gt;
+uid           Sebastian Hubenschmid &lt;Sebastian.Hubenschmid@uni-konstanz.de&gt;
+uid           Sebastian Hubenschmid &lt;SebastianHubenschmid@gmail.com&gt;
+sub   rsa4096 2016-10-18 [E] [expires: 2021-10-17]

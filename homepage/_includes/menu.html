@@ -1,18 +1,17 @@
 <div class="pure-menu custom-menu">
         <ul class="pure-menu-list">
-            <li class="custom-menu-item menu-item">
-                <a href="/" class="spf-link custom-menu-link">Home</a>
-            </li>
-
-            <li class="custom-menu-item menu-item">
-                <a href="/projects/" class="spf-link custom-menu-link">Projects</a>
-            </li>
-
-            <li class="custom-menu-item menu-item">
-                <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#99;&#111;&#110;&#116;&#97;&#99;&#116;&#64;&#115;&#101;&#98;&#105;&#46;&#115;&#104;" class="custom-menu-link">
-                    <span>Contact</span>
-                </a>
-            </li>
+            {% assign pages = site.pages | sort:"weight" %}
+            {% for node in pages %}
+                {% if node.group == 'navigation' %}
+                    <li class="custom-menu-item menu-item">
+                    {% if page.url == node.url %}
+                        <a href="{{node.url}}" class="spf-link custom-menu-link selected">{{node.title}}</a>
+                    {% else %}
+                        <a href="{{node.url}}" class="spf-link custom-menu-link">{{node.title}}</a>
+                    {% endif %}
+                    </li>
+                {% endif %}
+            {% endfor %}
         </ul>
 </div>
 
