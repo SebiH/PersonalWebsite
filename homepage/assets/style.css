@@ -254,6 +254,20 @@ p {
     padding-right: 2em;
 }
 
+@media screen and (max-width: 48em) {
+    .profile-picture {
+        box-sizing: border-box;
+        padding-right: 1em;
+    }
+}
+
+@media screen and (max-width: 28em) {
+    .profile-picture {
+        box-sizing: border-box;
+        padding-right: 0;
+    }
+}
+
 .bullet-list {
 }
 
