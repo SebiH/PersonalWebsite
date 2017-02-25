@@ -54,12 +54,21 @@ module Jekyll
             #attr_body_class_regex = /<body[^>]* class="([^"]*)"/
 
             title = title_regex.match(html)
+            if title
+                title = title[1]
+            end
             head = head_regex.match(html)
+            if head
+                head = head[1]
+            end
             body = {}
             html.scan(body_regex).each do |group|
                 body[group[0]] = group[1]
             end
             foot = foot_regex.match(html)
+            if foot
+                foot = foot[1]
+            end
             #attr_body_class = html.match(attr_body_class_regex)[1]
             #attrs = {
                 #'body' => {'class' => attr_body_class}
