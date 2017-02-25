@@ -53,13 +53,13 @@ module Jekyll
             foot_regex = /<!-- begin spf foot -->(.*)<!-- end spf foot -->/m
             #attr_body_class_regex = /<body[^>]* class="([^"]*)"/
 
-            title = html.match(title_regex)[1]
-            head = html.match(head_regex)[1]
+            title = title_regex.match(html)
+            head = head_regex.match(html)
             body = {}
             html.scan(body_regex).each do |group|
                 body[group[0]] = group[1]
             end
-            foot = html.match(foot_regex)[1]
+            foot = foot_regex.match(html)
             #attr_body_class = html.match(attr_body_class_regex)[1]
             #attrs = {
                 #'body' => {'class' => attr_body_class}
