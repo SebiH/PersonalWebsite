@@ -5,7 +5,7 @@ spf.init({
 
 
 function setActiveLink(event) {
-    var links = document.getElementsByClassName('custom-menu-link');
+    var links = document.getElementsByClassName('menu-link');
     const selectedLinkClass = "selected";
 
     for (var i = 0; i < links.length; i++) {

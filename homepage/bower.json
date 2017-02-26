@@ -16,7 +16,6 @@
     "tests"
   ],
   "dependencies": {
-    "pure": "^0.6.0",
     "spf": "^2.4.0"
   }
 }

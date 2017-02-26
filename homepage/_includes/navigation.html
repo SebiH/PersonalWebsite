@@ -1,17 +1,15 @@
-<div class="pure-menu custom-menu">
-        <ul class="pure-menu-list">
-            {% assign pages = site.pages | sort:"weight" %}
-            {% for node in pages %}
-                {% if node.group == 'navigation' %}
-                    <li class="custom-menu-item menu-item">
-                    {% if page.url == node.url %}
-                        <a href="{{node.url}}" class="spf-link custom-menu-link selected">{{node.title}}</a>
-                    {% else %}
-                        <a href="{{node.url}}" class="spf-link custom-menu-link">{{node.title}}</a>
-                    {% endif %}
-                    </li>
-                {% endif %}
-            {% endfor %}
-        </ul>
+<div class="menu-list noselect">
+    {% assign pages = site.pages | sort:"weight" %}
+    {% for node in pages %}
+        {% if node.group == 'navigation' %}
+            <div class="menu-item">
+            {% if page.url == node.url %}
+                <a href="{{node.url}}" class="spf-link menu-link selected">{{node.title}}</a>
+            {% else %}
+                <a href="{{node.url}}" class="spf-link menu-link">{{node.title}}</a>
+            {% endif %}
+            </div>
+        {% endif %}
+    {% endfor %}
 </div>
 
