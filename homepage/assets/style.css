@@ -8,7 +8,8 @@ html {
     line-height: 1.7;
     text-rendering: auto;
     /* Prevents page from jumping / moving when scrollbar appears */
-    margin-left: calc(100vw - 100%);
+    margin-right: calc(100% - 100vw);
+    overflow-x: hidden;
 }
 
 body {
@@ -336,6 +337,7 @@ p {
  * -------- */
 
 .project-entry {
+    min-height: 300px;
 }
 
 .project-img {
