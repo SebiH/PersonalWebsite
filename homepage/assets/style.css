@@ -69,10 +69,10 @@ p {
 
 #layout {
     position: relative;
-    max-width:1020px;
-    margin:0 auto;
-    padding:0 30px;
-    padding:0 1.5rem;
+    max-width: 1020px;
+    margin: 0 auto;
+    padding: 0 30px;
+    padding: 0 1.5rem;
 
     /* Transition smoothly on resize */
     -webkit-transition: all 0.2s ease-out;
