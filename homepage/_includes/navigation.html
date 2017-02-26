@@ -4,9 +4,9 @@
         {% if node.group == 'navigation' %}
             <div class="menu-item">
             {% if page.url == node.url %}
-                <a href="{{node.url}}" class="spf-link menu-link selected">{{node.title}}</a>
+                <a href="{{node.url}}" class="spf-link menu-link selected">{{node.navigation}}</a>
             {% else %}
-                <a href="{{node.url}}" class="spf-link menu-link">{{node.title}}</a>
+                <a href="{{node.url}}" class="spf-link menu-link">{{node.navigation}}</a>
             {% endif %}
             </div>
         {% endif %}

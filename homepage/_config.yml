@@ -3,6 +3,7 @@ title: Sebastian Hubenschmid | Personal website
 email: info@sebi.sh
 description: Sebastian Hubenschmid, CompScience Student (B.Sc.) and Software Engineer
 baseurl: ""
+encoding: utf-8
 url: "https://sebi.sh"
 twitter_username: Sebi__H
 github_username:  SebiH
