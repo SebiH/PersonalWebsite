@@ -4,10 +4,10 @@
 html {
     color: #444;
     font-weight: lighter;
-    font-size: 105%;
+    font-size: 14px;
     line-height: 1.7;
     /* Prevents page from jumping / moving when scrollbar appears */
-    margin-left: calc(100vw - 100%);
+    margin-right: calc(100vw - 100%);
 }
 
 div, p {
@@ -69,7 +69,7 @@ p {
 
 #layout {
     position: relative;
-    max-width: 1020px;
+    max-width: 1040px;
     margin: 0 auto;
     padding: 0 30px;
     padding: 0 1.5rem;
@@ -99,7 +99,7 @@ p {
 }
 
 
-@media screen and (min-width: 48em) {
+@media all and (min-width: 64em) {
     #layout {
         padding-left: 10px;
     }
@@ -160,7 +160,7 @@ p {
 }
 
 /* Transform menu into horizontal menu */
-@media screen and (max-width: 48em) {
+@media all and (max-width: 64em) {
     .custom-menu {
         width: 100%;
         white-space: nowrap;
@@ -171,7 +171,7 @@ p {
     }
 }
 
-@media screen and (max-width: 28em) {
+@media all and (min-width: 28em) {
     .custom-menu-item {
         width: inherit;
         padding: 5px;
@@ -223,7 +223,7 @@ p {
     fill: #444;
 }
 
-@media screen and (max-width: 48em) {
+@media all and (max-width: 64em) {
     .title-name {
         font-size: 22px;
     }
@@ -233,7 +233,7 @@ p {
     }
 }
 
-@media screen and (max-width: 28em) {
+@media all and (max-width: 28em) {
     .title-social {
         position: relative;
         text-align: center;
@@ -254,14 +254,14 @@ p {
     padding-right: 2em;
 }
 
-@media screen and (max-width: 48em) {
+@media all and (max-width: 64em) {
     .profile-picture {
         box-sizing: border-box;
         padding-right: 1em;
     }
 }
 
-@media screen and (max-width: 28em) {
+@media all and (max-width: 28em) {
     .profile-picture {
         box-sizing: border-box;
         padding-right: 0;
@@ -343,7 +343,7 @@ p {
  * Contact
  * ------- */
 
-@media screen and (min-width: 48em) {
+@media all and (min-width: 48em) {
     .pre-container {
         display: inline-block;
     }
