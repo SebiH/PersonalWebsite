@@ -415,6 +415,7 @@ pre {
     background: #ddd;
     padding: 10px;
     font-size: 12px;
+    overflow: auto;
 }
 
 h1.compact, h2.compact, h3.compact {
