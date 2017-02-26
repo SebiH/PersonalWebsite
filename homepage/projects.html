@@ -1,6 +1,7 @@
 ---
 layout: default
 group: navigation
+subgroup: projects
 weight: 2
 title: Projects
 permalink: /projects/
@@ -10,108 +11,24 @@ permalink: /projects/
 <!-- end spf head -->
 
 <!-- begin spf body: content -->
-<h1> Projects </h1>
-
-<hr class="separator">
-
-
+{% assign projects = site.pages | sort:"weight" | where:"group","projects" %}
+{% for project in projects %}
+<h1> {{project.title}} </h1>
 <div class="row project-entry">
     <div class="project-img">
-        <img class="responsive-img" src="/images/ioncube24.png" alt="Project screenshot" />
+        <img class="responsive-img" src="{{project.url}}{{project.image}}" alt="Project screenshot">
     </div>
-
     <div class="project-abstract">
-        <h2> ionCube24 </h2>
-
-        <p> ionCube24 protects users from malicious PHP code by preventing unauthorized scripts from running. Actively in development at ionCube Ltd. in Canterbury, UK </p>
-
-        <!--<a> Read More {% include sprites/angle-double-right.svg width="10" height="10" %} </a>-->
-
+        {{project.abstract}}
     </div>
 </div>
+<a href="{{project.url}}" class="spf-link"> Read more &gt; </a>
 
-<hr class="separator" />
+    {% if forloop.last == false %}
+    <hr class="separator">
+    {% endif %}
 
-
-<div class="row project-entry">
-    <div class="project-img">
-        <img class="responsive-img" src="/images/quellentaucher.jpg" alt="Project screenshot" />
-    </div>
-
-    <div class="project-abstract">
-        <h2> Quellentaucher </h2>
-        <!--<span class="project-languages"> C# ... </span>-->
-        <p> Quellentaucher is part of the librOS project and merges digitial and real aspects for researching information in public libaries. </p>
-        <p> librOS is funded by the federal state of North Rhine Westphalia, Germany, and is currently standing in the Central Library Cologne. </p>
-
-        <!--<a> Read More {% include sprites/angle-double-right.svg width="10" height="10" %} </a>-->
-
-    </div>
-</div>
-
-<hr class="separator" />
-
-
-
-
-<div class="row project-entry">
-    <div class="project-img">
-        <img class="responsive-img" src="/images/MediaRoomControl.jpg" alt="Project screenshot" />
-    </div>
-
-    <div class="project-abstract">
-        <h2> MediaRoomControl </h2>
-
-        <p> Created for the course of "Blended Interaction" at the University of Konstanz, MediaRoomControl offers intuitive keyboard and mouse controls in multi-computer systems. </p>
-
-        <!--<a> Read More {% include sprites/angle-double-right.svg width="10" height="10" %} </a>-->
-
-    </div>
-</div>
-
-<hr class="separator" />
-
-
-
-
-<div class="row project-entry">
-    <div class="project-img">
-        <img class="responsive-img" src="/images/HyperGrid.jpg" alt="Project screenshot" />
-    </div>
-
-    <div class="project-abstract">
-        <h2> FacetStream++ - HyperGrid </h2>
-
-        <p> FacetStream++ and the HyperGrid are now part of librOS, standing in the Central Library of Cologne, as well as in the library of the University of Konstanz. </p>
-
-        <!--<a> Read More {% include sprites/angle-double-right.svg width="10" height="10" %} </a>-->
-
-    </div>
-</div>
-
-<hr class="separator" />
-
-
-
-
-<div class="row project-entry">
-    <div class="project-img">
-        <img class="responsive-img" src="/images/ISGCI.jpg" alt="Project screenshot" />
-    </div>
-
-    <div class="project-abstract">
-        <h2> ISGCI </h2>
-
-        <p> ISGCI is an open-source graph-visualisation application. Since it has been in development for over a decade (started in 1999), its code-base is ancient, relying on out-of-date Java features. </p>
-
-        <p> As part of the 'Software Engineering' course at the University of Konstanz, the codebase was partially refactored, extended and adapted to use an up-to-date graph-drawing library - in this case JGraphX. </p>
-
-    <!--<a> Read More {% include sprites/angle-double-right.svg width="10" height="10" %} </a>-->
-
-    </div>
-</div>
-
-<hr class="separator" />
+{% endfor %}
 <!-- end spf body: content -->
 
 <!-- begin spf foot -->

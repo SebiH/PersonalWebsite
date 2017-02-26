@@ -336,11 +336,11 @@ p {
  * -------- */
 
 .project-entry {
-    min-height: 300px;
 }
 
 .project-img {
     margin-top: 1.5em;
+    width: 200px;
 }
 
 .project-abstract {
