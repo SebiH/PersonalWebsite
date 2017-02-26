@@ -1,0 +1,7 @@
+@font-face {
+    font-family: 'GeosansLight';
+    font-style: normal;
+    font-weight: normal;
+    src: local('GeosansLight'), url('/fonts/GeosansLight.woff') format('woff');
+}
+

@@ -16,7 +16,7 @@ div, p {
 
 h1, h2, h3 {
     color: #666;
-    font-family: 'Pavanam', sans-serif;
+    font-family: 'GeosansLight', sans-serif;
     font-weight: lighter;
 }
 
@@ -186,7 +186,7 @@ p {
 
 .title-name {
     font-size: 38px;
-    font-family: 'Pavanam', sans-serif;
+    font-family: 'GeosansLight', sans-serif;
     color: #666;
     line-height: 2;
 }
