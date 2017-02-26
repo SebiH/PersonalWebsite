@@ -87,7 +87,7 @@ p {
     position: relative;
 }
 
-#menu {
+#navigation {
     position: relative;
     vertical-align: top;
 }
@@ -104,15 +104,15 @@ p {
         padding-left: 10px;
     }
 
-    #menu {
+    #navigation {
         margin-top: 15px;
     }
 }
 
 
-/* ----
- * Menu
- * ---- */
+/* ----------
+ * Navigation
+ * ---------- */
 
 .custom-menu-item {
     width: 120px;
