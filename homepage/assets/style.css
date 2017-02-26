@@ -8,7 +8,7 @@ html {
     line-height: 1.7;
     text-rendering: auto;
     /* Prevents page from jumping / moving when scrollbar appears */
-    margin-right: calc(100vw - 100%);
+    margin-left: calc(100vw - 100%);
 }
 
 body {
@@ -164,7 +164,6 @@ p {
     width: 120px;
     padding: 0;
     margin: 0;
-    height: 100%;
     position: relative;
 }
 
