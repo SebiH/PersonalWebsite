@@ -7,9 +7,13 @@ html {
     font-size: 14px;
     line-height: 1.7;
     text-rendering: auto;
-    /* Prevents page from jumping / moving when scrollbar appears */
-    margin-right: calc(100% - 100vw);
-    overflow-x: hidden;
+}
+
+@media all and (min-width: 64em) {
+    html {
+        /* Prevents page from jumping / moving when scrollbar appears */
+        padding-left: calc(100vw - 100%);
+    }
 }
 
 body {
