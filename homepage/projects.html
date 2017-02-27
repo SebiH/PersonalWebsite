@@ -15,15 +15,15 @@ permalink: /projects/
 {% assign projects = site.pages | sort:"weight" | where:"group","projects" %}
 {% for project in projects %}
 <h1> {{project.title}} </h1>
-<div class="row project-entry">
+<div class="project-entry">
     <div class="project-img">
         <img class="responsive-img" src="{{project.url}}{{project.image}}" alt="Project screenshot">
     </div>
     <div class="project-abstract">
-        {{project.abstract}}
+        {{project.abstract | markdownify}}
     </div>
+    <!--<a href="{{project.url}}" class="spf-link"> Read more &gt; </a>-->
 </div>
-<a href="{{project.url}}" class="spf-link"> Read more &gt; </a>
 
     {% if forloop.last == false %}
     <hr class="separator">
