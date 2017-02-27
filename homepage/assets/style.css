@@ -85,7 +85,7 @@ p {
 
 #layout {
     position: relative;
-    max-width: 1040px;
+    max-width: 1020px;
     margin: 0 auto;
     padding: 0 30px;
     padding: 0 1.5rem;
@@ -341,26 +341,45 @@ p {
  * -------- */
 
 .project-entry {
-    min-height: 300px;
+    display: -webkit-flex;
+    display: flex;
+
+    -webkit-flex-direction: column;
+    flex-direction: column;
 }
 
 .project-img {
-    margin-top: 1.5em;
-    width: 200px;
+    width: 100%;
 }
 
 .project-abstract {
-    padding: 0 10px;
+    padding: 10px 0;
+    width: 100%;
+}
+
+.project-abstract p {
+    font-family: sans-serif;
+    margin-top: 0;
 }
 
 .project-text > h1 {
     font-size: 1.5em;
 }
 
-@media all and (min-width: 64em) {
+@media all and (min-width: 24em) {
     .project-entry {
-        -webkit-flex-direction: column;
-        flex-direction: column;
+        -webkit-flex-direction: row;
+        flex-direction: row;
+    }
+
+    .project-img {
+        width: 250px;
+        padding: 15px 10px;
+    }
+
+    .project-abstract {
+        padding: 10px;
+        margin: 0;
     }
 }
 
