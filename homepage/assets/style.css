@@ -449,3 +449,15 @@ h1.compact, h2.compact, h3.compact {
     margin-bottom: 0;
 }
 
+.network-list {
+    list-style: none;
+}
+
+.network-list li {
+
+}
+
+.network-list li:before {
+    content: "»";
+}
+
