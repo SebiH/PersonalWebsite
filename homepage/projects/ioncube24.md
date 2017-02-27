@@ -1,11 +1,12 @@
 ---
 title: ionCube24
-abstract: Abstract comes here
+abstract: ionCube24 protects users from malicious PHP code by preventing unauthorized scripts from running. Actively in development at ionCube Ltd. in Canterbury, UK
 layout: project
 group: projects
 permalink: /projects/ionCube24/
 image: preview.png
+weight: 2
 ---
 
-# TODO
+# Work in progress
 
