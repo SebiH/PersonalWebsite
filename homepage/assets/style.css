@@ -360,6 +360,8 @@ p {
 .project-abstract p {
     font-family: sans-serif;
     margin-top: 0;
+    text-rendering: optimizeLegibility;
+    font-weight: 300;
 }
 
 .project-text > h1 {
