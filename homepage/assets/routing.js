@@ -1,23 +1,25 @@
-spf.init({
-    'cache-unified': true,
-    'url-identifier': '.spf.json'
-});
+window.onload = function() {
+    spf.init({
+        'cache-unified': true,
+        'url-identifier': '.spf.json'
+    });
 
 
-function setActiveLink(event) {
-    var links = document.getElementsByClassName('menu-link');
-    const selectedLinkClass = "selected";
+    function setActiveLink(event) {
+        var links = document.getElementsByClassName('menu-link');
+        const selectedLinkClass = "selected";
 
-    for (var i = 0; i < links.length; i++) {
-        var el = links[i];
-        var isSelectedPage = (el.href === window.location.href);
-        if (isSelectedPage) {
-            el.classList.add(selectedLinkClass)
-        } else {
-            el.classList.remove(selectedLinkClass)
+        for (var i = 0; i < links.length; i++) {
+            var el = links[i];
+            var isSelectedPage = (el.href === window.location.href);
+            if (isSelectedPage) {
+                el.classList.add(selectedLinkClass)
+            } else {
+                el.classList.remove(selectedLinkClass)
+            }
         }
     }
-}
 
-document.addEventListener('spfdone', setActiveLink);
+    document.addEventListener('spfdone', setActiveLink);
+};
 
