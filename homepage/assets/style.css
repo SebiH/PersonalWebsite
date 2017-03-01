@@ -89,13 +89,6 @@ p {
     margin: 0 auto;
     padding: 0 30px;
     padding: 0 1.5rem;
-
-    /* Transition smoothly on resize */
-    -webkit-transition: all 0.2s ease-out;
-    -moz-transition: all 0.2s ease-out;
-    -ms-transition: all 0.2s ease-out;
-    -o-transition: all 0.2s ease-out;
-    transition: all 0.2s ease-out;
 }
 
 #body {
