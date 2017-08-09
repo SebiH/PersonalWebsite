@@ -13,9 +13,13 @@
     <link rel="shortcut icon" type="image/ico" href="/favicon.png">
     <link rel="apple-touch-icon" type="image/ico" href="/favicon.png">
 
-    <link href="/fonts/GeosansLight.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="/assets/style.css">
+    <style type="text/css">
+        {% capture include_to_scssify %}
+            {% include GeosansLight.scss %}
+            {% include style.scss %}
+        {% endcapture %}
+        {{ include_to_scssify | scssify }}
+    </style>
 
     <script src="/libs/spf/dist/spf.js" async></script>
     <script src="/assets/routing.js" async></script>
