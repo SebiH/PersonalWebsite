@@ -24,7 +24,6 @@ div, p {
 }
 
 h1, h2, h3 {
-    color: #666;
     font-family: 'GeosansLight', sans-serif;
     font-weight: lighter;
     font-size: 1.8em;
@@ -80,7 +79,7 @@ a::selection {
 
 #layout {
     position: relative;
-    max-width: 1020px;
+    max-width: 768px;
     margin: 0 auto;
     padding: 0 30px;
     padding: 0 1.5rem;
@@ -173,8 +172,8 @@ a::selection {
 }
 
 .menu-link:link {
-    color: #666;
-    fill: #666;
+    color: #888;
+    fill: #888;
 }
 
 .menu-link:visited {
@@ -189,13 +188,18 @@ a::selection {
 }
 
 .menu-link:before {
-    content: "// ";
+    content: "* ";
 }
 
 .menu-link.selected {
     font-weight: bold;
     text-decoration: underline;
 }
+
+.menu-link.selected:before {
+    content: "» ";
+}
+
 
 /* Transform menu into horizontal menu */
 @media all and (min-width: 28em) {
@@ -243,7 +247,7 @@ a::selection {
 }
 
 .icon a {
-    transition: fill 0.2s linear;
+    transition: fill 0.1s linear;
 }
 
 .icon a:link,
@@ -254,7 +258,7 @@ a::selection {
 
 .icon a:focus,
 .icon a:hover {
-    fill: #444;
+    fill: #000;
 }
 
 @media all and (min-width: 64em) {
@@ -446,6 +450,6 @@ h1.compact, h2.compact, h3.compact {
 }
 
 .network-list li:before {
-    content: "»";
+    content: "» ";
 }
 
