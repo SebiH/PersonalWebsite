@@ -1,5 +1,5 @@
 require 'json'
-
+require 'cgi'
 
 module Jekyll
 
@@ -45,7 +45,7 @@ module Jekyll
         end
 
         def generate_content(page)
-            html = page.html
+            html = CGI.unescapeHTML(page.html)
 
             title_regex = /<title>(.*)<\/title>/m
             head_regex = /<!-- begin spf head -->(.*)<!-- end spf head -->/m
