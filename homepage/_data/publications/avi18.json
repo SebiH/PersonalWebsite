@@ -1,0 +1,19 @@
+{
+    "type": "workshop_paper",
+    "title": "Employing Tangible Visualisations in Augmented Reality with Mobile Devices",
+    "authors": [
+        { "first": "Sebastian", "last": "Hubenschmid" },
+        { "first": "Simon", "last": "Butscher" },
+        { "first": "Johannes", "last": "Zagermann" },
+        { "first": "Harald", "last": "Reiterer" }
+    ],
+    "doi": "TODO",
+    "conference": "MultimodalVis @ AVI'18",
+    "links": [
+        {
+            "name": "Paper",
+            "url": "http://hci.uni-konstanz.de/downloads/AVI_2018_paper_150.pdf"
+        }
+    ]
+}
+

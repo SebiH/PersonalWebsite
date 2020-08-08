@@ -1,0 +1,10 @@
+<div class="annotation-container">
+    {% if include.type == 'right' %}
+    <aside class="annotation right">
+    {% else %}
+    <aside class="annotation left">
+    {% endif %}
+        {{ include.text }}
+    </aside>
+</div>
+

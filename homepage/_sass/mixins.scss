@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+%mono {
+    font-family: 'Fira Code', monospace;
+    // fira code ligatures in edge
+    font-feature-settings: "calt" 1;
+    font-weight: 300;
+}
+
+%center {
+    max-width: $max-width;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}

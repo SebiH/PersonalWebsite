@@ -1,0 +1,26 @@
+{
+    "type": "thesis",
+    "title": "ART – Augmented Reality above the Tabletop",
+    "subtitle": "An immersive analytics tool for the visual analysis of mobile health data",
+    "date": "Nov 2017",
+    "degree": "Bachelor of Science in Computer Science",
+    "authors": [
+        { "first": "Sebastian", "last": "Hubenschmid" }
+    ],
+    "university": "University of Konstanz",
+    "links": [
+        {
+            "name": "YouTube",
+            "url": "https://youtu.be/5KMH1t_N5Ow"
+        },
+        {
+            "name": "Thesis",
+            "url": "http://hci.uni-konstanz.de/downloads/bachelorthesis_shubenschmid.pdf"
+        },
+        {
+            "name": "Github",
+            "url": "https://github.com/SebiH/ART"
+        }
+    ]
+}
+

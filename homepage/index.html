@@ -1,28 +1,72 @@
 ---
-layout: default
+layout: centered
 weight: 1
 group: navigation
 title: Sebastian's Personal Website
 navigation: Home
 ---
 
-<!-- begin spf head -->
-<!-- end spf head -->
+{% assign conference_papers = site.data.publications | where:"type","conference_paper" | sort: "date" | reverse %}
+{% assign workshop_papers = site.data.publications | where:"type","workshop_paper" | sort: "date" | reverse %}
+{% assign theses = site.data.publications | where:"type","thesis" | sort: "date" | reverse %}
+{% assign projects = site.data.projects | where:"type","project" | sort: "date" | reverse %}
 
-<!-- begin spf body: content -->
-<h1>About me</h1>
+<h1> Recent Work </h1>
 
-<section class="row">
+{% for paper in workshop_papers %}
+<section>
+    <div style="font-weight: 900;">{{ paper.title }}</div>
 
-    <div class="bullet-list">
-        <div>Computer Science (B.Sc.) student at the University of Konstanz, Germany </div>
-        <div>Student Researcher for the Human-Computer Interaction Lab, University of Konstanz, Germany </div>
-        <div>Senior Software Developer for ionCube Ltd., Canterbury, UK </div>
+    <div class="authors">
+        {% for author in paper.authors %}
+        <span>
+            {{ author.last }}, {{ author.first }}{% if forloop.last != true %};{% endif %}
+        </span>
+        {% endfor %}
     </div>
 
+    <div style="font-style: italic;">{{ paper.conference }}</div>
 </section>
-<!-- end spf body: content -->
+{% endfor %}
 
-<!-- begin spf foot -->
-<!-- end spf foot -->
+<hr/>
+
+{% for paper in conference_papers %}
+<section>
+    <div style="font-weight: 900;">{{ paper.title }}</div>
+
+    <div class="authors">
+        {% for author in paper.authors %}
+        <span>
+            {{ author.last }}, {{ author.first }}{% if forloop.last != true %};{% endif %}
+        </span>
+        {% endfor %}
+    </div>
+
+    <div style="font-style: italic;">{{ paper.conference }}</div>
+    <div class="doi">DOI: <a href="https://doi.org/{{paper.doi}}">{{paper.doi}}</a></div>
+</section>
+{% endfor %}
+
+
+<!--{% for post in site.posts limit:5 %}-->
+<!--<article class="journal-preview">-->
+    <!--<div>-->
+        <!--<h2><a href="{{post.url}}">{{ post.title }}</a></h2>-->
+        <!--<div class="mono date unimportant">{{ post.date | date_to_string }}</div>-->
+    <!--</div>-->
+    <!--<div>-->
+        <!--{{ post.abstract | markdownify | truncatewords:50 }}-->
+    <!--</div>-->
+    <!--<div class="link mono">-->
+        <!--<a href="{{post.url}}"> Read more &raquo; </a>-->
+    <!--</div>-->
+
+    <!--{% if forloop.last == false %}-->
+    <!--<hr class="separator"/>-->
+    <!--{% endif %}-->
+<!--</article>-->
+<!--{% endfor %}-->
+
+<br/>
 

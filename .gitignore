@@ -1,3 +1,5 @@
 _site
 homepage/.jekyll-metadata
-
+homepage/.jekyll-cache
+homepage/.sass-cache
+homepage/_drafts

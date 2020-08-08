@@ -1,28 +1,24 @@
 # Site settings
 title: Sebastian Hubenschmid | Personal website
 email: info@sebi.sh
-description: Sebastian Hubenschmid, CompScience Student (B.Sc.) and Software Engineer
+description: Sebastian Hubenschmid, CompScience Student (M.Sc.) and Software Engineer
 baseurl: ""
 encoding: utf-8
 url: "https://sebi.sh"
 twitter_username: Sebi__H
 github_username:  SebiH
 
+# Post settings
+collections:
+    posts:
+        permalink: /journal/:year/:title/
+
 # Build settings
 env: production
 destination: ../_site/
 markdown: kramdown
-gems:
-    - jekyll-angular
-    - jekyll_image_encode
+plugins:
     - jekyll-sitemap
-
-exclude:
-    - bower.json
-
-keep_files:
-    - libs
 
 sass:
     style: compressed
-

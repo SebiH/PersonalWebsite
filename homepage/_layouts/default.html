@@ -6,21 +6,18 @@ layout: compress
 <html lang="en">
     {% include head.html %}
     <body>
-        <div id="layout">
+        <header id="head">
             <div id="title">
                 {% include title.html %}
             </div>
+            <hr class="separator"/>
+            <nav id="navigation">
+                {% include navigation.html %}
+            </nav>
+        </header>
 
-            <div id="body">
-                <nav id="navigation">
-                    {% include navigation.html %}
-                </nav>
-
-                <main id="content">
-                    {{ content }}
-                </main>
-            </div>
-        </div>
+        <main id="content">
+            {{ content }}
+        </main>
     </body>
 </html>
-
