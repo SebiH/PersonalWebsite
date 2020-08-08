@@ -5,7 +5,7 @@
 html {
     text-rendering: optimizeLegibility;
     font-kerning: normal;
-    font: 18px/1.4 'et-book', serif;
+    font: 18px/1.4 serif;
 }
 
 body,
@@ -14,7 +14,7 @@ figure {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Fira Sans', system-ui, sans-serif;
+    font-family: system-ui, sans-serif;
     font-weight: 500;
     margin: 0.5rem 0;
     padding: 0.5rem 0;
@@ -116,7 +116,7 @@ a::selection {
 
 #navigation {
     @extend %mono;
-    font-size: 13px;
+    font-size: 13pt;
 
     width: 100%;
     margin: 0;
@@ -192,7 +192,7 @@ a::selection {
     margin-top: 10px;
 
     .name {
-        font-family: 'Fira Code';
+        font-family: monospace;
         font-size: 22px;
         color: #666;
         text-align: center;

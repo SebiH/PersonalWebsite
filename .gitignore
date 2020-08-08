@@ -1,5 +1,6 @@
 _site
 homepage/.jekyll-metadata
-homepage/.jekyll-cache
+.jekyll-cache
 homepage/.sass-cache
 homepage/_drafts
+vendor
