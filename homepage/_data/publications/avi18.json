@@ -1,5 +1,7 @@
 {
-    "type": "workshop_paper",
+    "type": "Workshop Paper",
+    "year": 2018,
+    "month": 5,
     "title": "Employing Tangible Visualisations in Augmented Reality with Mobile Devices",
     "authors": [
         { "first": "Sebastian", "last": "Hubenschmid" },
@@ -7,11 +9,12 @@
         { "first": "Johannes", "last": "Zagermann" },
         { "first": "Harald", "last": "Reiterer" }
     ],
-    "doi": "TODO",
-    "conference": "MultimodalVis @ AVI'18",
+    "workshop": "MultimodalVis",
+    "conference": "AVI 2018 Workshop on Multimodal Interaction for Data Visualization",
+    "conference_short": "AVI '18",
     "links": [
         {
-            "name": "Paper",
+            "name": "PDF",
             "url": "http://hci.uni-konstanz.de/downloads/AVI_2018_paper_150.pdf"
         }
     ]

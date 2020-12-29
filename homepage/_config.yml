@@ -1,5 +1,5 @@
 # Site settings
-title: Sebastian Hubenschmid | Personal website
+title: Sebastian Hubenschmid | Personal Website
 email: info@sebi.sh
 description: Sebastian Hubenschmid, Ph.D. student at the HCI Group, University of Konstanz, Germany
 baseurl: ""
@@ -8,17 +8,10 @@ url: "https://sebi.sh"
 twitter_username: Sebi__H
 github_username:  SebiH
 
-# Post settings
-collections:
-    posts:
-        permalink: /journal/:year/:title/
-
 # Build settings
 env: production
 destination: ../_site/
 markdown: kramdown
-plugins:
-    - jekyll-sitemap
 
 sass:
     style: compressed

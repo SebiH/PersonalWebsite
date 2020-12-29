@@ -1,5 +1,7 @@
 {
-    "type": "conference_paper",
+    "type": "Conference Paper",
+    "year": 2018,
+    "month": 4,
     "title": "Clusters, Trends, and Outliers: How Immersive Technologies Can Facilitate the Collaborative Analysis of Multidimensional Data",
     "authors": [
         { "first": "Simon", "last": "Butscher" },
@@ -9,18 +11,15 @@
         { "first": "Harald", "last": "Reiterer" }
     ],
     "doi": "10.1145/3173574.3173664",
-    "conference": "In Proceedings of the 36th annual ACM conference on Human factors in computing systems (CHI ’18), ACM, Apr 2018",
+    "conference": "Proceedings of the 2018 CHI Conference on Human Factors in Computing Systems",
+    "conference_short": "CHI '18",
     "links": [
         {
-            "name": "Main Author Webpage",
-            "url": "http://hci.uni-konstanz.de/staff/Butscher"
-        },
-        {
-            "name": "YouTube",
+            "name": "Video",
             "url": "https://youtu.be/5KMH1t_N5Ow"
         },
         {
-            "name": "Preprint",
+            "name": "PDF",
             "url": "http://hci.uni-konstanz.de/downloads/ART.pdf"
         }
     ]

@@ -1,157 +1,86 @@
 ---
-layout: centered
-weight: 1
-group: navigation
+layout: default
 title: Sebastian Hubenschmid
-styles:
-    - publications
 ---
-
-{% assign conference_papers = site.data.publications | where:"type","conference_paper" | sort: "date" | reverse %}
-{% assign workshop_papers = site.data.publications | where:"type","workshop_paper" | sort: "date" | reverse %}
-{% assign theses = site.data.publications | where:"type","thesis" | sort: "date" | reverse %}
-{% assign projects = site.data.projects | where:"type","project" | sort: "date" | reverse %}
-
-
-<h1> Publications </h1>
-
-<h2> Conference Paper </h2>
-
-{% for paper in conference_papers %}
-<section>
-    <div style="font-weight: 900;">{{ paper.title }}</div>
-
-    <div class="authors">
-        {% for author in paper.authors %}
-        <span>
-            {{ author.last }}, {{ author.first }}{% if forloop.last != true %};{% endif %}
-        </span>
-        {% endfor %}
-    </div>
-
-    <div style="font-style: italic;">{{ paper.conference }}</div>
-    <div class="doi">DOI: <a href="https://doi.org/{{paper.doi}}">{{paper.doi}}</a></div>
-    <div>
-        {% for link in paper.links %}
-        <a href="{{link.url}}">[{{link.name}}]</a>
-        {% endfor %}
-    </div>
-</section>
-{% endfor %}
-
-
-<h2> Workshop Paper </h2>
-
-{% for paper in workshop_papers %}
-<section>
-    <div style="font-weight: 900;">{{ paper.title }}</div>
-
-    <div class="authors">
-        {% for author in paper.authors %}
-        <span>
-            {{ author.last }}, {{ author.first }}{% if forloop.last != true %};{% endif %}
-        </span>
-        {% endfor %}
-    </div>
-
-    <div style="font-style: italic;">{{ paper.conference }}</div>
-    <div>
-        {% for link in paper.links %}
-        <a href="{{link.url}}">[{{link.name}}]</a>
-        {% endfor %}
-    </div>
-</section>
-{% endfor %}
-
-
-<h2> Thesis </h2>
-
-{% for thesis in theses %}
-<section>
-    <div style="font-weight: 900;">{{ thesis.title }}</div>
-    {% if thesis.subtitle %}
-    <div style="font-weight: 100;">{{ thesis.subtitle }}</div>
-    {% endif %}
-
-    <div class="authors">
-        {% for author in thesis.authors %}
-        <span>
-            {{ author.last }}, {{ author.first }}{% if forloop.last != true %};{% endif %}
-        </span>
-        {% endfor %}
-    </div>
-
-    <div>
-        <span>{{ thesis.degree }}</span>,
-        <span>{{ thesis.date }}</span>,
-        <span style="font-style: italic;">{{ thesis.university }}</span>
-    </div>
-    <div>
-        {% for link in thesis.links %}
-        <a href="{{link.url}}">[{{link.name}}]</a>
-        {% endfor %}
-    </div>
-</section>
-{% endfor %}
-
-
-<h2> Projects </h2>
-
-{% for project in projects %}
-<section>
-    <div style="font-weight: 900;">{{ project.title }}</div>
-    <div> {{ project.description }} </div>
-    <div>
-        {% for link in project.links %}
-        <a href="{{link.url}}">[{{link.name}}]</a>
-        {% endfor %}
-    </div>
-
-    {% if forloop.last == false %}
-    <hr class="separator"/>
-    {% endif %}
-</section>
-
-{% endfor %}
 
 <h1>About me</h1>
 <section class="mono">
     <ul class="bullet-list">
-        <li>Ph.D. student at the Human-Computer Interaction Group, University of Konstanz, Germany</li>
-        <li>M.Sc. &amp; B.Sc. in Computer Science, University of Konstanz, Germany</li>
+        <li>Research assistant and Ph.D. student at the Human-Computer Interaction Group, University of Konstanz, Germany</li>
+        <li>M.Sc. and B.Sc. in Computer Science, University of Konstanz, Germany</li>
         <li>Former Senior Software Developer for ionCube Ltd., Canterbury, UK </li>
     </ul>
 </section>
 
+
+<h1> Publications </h1>
+
+{% assign publications = site.data.publications | where_exp:"type","type != null" | sort: "month" | sort: "year" | reverse %}
+{% for publication in publications %}
+<section class="publication">
+    <div class="title">{{ publication.title }}</div>
+
+    <div class="info">
+        <span class="authors">
+            {% for author in publication.authors %}
+            <span
+                {% if author.first == 'Sebastian' and author.last == 'Hubenschmid' %}
+                class="me"
+                {% endif %}
+                >
+                {{ author.first }} {{ author.last }}{% if forloop.last != true %},{% else %}.{% endif %}
+            </span>
+            {% endfor %}
+        </span>
+
+        <span>In:</span>
+        <span class="conference">{{ publication.conference }}.</span>
+        <span>{{ publication.year }}.</span>
+    </div>
+
+    {% if publication.doi %}
+    <div class="doi">DOI: <a href="https://doi.org/{{publication.doi}}">{{publication.doi}}</a></div>
+    {% endif %}
+
+    <div class="links">
+        {% for link in publication.links %}
+        <a href="{{link.url}}">[{{link.name}}]</a>
+        {% if forloop.last != true %}<span class="spacer"></span>{% endif %}
+
+        {% endfor %}
+    </div>
+
+    <div class="tags">
+        <div class="tag">
+            <span class="icon icon-conference">
+            </span>
+            <span class="text">
+                {{ publication.conference_short }}
+            </span>
+        </div>
+        <div class="tag">
+            <span class="icon icon-type">
+            </span>
+
+            <span class="text">
+                {{ publication.type }}
+            </span>
+        </div>
+    </div>
+
+</section>
+{% endfor %}
+
+
 <h1>Contact</h1>
 
-<section class="mono">
+<section>
     <ul class="bullet-list">
         <li> <a href="https://hci.uni-konstanz.de/en/members/research-assistants/sebastian-hubenschmid/">University</a></li>
         <li> <a href="https://github.com/SebiH">GitHub</a></li>
-        <li> <a href="https://stackoverflow.com/users/story/4090817">StackOverflow CV</a></li>
         <li> <a href="https://www.linkedin.com/in/sebastianhubenschmid">LinkedIn</a></li>
         <li> <a href="https://twitter.com/Sebi__H">Twitter</a></li>
+        <li> <a href="mailto:info@sebi.sh">Email</a> (<a href="/ssh-pubkey.txt">GPG Key</a>)</li>
     </ul>
 </section>
 
-<h2>Email</h2>
-<section class="mono">
-    <ul class="bullet-list">
-        <li>
-            <a href="mailto:info@sebi.sh">
-                <span>info@sebi.sh</span>
-            </a>
-        </li>
-    </ul>
-</section>
-
-<h2>GPG Key</h2>
-<section class="mono">
-    <div>
-        <a href="/ssh-pubkey.txt" download>Download</a> / <a href="/ssh-pubkey.txt">View</a>
-    </div>
-    <div class="pre-container">
-        <pre><code>{% include gpg-info.txt %}</code></pre>
-    </div>
-</section>
