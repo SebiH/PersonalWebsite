@@ -25,6 +25,13 @@ h1, h2, h3, h4, h5, h6 {
     color: $nord2;
 }
 
+@media only screen and (max-width: 64em) {
+    /* For mobile phones: */
+    h1 {
+        font-size: 22px;
+    }
+}
+
 #content {
     margin-bottom: 5rem;
 }
@@ -203,10 +210,10 @@ $icons: (
                 background-repeat: no-repeat;
                 background-size: auto 80%;
                 position: absolute;
-                top: 0;
+                top: 0.05em;
                 left: 0;
-                height: 1.6em;
-                width: 1.6em;
+                height: 1.5em;
+                width: 1.5em;
 
                 &-conference {
                     background-image: url( $data-svg-prefix + map-get( $icons, 'mark' ) );
@@ -218,7 +225,7 @@ $icons: (
             }
 
             .text {
-                margin-left: 1.5em;
+                margin-left: 1.6em;
             }
         }
     }
