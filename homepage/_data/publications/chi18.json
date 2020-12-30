@@ -15,11 +15,13 @@
     "conference_short": "CHI '18",
     "links": [
         {
-            "name": "PDF",
+            "name": "Paper (Preprint)",
+            "type": "pdf",
             "url": "https://kops.uni-konstanz.de/handle/123456789/43062"
         },
         {
-            "name": "Video",
+            "name": "Teaser Video",
+            "type": "video",
             "url": "https://youtu.be/5KMH1t_N5Ow"
         }
     ]

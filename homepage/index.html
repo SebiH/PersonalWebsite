@@ -44,8 +44,16 @@ title: Sebastian Hubenschmid
 
     <div class="links">
         {% for link in publication.links %}
-        <a href="{{link.url}}">[{{link.name}}]</a>
-        {% if forloop.last != true %}<span class="spacer"></span>{% endif %}
+        <div class="link">
+            <a href="{{link.url}}">
+                <span class="icon icon-{{ link.type }}"></span>
+                <span class="text">{{link.name}}</span>
+            </a>
+        </div>
+
+        {% if forloop.last != true %}
+        <div class="spacer"></div>
+        {% endif %}
 
         {% endfor %}
     </div>
