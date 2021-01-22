@@ -9,14 +9,14 @@
         { "first": "Simon", "last": "Butscher" },
         { "first": "Harald", "last": "Reiterer" }
     ],
-    "doi": "10.1145/3173574.3173664",
+    "doi": "10.1145/3411764.3445298",
     "conference": "CHI Conference on Human Factors in Computing Systems (CHI '21)",
     "conference_short": "CHI '21",
     "links": [
         {
             "name": "Paper",
             "type": "pdf",
-            "url": "https://t.co/mx2TBygECP?amp=1"
+            "url": "https://kops.uni-konstanz.de/handle/123456789/52529"
         },
         {
             "name": "Video",
