@@ -1,0 +1,24 @@
+{
+    "type": "Conference Paper",
+    "year": 2021,
+    "month": 9,
+    "title": "IDIAR: Augmented Reality Dashboards to Supervise Mobile Intervention Studies",
+    "authors": [
+        { "first": "Katja", "last": "Vock" },
+        { "first": "Sebastian", "last": "Hubenschmid" },
+        { "first": "Johannes", "last": "Zagermann" },
+        { "first": "Simon", "last": "Butscher" },
+        { "first": "Harald", "last": "Reiterer" }
+    ],
+    "doi": "10.1145/3473856.3473876",
+    "conference": "Mensch und Computer 2021 (MuC '21)",
+    "conference_short": "MuC '21",
+    "links": [
+        {
+            "name": "Paper",
+            "type": "pdf",
+            "url": "https://kops.uni-konstanz.de/handle/123456789/54430"
+        }
+    ]
+}
+
