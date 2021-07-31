@@ -5,12 +5,12 @@ description: Sebastian Hubenschmid, Ph.D. student at the HCI Group, University o
 baseurl: ""
 encoding: utf-8
 url: "https://sebi.sh"
-twitter_username: Sebi__H
+twitter_username: s_hubenschmid
 github_username:  SebiH
 
 # Build settings
 env: production
-destination: ../_site/
+destination: _site/
 markdown: kramdown
 
 sass:
