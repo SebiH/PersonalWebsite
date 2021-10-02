@@ -14,17 +14,17 @@
     "conference_short": "CHI '21",
     "links": [
         {
-            "name": "Paper",
+            "name": "Paper (Open Access)",
             "type": "pdf",
-            "url": "https://kops.uni-konstanz.de/handle/123456789/52529"
+            "url": "https://dl.acm.org/doi/10.1145/3411764.3445298"
         },
         {
-            "name": "Video",
+            "name": "Video Figure",
             "type": "video",
             "url": "https://youtu.be/5KMH1t_N5Ow"
         },
         {
-            "name": "Project source code",
+            "name": "Project Source Code",
             "type": "code",
             "url": "https://github.com/hcigroupkonstanz/STREAM"
         }

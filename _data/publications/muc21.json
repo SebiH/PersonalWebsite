@@ -15,9 +15,14 @@
     "conference_short": "MuC '21",
     "links": [
         {
-            "name": "Paper",
+            "name": "Paper (Open Access)",
             "type": "pdf",
-            "url": "https://kops.uni-konstanz.de/handle/123456789/54430"
+            "url": "https://dl.acm.org/doi/10.1145/3473856.3473876"
+        },
+        {
+            "name": "Presentation",
+            "type": "video",
+            "url": "https://youtu.be/i4P6K2o1n2A"
         }
     ]
 }
