@@ -274,6 +274,12 @@ $icons: (
 }
 
 
+.workshop {
+    @extend .publication;
+    border-color: $nord14;
+}
+
+
 /* -------
  * Utility
  * ------- */
