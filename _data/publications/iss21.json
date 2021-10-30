@@ -1,0 +1,27 @@
+{
+    "type": "Workshop Paper",
+    "year": 2021,
+    "month": 11,
+    "title": "Towards Asynchronous Hybrid User Interfaces for Cross-Reality Interaction",
+    "authors": [
+        { "first": "Sebastian", "last": "Hubenschmid", "equal": true },
+        { "first": "Johannes", "last": "Zagermann", "equal": true },
+        { "first": "Daniel", "last": "Fink", "equal": true },
+        { "first": "Jonathan", "last": "Wieland", "equal": true },
+        { "first": "Tiare", "last": "Feuchtner", "equal": true },
+        { "first": "Harald", "last": "Reiterer", "equal": true }
+    ],
+    "workshop": "Transitional Interfaces in Mixed and Cross-Reality: A new frontier?",
+    "doi": "10.18148/kops/352-2-84mm0sggczq02",
+    "conference": "ISS '21 Workshop on 'Transitional Interfaces in Mixed and Cross-Reality: A new frontier?'",
+    "conference_short": "ISS '21",
+    "links": [
+        {
+            "name": "Paper (Open Access)",
+            "type": "pdf",
+            "url": "https://dx.doi.org/10.18148/kops/352-2-84mm0sggczq02"
+        }
+    ]
+}
+
+
