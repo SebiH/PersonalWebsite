@@ -1,0 +1,26 @@
+
+{
+    "type": "Journal Paper",
+    "year": 2022,
+    "month": 4,
+    "title": "RagRug: A Toolkit for Situated Analytics",
+    "authors": [
+        { "first": "Philipp", "last": "Fleck" },
+        { "first": "Aimée Sousa", "last": "Calepso" },
+        { "first": "Sebastian", "last": "Hubenschmid" },
+        { "first": "Michael", "last": "Sedlmair" },
+        { "first": "Dieter", "last": "Schmalstieg" }
+    ],
+    "doi": "10.1109/TVCG.2022.3157058",
+    "conference": "IEEE Transactions on Visualization and Computer Graphics (TVCG)",
+    "journal": "TODO",
+    "journal_short": "TODO",
+    "links": [
+        {
+            "name": "Project Source Code",
+            "type": "code",
+            "url": "https://github.com/philfleck/ragrug"
+        }
+    ]
+}
+

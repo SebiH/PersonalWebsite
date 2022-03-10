@@ -1,0 +1,27 @@
+{
+    "type": "Conference Paper",
+    "year": 2022,
+    "month": 5,
+    "title": "ReLive: Bridging In-Situ and Ex-Situ Visual Analytics for Analyzing Mixed Reality User Studies",
+    "authors": [
+        { "first": "Sebastian", "last": "Hubenschmid", "equal": true },
+        { "first": "Jonathan", "last": "Wieland", "equal", true },
+        { "first": "Daniel Immanuel", "last": "Fink", "equal": true },
+        { "first": "Andrea", "last": "Batch" },
+        { "first": "Johannes", "last": "Zagermann" },
+        { "first": "Niklas", "last": "Elmqvist" },
+        { "first": "Harald", "last": "Reiterer" }
+    ],
+    "equal": "First three authors contributed equally",
+    "doi": "10.1145/3491102.3517550",
+    "conference": "CHI Conference on Human Factors in Computing Systems (CHI '22)",
+    "conference_short": "CHI '22",
+    "links": [
+        {
+            "name": "Project Source Code",
+            "type": "code",
+            "url": "https://github.com/hcigroupkonstanz/ReLive"
+        }
+    ]
+}
+
