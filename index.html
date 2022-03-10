@@ -15,7 +15,7 @@ title: Sebastian Hubenschmid
 
 <h1> Publications </h1>
 
-{% assign publications = site.data.publications | where_exp:"type","type != null" | sort: "month" | sort: "year" | reverse %}
+{% assign publications = site.data.publications | where_exp:"type","type != null" | sort: "sort" | reverse %}
 {% for publication in publications %}
 <section class="publication">
     <div class="title">{{ publication.title }}</div>

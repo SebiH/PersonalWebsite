@@ -1,11 +1,12 @@
 {
     "type": "Conference Paper",
+    "sort": 202205,
     "year": 2022,
     "month": 5,
     "title": "ReLive: Bridging In-Situ and Ex-Situ Visual Analytics for Analyzing Mixed Reality User Studies",
     "authors": [
         { "first": "Sebastian", "last": "Hubenschmid", "equal": true },
-        { "first": "Jonathan", "last": "Wieland", "equal", true },
+        { "first": "Jonathan", "last": "Wieland", "equal": true },
         { "first": "Daniel Immanuel", "last": "Fink", "equal": true },
         { "first": "Andrea", "last": "Batch" },
         { "first": "Johannes", "last": "Zagermann" },
