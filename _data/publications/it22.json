@@ -1,0 +1,26 @@
+
+{
+    "type": "Journal Paper",
+    "sort": 202208,
+    "year": 2022,
+    "month": 8,
+    "title": "Complementary Interfaces for Visual Computing",
+    "authors": [
+        { "first": "Johannes", "last": "Zagermann", "equal": true },
+        { "first": "Sebastian", "last": "Hubenschmid", "equal": true },
+        { "first": "Priscilla", "last": "Balestrucci" },
+        { "first": "Tiare", "last": "Feuchtner" },
+        { "first": "Sven", "last": "Mayer" },
+        { "first": "Marc O.", "last": "Ernst" },
+        { "first": "Albrecht", "last": "Schmidt" },
+        { "first": "Harald", "last": "Reiterer" }
+    ],
+    "conference": "Information Technology Special Issue",
+    "conference_short": "IT'22",
+    "journal": "TODO",
+    "journal_short": "TODO",
+    "links": [
+    ]
+}
+
+
