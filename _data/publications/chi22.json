@@ -19,6 +19,16 @@
     "conference_short": "CHI '22",
     "links": [
         {
+            "name": "Paper (Open Access)",
+            "type": "pdf",
+            "url": "https://dl.acm.org/doi/10.1145/3491102.3517550"
+        },
+        {
+            "name": "Video Figure",
+            "type": "video",
+            "url": "https://youtu.be/BaNZ02QkZ_k"
+        },
+        {
             "name": "Project Source Code",
             "type": "code",
             "url": "https://github.com/hcigroupkonstanz/ReLive"
