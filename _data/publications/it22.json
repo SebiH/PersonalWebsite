@@ -21,6 +21,11 @@
     "journal": "TODO",
     "journal_short": "TODO",
     "links": [
+        {
+            "name": "Paper (Open Access)",
+            "type": "pdf",
+            "url": "https://www.degruyter.com/document/doi/10.1515/itit-2022-0031/"
+        }
     ]
 }
 
