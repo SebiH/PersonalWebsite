@@ -1,0 +1,18 @@
+{
+    "type": "Conference Paper",
+    "sort": 202304,
+    "year": 2023,
+    "month": 4,
+    "title": "ARound the Smartphone: Investigating the Effects of Virtually-Extended Display Size on Spatial Memory",
+    "authors": [
+        { "first": "Sebastian", "last": "Hubenschmid" },
+        { "first": "Johannes", "last": "Zagermann" },
+        { "first": "Daniel", "last": "Leicht" },
+        { "first": "Harald", "last": "Reiterer" },
+        { "first": "Tiare", "last": "Feuchtner" }
+    ],
+    "conference": "CHI Conference on Human Factors in Computing Systems (CHI '23)",
+    "conference_short": "CHI '23",
+    "links": [ ]
+}
+
