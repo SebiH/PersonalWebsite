@@ -19,6 +19,11 @@
     "journal_short": "TODO",
     "links": [
         {
+            "name": "PDF",
+            "type": "pdf",
+            "url": "https://kops.uni-konstanz.de/entities/publication/54973d4a-3d03-48f1-9e82-9df9abc7cb73"
+        },
+        {
             "name": "Project Source Code",
             "type": "code",
             "url": "https://github.com/philfleck/ragrug"

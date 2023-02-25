@@ -193,6 +193,7 @@ $icons: (
     .links {
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
         margin-bottom: 0.6em;
 
         .spacer:before {
@@ -273,6 +274,27 @@ $icons: (
     }
 }
 
+
+@media only screen and (max-width: 64em) {
+    /* For mobile phones: */
+
+    .publication .links {
+
+        .spacer {
+            display: none;
+        }
+
+        .link {
+            width: 100%;
+            margin-bottom: 4px;
+            margin-top: 4px;
+
+            .text {
+                margin-left: 2.5em;
+            }
+        }
+    }
+}
 
 .workshop {
     @extend .publication;

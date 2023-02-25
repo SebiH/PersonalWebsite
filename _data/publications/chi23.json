@@ -16,9 +16,9 @@
     "doi": "10.1145/3544548.3581438",
     "links": [
         {
-            "name": "Paper (Open Access)",
+            "name": "PDF",
             "type": "pdf",
-            "url": "https://kops.uni-konstanz.de/entities/publication/607d81ff-42c2-4fb1-a7fd-123a960b6a44"
+            "url": "https://kops.uni-konstanz.de/entities/publication/06bba04d-3d04-4758-b6d2-eb35ec114c25"
         },
         {
             "name": "Video",
@@ -26,12 +26,12 @@
             "url": "https://youtu.be/p6cHwLxHWJg"
         },
         {
-            "name": "Research Code",
+            "name": "Code",
             "type": "code",
             "url": "https://github.com/hcigroupkonstanz/ARound-the-Smartphone"
         },
         {
-            "name": "Research Data",
+            "name": "Study Data",
             "type": "code",
             "url": "https://darus.uni-stuttgart.de/dataset.xhtml?persistentId=doi:10.18419/darus-3326"
         }
