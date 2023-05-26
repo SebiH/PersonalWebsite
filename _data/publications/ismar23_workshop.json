@@ -1,0 +1,28 @@
+{
+    "type": "Workshop",
+    "sort": 202310,
+    "year": 2023,
+    "month": 10,
+    "title": "Hybrid User Interfaces: Complementary Interfaces for Mixed Reality Interaction",
+    "authors": [
+        { "first": "Sebastian", "last": "Hubenschmid" },
+        { "first": "Johannes", "last": "Zagermann" },
+        { "first": "Raimund", "last": "Dachselt" },
+        { "first": "Niklas", "last": "Elmqvist" },
+        { "first": "Steven", "last": "Feiner" },
+        { "first": "Tiare", "last": "Feuchtner" },
+        { "first": "Benjamin", "last": "Lee" },
+        { "first": "Harald", "last": "Reiterer" },
+        { "first": "Dieter", "last": "Schmalstieg" }
+    ],
+    "conference": "2023 IEEE International Symposium on Mixed and Augmented Reality (ISMAR)",
+    "conference_short": "ISMAR '23",
+    "links": [
+        {
+            "name": "Website",
+            "type": "pdf",
+            "url": "https://hybrid-ui-workshop.io"
+        }
+    ]
+}
+
