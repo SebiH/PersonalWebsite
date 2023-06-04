@@ -39,41 +39,17 @@ title: Sebastian Hubenschmid
     </div>
 
     {% if publication.doi %}
-    <div class="doi">DOI: <a href="https://doi.org/{{publication.doi}}">{{publication.doi}}</a></div>
+    <div class="doi">DOI: <a href="https://doi.org/{{publication.doi}}" target="_blank">{{publication.doi}}</a></div>
     {% endif %}
 
     <div class="links">
         {% for link in publication.links %}
-        <div class="link">
-            <a href="{{link.url}}">
-                <span class="icon icon-{{ link.type }}"></span>
-                <span class="text">{{link.name}}</span>
-            </a>
-        </div>
-
-        {% if forloop.last != true %}
-        <div class="spacer"></div>
-        {% endif %}
+        <a class="link" href="{{link.url}}" target="_blank">
+            <span class="icon icon-{{ link.type }}"></span>
+            <span class="text">{{link.name}}</span>
+        </a>
 
         {% endfor %}
-    </div>
-
-    <div class="tags">
-        <div class="tag">
-            <span class="icon icon-conference">
-            </span>
-            <span class="text">
-                {{ publication.conference_short }}
-            </span>
-        </div>
-        <div class="tag">
-            <span class="icon icon-type">
-            </span>
-
-            <span class="text">
-                {{ publication.type }}
-            </span>
-        </div>
     </div>
 
 </section>
