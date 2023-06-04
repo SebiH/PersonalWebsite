@@ -39,12 +39,12 @@ title: Sebastian Hubenschmid
     </div>
 
     {% if publication.doi %}
-    <div class="doi">DOI: <a href="https://doi.org/{{publication.doi}}" target="_blank">{{publication.doi}}</a></div>
+    <div class="doi">DOI: <a href="https://doi.org/{{publication.doi}}" target="_blank" rel="noopener">{{publication.doi}}</a></div>
     {% endif %}
 
     <div class="links">
         {% for link in publication.links %}
-        <a class="link" href="{{link.url}}" target="_blank">
+        <a class="link" href="{{link.url}}" target="_blank" rel="noopener">
             <span class="icon icon-{{ link.type }}"></span>
             <span class="text">{{link.name}}</span>
         </a>
@@ -84,12 +84,12 @@ title: Sebastian Hubenschmid
     </div>
 
     {% if workshop.doi %}
-    <div class="doi">DOI: <a href="https://doi.org/{{workshop.doi}}" target="_blank">{{workshop.doi}}</a></div>
+    <div class="doi">DOI: <a href="https://doi.org/{{workshop.doi}}" target="_blank" rel="noopener">{{workshop.doi}}</a></div>
     {% endif %}
 
     <div class="links">
         {% for link in workshop.links %}
-        <a class="link" href="{{link.url}}" target="_blank">
+        <a class="link" href="{{link.url}}" target="_blank" rel="noopener">
             <span class="icon icon-{{ link.type }}"></span>
             <span class="text">{{link.name}}</span>
         </a>
@@ -104,11 +104,11 @@ title: Sebastian Hubenschmid
 
 <section>
     <ul class="bullet-list">
-        <li> <a target="_blank" href="https://hci.uni-konstanz.de/staff/hubenschmid">University</a></li>
-        <li> <a target="_blank" href="https://github.com/SebiH">GitHub</a></li>
-        <li> <a target="_blank" href="https://www.linkedin.com/in/sebastianhubenschmid">LinkedIn</a></li>
-        <li> <a target="_blank" href="https://twitter.com/s_hubenschmid">Twitter</a></li>
-        <li> <a target="_blank" href="mailto:info@sebi.sh">Email</a></li>
+        <li> <a target="_blank" rel="noopener" href="https://hci.uni-konstanz.de/staff/hubenschmid">University</a></li>
+        <li> <a target="_blank" rel="noopener" href="https://github.com/SebiH">GitHub</a></li>
+        <li> <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/sebastianhubenschmid">LinkedIn</a></li>
+        <li> <a target="_blank" rel="noopener" href="https://twitter.com/s_hubenschmid">Twitter</a></li>
+        <li> <a target="_blank" rel="noopener" href="mailto:info@sebi.sh">Email</a></li>
     </ul>
 </section>
 
