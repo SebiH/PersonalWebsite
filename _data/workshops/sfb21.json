@@ -15,11 +15,10 @@
         { "first": "Harald", "last": "Reiterer" },
         { "first": "Falk", "last": "Schreiber" }
     ],
-    "conference": "SFB-TRR 161",
-    "conference_short": "SFB-TRR 161",
+    "location": "Konstanz, Germany",
     "links": [
         {
-            "name": "Article",
+            "name": "News Article",
             "type": "pdf",
             "url": "https://www.visual-computing.org/2021/12/20/situated-analytics-workshop/"
         }
