@@ -24,6 +24,11 @@
             "name": "Video Figure",
             "type": "video",
             "url": "https://youtu.be/5KMH1t_N5Ow"
+        },
+        {
+            "name": "Source Code",
+            "type": "code",
+            "url": "https://github.com/SebiH/ART"
         }
     ]
 }

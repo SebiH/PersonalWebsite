@@ -25,7 +25,12 @@
             "url": "https://youtu.be/BtwAbytRrJQ"
         },
         {
-            "name": "Project Source Code",
+            "name": "Presentation",
+            "type": "video",
+            "url": "https://youtu.be/6XKHTO6krfg"
+        },
+        {
+            "name": "Source Code",
             "type": "code",
             "url": "https://github.com/hcigroupkonstanz/STREAM"
         }

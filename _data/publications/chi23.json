@@ -21,7 +21,7 @@
             "url": "https://dl.acm.org/doi/10.1145/3544548.3581438"
         },
         {
-            "name": "Video",
+            "name": "Video Figure",
             "type": "video",
             "url": "https://youtu.be/p6cHwLxHWJg"
         },
@@ -31,7 +31,7 @@
             "url": "https://youtu.be/4boLfuMl63Y"
         },
         {
-            "name": "Code",
+            "name": "Source Code",
             "type": "code",
             "url": "https://github.com/hcigroupkonstanz/ARound-the-Smartphone"
         },

@@ -29,7 +29,12 @@
             "url": "https://youtu.be/BaNZ02QkZ_k"
         },
         {
-            "name": "Project Source Code",
+            "name": "Presentation",
+            "type": "video",
+            "url": "https://youtu.be/As3i9rzliF4"
+        },
+        {
+            "name": "Source Code",
             "type": "code",
             "url": "https://github.com/hcigroupkonstanz/ReLive"
         }

@@ -24,7 +24,12 @@
             "url": "https://kops.uni-konstanz.de/entities/publication/54973d4a-3d03-48f1-9e82-9df9abc7cb73"
         },
         {
-            "name": "Project Source Code",
+            "name": "Video Figure",
+            "type": "video",
+            "url": "https://www.youtube.com/watch?v=mFxSdvQhSVU"
+        },
+        {
+            "name": "Source Code",
             "type": "code",
             "url": "https://github.com/philfleck/ragrug"
         }
