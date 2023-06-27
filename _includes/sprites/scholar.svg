@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg  width="{{include.width}}" height="{{include.height}}" version="1.1" viewBox="100 50 900 900" xmlns="http://www.w3.org/2000/svg">
+ <g>
+  <path d="m610.82 530.41-484.25-169.47 485.6-169.47 461.28 169.47z"/>
+  <path d="m610.82 601.68-304.57-106.59v267.36l292.95 97.77 294.55-97.77v-264.42z"/>
+  <path d="m126.56 731.75h66.18v74.078h-66.18z"/>
+  <path d="m126.56 363.48h66.18v296.57h-66.18z"/>
+ </g>
+</svg>
