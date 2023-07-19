@@ -38,8 +38,26 @@ title: Sebastian Hubenschmid
         <span>{{ publication.year }}.</span>
     </div>
 
-    {% if publication.doi %}
-    <div class="doi">DOI: <a href="https://doi.org/{{publication.doi}}" target="_blank" rel="noopener">{{publication.doi}}</a></div>
+    {% if publication.doi or publication.bibtex %}
+    <div class="citation">
+        »
+        
+        {% if publication.doi %}
+        <span class="doi">
+            DOI: <a href="https://doi.org/{{publication.doi}}" target="_blank" rel="noopener">{{publication.doi}}</a>
+        </span>
+        {% endif %}
+
+        {% if publication.doi and publication.bibtex %}
+        <span class="separator">/</span>
+        {% endif %}
+
+        {% if publication.bibtex %}
+        <span class="bibtex">
+            <a href="/bib/{{publication.bibtex}}.bib" target="_blank" rel="noopener">.bib</a>
+        </span>
+        {% endif %}
+    </div>
     {% endif %}
 
     <div class="links">

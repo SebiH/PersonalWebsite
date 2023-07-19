@@ -190,6 +190,12 @@ $icons: (
         font-style: italic;
     }
 
+    .citation {
+        .separator {
+            margin: 0 10px;
+        }
+    }
+
     .links {
         display: flex;
         flex-direction: row;
