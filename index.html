@@ -18,6 +18,7 @@ title: Sebastian Hubenschmid
 {% assign publications = site.data.publications | where_exp:"type","type != null" | sort: "sort" | reverse %}
 {% for publication in publications %}
 <section class="publication">
+    <div class="dot {% if publication.workshop %} small {% else %} big {% endif %}"></div>
     <div class="title">{{ publication.title }}</div>
 
     <div class="info">
@@ -78,6 +79,7 @@ title: Sebastian Hubenschmid
 {% assign workshops = site.data.workshops | where_exp:"type","type != null" | sort: "sort" | reverse %}
 {% for workshop in workshops %}
 <section class="publication">
+    <div class="big dot"></div>
     <div class="title">{{ workshop.title }}</div>
 
     <div class="info">

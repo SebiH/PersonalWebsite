@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 $indent-outer: 0.8em;
-$indent-inner: 1em;
+$indent-inner: 1.4em;
 
 
 /* --------------
@@ -164,14 +164,36 @@ $icons: (
 );
 
 .publication {
-    $line-width: 6px;
+    $line-width: 3px;
     border-left: $line-width solid $nord10;
     padding-left: $indent-inner;
-    margin-bottom: 32px;
     margin-left: calc(#{$indent-outer} - #{$line-width});
+    padding-bottom: 32px;
+    
+    position: relative;
 
     > * {
         margin-bottom: 0.5em;
+    }
+
+    .dot {
+        position: absolute;
+        border-radius: 25px;
+
+        &.big {
+            background: $nord10;
+            width: 25px;
+            height: 25px;
+            left: -14px;
+            top: 0px;
+        }
+        &.small {
+            background: $nord10;
+            width: 15px;
+            height: 15px;
+            left: -9px;
+            top: 5px;
+        }
     }
 
     .title {
