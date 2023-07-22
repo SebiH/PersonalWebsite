@@ -13,112 +13,121 @@ title: Sebastian Hubenschmid
 </section>
 
 
+
 <h1> Publications </h1>
+<section class="publications">
 
-{% assign publications = site.data.publications | where_exp:"type","type != null" | sort: "sort" | reverse %}
-{% for publication in publications %}
-<section class="publication">
-    <div class="dot {% if publication.workshop %} small {% else %} big {% endif %}"></div>
-    <div class="title">{{ publication.title }}</div>
+    {% assign publications = site.data.publications | where_exp:"type","type != null" | sort: "sort" | reverse %}
+    {% for publication in publications %}
+    <section class="publication">
+        <div class="dot {% if publication.workshop %} small {% else %} big {% endif %}"></div>
+        <div class="title">{{ publication.title }}</div>
 
-    <div class="info">
-        <span class="authors">
-            {% for author in publication.authors %}
-            <span
-                {% if author.first == 'Sebastian' and author.last == 'Hubenschmid' %}
-                class="me"
-                {% endif %}
-                >
-                {{ author.first }} {{ author.last }}{% if author.equal %}<sup>*</sup>{% endif %}{% if forloop.last != true %},{% else %}.{% endif %}
+        <div class="info">
+            <span class="authors">
+                {% for author in publication.authors %}
+                <span
+                    {% if author.first == 'Sebastian' and author.last == 'Hubenschmid' %}
+                    class="me"
+                    {% endif %}
+                    >
+                    {{ author.first }} {{ author.last }}{% if author.equal %}<sup>*</sup>{% endif %}{% if forloop.last != true %},{% else %}.{% endif %}
+                </span>
+                {% endfor %}
             </span>
+
+            <span>In:</span>
+            <span class="conference">{{ publication.conference }}.</span>
+            <span>{{ publication.year }}.</span>
+        </div>
+
+        {% if publication.doi or publication.bibtex %}
+        <div class="citation">
+            »
+            
+            {% if publication.doi %}
+            <span class="doi">
+                DOI: <a href="https://doi.org/{{publication.doi}}" target="_blank" rel="noopener">{{publication.doi}}</a>
+            </span>
+            {% endif %}
+
+            {% if publication.doi and publication.bibtex %}
+            <span class="separator">/</span>
+            {% endif %}
+
+            {% if publication.bibtex %}
+            <span class="bibtex">
+                <a href="/bib/{{publication.bibtex}}.bib" target="_blank" rel="noopener">.bib</a>
+            </span>
+            {% endif %}
+        </div>
+        {% endif %}
+
+        <div class="links">
+            {% for link in publication.links %}
+            <a class="link" href="{{link.url}}" target="_blank" rel="noopener">
+                <span class="icon icon-{{ link.type }}"></span>
+                <span class="text">{{link.name}}</span>
+            </a>
+
             {% endfor %}
-        </span>
+        </div>
 
-        <span>In:</span>
-        <span class="conference">{{ publication.conference }}.</span>
-        <span>{{ publication.year }}.</span>
-    </div>
-
-    {% if publication.doi or publication.bibtex %}
-    <div class="citation">
-        »
-        
-        {% if publication.doi %}
-        <span class="doi">
-            DOI: <a href="https://doi.org/{{publication.doi}}" target="_blank" rel="noopener">{{publication.doi}}</a>
-        </span>
-        {% endif %}
-
-        {% if publication.doi and publication.bibtex %}
-        <span class="separator">/</span>
-        {% endif %}
-
-        {% if publication.bibtex %}
-        <span class="bibtex">
-            <a href="/bib/{{publication.bibtex}}.bib" target="_blank" rel="noopener">.bib</a>
-        </span>
-        {% endif %}
-    </div>
-    {% endif %}
-
-    <div class="links">
-        {% for link in publication.links %}
-        <a class="link" href="{{link.url}}" target="_blank" rel="noopener">
-            <span class="icon icon-{{ link.type }}"></span>
-            <span class="text">{{link.name}}</span>
-        </a>
-
-        {% endfor %}
-    </div>
-
+    </section>
+    {% endfor %}
 </section>
-{% endfor %}
+
+
 
 <h1> Workshops </h1>
 
-{% assign workshops = site.data.workshops | where_exp:"type","type != null" | sort: "sort" | reverse %}
-{% for workshop in workshops %}
-<section class="publication">
-    <div class="big dot"></div>
-    <div class="title">{{ workshop.title }}</div>
+<section class="publications">
 
-    <div class="info">
-        <span class="authors">
-            {% for author in workshop.authors %}
-            <span
-                {% if author.first == 'Sebastian' and author.last == 'Hubenschmid' %}
-                class="me"
-                {% endif %}
-                >
-                {{ author.first }} {{ author.last }}{% if author.equal %}<sup>*</sup>{% endif %}{% if forloop.last != true %},{% else %}.{% endif %}
+    {% assign workshops = site.data.workshops | where_exp:"type","type != null" | sort: "sort" | reverse %}
+    {% for workshop in workshops %}
+    <section class="publication">
+        <div class="big dot"></div>
+        <div class="title">{{ workshop.title }}</div>
+
+        <div class="info">
+            <span class="authors">
+                {% for author in workshop.authors %}
+                <span
+                    {% if author.first == 'Sebastian' and author.last == 'Hubenschmid' %}
+                    class="me"
+                    {% endif %}
+                    >
+                    {{ author.first }} {{ author.last }}{% if author.equal %}<sup>*</sup>{% endif %}{% if forloop.last != true %},{% else %}.{% endif %}
+                </span>
+                {% endfor %}
             </span>
-            {% endfor %}
-        </span>
 
-        {% if workshop.conference %}
-        <span>In:</span>
-        <span class="conference">{{ workshop.conference }},</span>
+            {% if workshop.conference %}
+            <span>In:</span>
+            <span class="conference">{{ workshop.conference }},</span>
+            {% endif %}
+            <span>{{ workshop.location }}.</span>
+            <span>{{ workshop.year }}.</span>
+        </div>
+
+        {% if workshop.doi %}
+        <div class="doi">DOI: <a href="https://doi.org/{{workshop.doi}}" target="_blank" rel="noopener">{{workshop.doi}}</a></div>
         {% endif %}
-        <span>{{ workshop.location }}.</span>
-        <span>{{ workshop.year }}.</span>
-    </div>
 
-    {% if workshop.doi %}
-    <div class="doi">DOI: <a href="https://doi.org/{{workshop.doi}}" target="_blank" rel="noopener">{{workshop.doi}}</a></div>
-    {% endif %}
+        <div class="links">
+            {% for link in workshop.links %}
+            <a class="link" href="{{link.url}}" target="_blank" rel="noopener">
+                <span class="icon icon-{{ link.type }}"></span>
+                <span class="text">{{link.name}}</span>
+            </a>
 
-    <div class="links">
-        {% for link in workshop.links %}
-        <a class="link" href="{{link.url}}" target="_blank" rel="noopener">
-            <span class="icon icon-{{ link.type }}"></span>
-            <span class="text">{{link.name}}</span>
-        </a>
+            {% endfor %}
+        </div>
 
-        {% endfor %}
-    </div>
+    </section>
+    {% endfor %}
 
 </section>
-{% endfor %}
 
 <h1>Contact</h1>
 
