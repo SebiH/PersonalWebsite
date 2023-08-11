@@ -1,0 +1,22 @@
+{
+    "type": "Journal Article",
+    "bibtex": "wunsch2024smartfamily",
+    "sort": 202401,
+    "year": 2023,
+    "month": 8,
+    "title": "SMART<i>FAMILY</i>: A randomized-controlled trial as a first approach to designing mobile health interventions to promote physical activity and healthy eating in a collaborative family setting",
+    "authors": [
+        { "first": "Kathrin", "last": "Wunsch" },
+        { "first": "Janis", "last": "Fiedler" },
+        { "first": "Sebastian", "last": "Hubenschmid" },
+        { "first": "Harald", "last": "Reiterer" },
+        { "first": "Britta", "last": "Renner" },
+        { "first": "Alexander", "last": "Woll" }
+    ],
+    "doi": "10.2196/preprints.51201",
+    "conference": "JMIR mHealth and uHealth",
+    "conference_short": "JMIR",
+    "journal": "TODO",
+    "journal_short": "TODO",
+    "links": [ ]
+}

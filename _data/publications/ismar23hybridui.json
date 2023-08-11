@@ -1,0 +1,22 @@
+{
+    "type": "Workshop Paper",
+    "bibtex": "zagermann2023challenges",
+    "sort": 202310,
+    "year": 2023,
+    "month": 10,
+    "title": "Challenges and Opportunities for Collaborative Immersive Analytics with Hybrid User Interfaces",
+    "authors": [
+        { "first": "Johannes", "last": "Zagermann" },
+        { "first": "Sebastian", "last": "Hubenschmid" },
+        { "first": "Daniel", "last": "Fink" },
+        { "first": "Jonathan", "last": "Wieland" },
+        { "first": "Harald", "last": "Reiterer" },
+        { "first": "Tiare", "last": "Feuchtner" }
+    ],
+    "workshop": "Workshop on Hybrid User Interfaces: Complementary Interfaces for Mixed Reality Interaction",
+    "conference": "ISMAR'23 Adjunct",
+    "conference_short": "ISMAR '23 Adjunct",
+    "links": [ ]
+}
+
+

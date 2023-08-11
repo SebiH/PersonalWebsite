@@ -1,0 +1,22 @@
+{
+    "type": "Workshop Paper",
+    "bibtex": "hubenschmid2023colibri",
+    "sort": 202311,
+    "year": 2023,
+    "month": 10,
+    "title": "Colibri: A toolkit for rapid prototyping of networking across realities",
+    "authors": [
+        { "first": "Sebastian", "last": "Hubenschmid", "equal": true },
+        { "first": "Daniel Immanuel", "last": "Fink", "equal": true },
+        { "first": "Johannes", "last": "Zagermann" },
+        { "first": "Jonathan", "last": "Wieland" },
+        { "first": "Harald", "last": "Reiterer" },
+        { "first": "Tiare", "last": "Feuchtner" }
+    ],
+    "workshop": "1st Joint Workshop on Cross Reality",
+    "conference": "ISMAR'23 Adjunct",
+    "conference_short": "ISMAR'23 Adjunct",
+    "links": [ ]
+}
+
+
