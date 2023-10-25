@@ -31,7 +31,8 @@ title: Sebastian Hubenschmid
                     class="me"
                     {% endif %}
                     >
-                    {{ author.first }} {{ author.last }}{% if author.equal %}<sup>*</sup>{% endif %}{% if forloop.last != true %},{% else %}.{% endif %}
+                    {% if author.equal %}<abbr title="Contributed equally">{% endif %}
+                    {{ author.first }} {{ author.last }}{% if author.equal %}<sup>*</sup></abbr>{% endif %}{% if forloop.last != true %},{% else %}.{% endif %}
                 </span>
                 {% endfor %}
             </span>
@@ -97,7 +98,7 @@ title: Sebastian Hubenschmid
                     class="me"
                     {% endif %}
                     >
-                    {{ author.first }} {{ author.last }}{% if author.equal %}<sup>*</sup>{% endif %}{% if forloop.last != true %},{% else %}.{% endif %}
+                    {{ author.first }} {{ author.last }}{% if author.equal %}<abbr title="Contributed equally"><sup>*</sup></abbr>{% endif %}{% if forloop.last != true %},{% else %}.{% endif %}
                 </span>
                 {% endfor %}
             </span>
