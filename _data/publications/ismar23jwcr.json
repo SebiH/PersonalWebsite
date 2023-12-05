@@ -14,9 +14,19 @@
         { "first": "Tiare", "last": "Feuchtner" }
     ],
     "workshop": "1st Joint Workshop on Cross Reality",
-    "conference": "ISMAR'23 Adjunct",
+    "conference": "2023 IEEE International Symposium on Mixed and Augmented Reality Adjunct (ISMAR-Adjunct)",
     "conference_short": "ISMAR'23 Adjunct",
-    "links": [ ]
+    "doi": "10.1109/ISMAR-Adjunct60411.2023.00010",
+    "links": [
+        {
+            "name": "PDF",
+            "type": "pdf",
+            "url": "https://cross-realities.org/proceedings/JWCR23_paper_3.pdf"
+        },
+        {
+            "name": "Project",
+            "type": "code",
+            "url": "https://github.com/hcigroupkonstanz/Colibri"
+        }
+    ]
 }
-
-

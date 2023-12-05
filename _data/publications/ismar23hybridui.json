@@ -14,9 +14,21 @@
         { "first": "Tiare", "last": "Feuchtner" }
     ],
     "workshop": "Workshop on Hybrid User Interfaces: Complementary Interfaces for Mixed Reality Interaction",
-    "conference": "ISMAR'23 Adjunct",
+    "conference": "2023 IEEE International Symposium on Mixed and Augmented Reality Adjunct (ISMAR-Adjunct)",
     "conference_short": "ISMAR '23 Adjunct",
-    "links": [ ]
+    "doi": "10.1109/ISMAR-Adjunct60411.2023.00044",
+    "links": [
+        {
+            "name": "PDF",
+            "type": "pdf",
+            "url": "https://hybrid-ui-workshop.io/proceedings/zagermann2023challenges.pdf"
+        },
+        {
+            "name": "Presentation",
+            "type": "video",
+            "url": "https://youtu.be/8qNkOR1KCsE"
+        }
+    ]
 }
 
 
