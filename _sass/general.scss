@@ -168,7 +168,7 @@ $icons: (
     border-left: $line-width solid $nord10;
     padding-left: $indent-inner;
     margin-left: calc(#{$indent-outer} - #{$line-width});
-    padding-bottom: 32px;
+    padding-bottom: 48px;
     
     position: relative;
 
@@ -199,6 +199,11 @@ $icons: (
             left: -9px;
             top: 5px;
         }
+    }
+
+    // Workaround for positioning dot if a workshop is first entry
+    &:first-child > .dot.small {
+        top: 0px;
     }
 
     .title {
