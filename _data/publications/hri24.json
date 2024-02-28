@@ -1,0 +1,18 @@
+{
+    "type": "Workshop Paper",
+    "sort": 202402,
+    "year": 2024,
+    "month": 2,
+    "title": "Proposing a Hybrid Authoring Interface for AR-Supported Human-Robot Collaboration",
+    "authors": [
+        { "first": "Rasmus", "last": "Lunding" },
+        { "first": "Sebastian", "last": "Hubenschmid" },
+        { "first": "Tiare", "last": "Feuchtner" }
+    ],
+    "workshop": "7th International Workshop on Virtual, Augmented, and Mixed-Reality for Human-Robot Interactions",
+    "conference": "7th International Workshop on Virtual, Augmented, and Mixed-Reality for Human-Robot Interactions at HRI'24",
+    "conferenceALT": "19th ACM/IEEE International Conference on Human-Robot Interaction (HRI)",
+    "conference_short": "VAM-HRI'24"
+}
+
+
