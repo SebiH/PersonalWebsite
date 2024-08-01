@@ -1,9 +1,10 @@
 {
     "type": "Journal Article",
+    "bibtex": "wunsch2024mhealth",
     "sort": 202403,
     "year": 2024,
     "month": 2,
-    "title": "SMARTFAMILY: A mobile health intervention promoting physical activity and healthy eating in a family setting – A randomized-controlled trial",
+    "title": "An mHealth Intervention Promoting Physical Activity and Healthy Eating in a Family Setting (SMARTFAMILY): Randomized Controlled Trial",
     "authors": [
         { "first": "Kathrin", "last": "Wunsch" },
         { "first": "Janis", "last": "Fiedler" },

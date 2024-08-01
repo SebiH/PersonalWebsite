@@ -1,0 +1,31 @@
+{
+    "type": "Conference Paper",
+    "bibtex": "wieland2024push2ar",
+    "sort": 202410,
+    "year": 2024,
+    "month": 10,
+    "title": "Push2AR: Enhancing Mobile List Interactions Using Augmented Reality",
+    "authors": [
+        { "first": "Jonathan", "last": "Wieland" },
+        { "first": "Hyunsung", "last": "Cho" },
+        { "first": "Sebastian", "last": "Hubenschmid" },
+        { "first": "Akihiro", "last": "Kiuchi" },
+        { "first": "Harald", "last": "Reiterer" },
+        { "first": "David", "last": "Lindlbaur" }
+    ],
+    "conference": "2024 IEEE International Symposium on Mixed and Augmented Reality (ISMAR)",
+    "conference_short": "ISMAR '24",
+    "links": [
+        {
+            "name": "Source Code",
+            "type": "code",
+            "url": "https://github.com/hcigroupkonstanz/Push2AR"
+        },
+        {
+            "name": "Project",
+            "type": "code",
+            "url": "https://augmented-perception.org/publications/2024-push2AR.html"
+        }
+    ]
+}
+
