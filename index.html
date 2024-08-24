@@ -20,10 +20,9 @@ title: Sebastian Hubenschmid
     {% assign publications = site.data.publications | where_exp:"type","type != null" | sort: "sort" | reverse %}
     {% for publication in publications %}
     <section class="publication">
-        <div class="dot {% if publication.workshop %} small {% else %} big {% endif %}"></div>
-        <div class="title">{{ publication.title }}</div>
-
         <div class="info">
+            <div class="title">{{ publication.title }}</div>
+
             <span class="authors">
                 {% for author in publication.authors %}
                 <span
@@ -37,18 +36,20 @@ title: Sebastian Hubenschmid
                 {% endfor %}
             </span>
 
-            <span>In:</span>
+            <br/>
+
+            <span>{{ publication.year }}</span>
+            <span class="separator">/</span>
             <span class="conference">{{ publication.conference }}.</span>
-            <span>{{ publication.year }}.</span>
+
         </div>
 
         {% if publication.doi or publication.bibtex %}
         <div class="citation">
-            »
-            
             {% if publication.doi %}
             <span class="doi">
-                DOI: <a href="https://doi.org/{{publication.doi}}" target="_blank" rel="noopener">{{publication.doi}}</a>
+                DOI:
+                <a href="https://doi.org/{{publication.doi}}" target="_blank" rel="noopener">{{publication.doi}}</a>
             </span>
             {% endif %}
 
@@ -57,9 +58,20 @@ title: Sebastian Hubenschmid
             {% endif %}
 
             {% if publication.bibtex %}
-            <span class="bibtex">
-                <a href="/bib/{{publication.bibtex}}.bib" target="_blank" rel="noopener">.bib</a>
-            </span>
+            <input type="checkbox" id="{{publication.bibtex}}" class="bibtex-checkbox">
+            <label for="{{publication.bibtex}}" class="bibtex-label">BibTeX</label>
+
+            <div class="bibtex-content">
+                {% capture bibtex %}
+                    {% assign bib_file = "/bib/" | append: publication.bibtex | append: ".bib" %}
+                    {% raw_include_relative {{bib_file}} %}
+                {% endcapture %}
+                <pre><code>{{ bibtex | strip | escape }}</code></pre>
+
+                <a href="/bib/{{ publication.bibtex }}.bib" class="download-button" download>
+                    <span class="icon"></span>
+                </a>
+            </div>
             {% endif %}
         </div>
         {% endif %}
@@ -67,17 +79,14 @@ title: Sebastian Hubenschmid
         <div class="links">
             {% for link in publication.links %}
             <a class="link" href="{{link.url}}" target="_blank" rel="noopener">
-                <span class="icon icon-{{ link.type }}"></span>
                 <span class="text">{{link.name}}</span>
             </a>
-
             {% endfor %}
         </div>
 
     </section>
     {% endfor %}
 </section>
-
 
 
 <h1> Workshops </h1>
@@ -87,7 +96,6 @@ title: Sebastian Hubenschmid
     {% assign workshops = site.data.workshops | where_exp:"type","type != null" | sort: "sort" | reverse %}
     {% for workshop in workshops %}
     <section class="publication">
-        <div class="big dot"></div>
         <div class="title">{{ workshop.title }}</div>
 
         <div class="info">
