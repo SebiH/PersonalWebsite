@@ -17,7 +17,11 @@
     "conference_short": "ISMAR '24",
     "links": [
         {
-            "name": "Source Code",
+            "name": "PDF",
+            "url": "/publications/wieland2024push2ar.pdf"
+        },
+        {
+            "name": "Code",
             "type": "code",
             "url": "https://github.com/hcigroupkonstanz/Push2AR"
         },

@@ -22,10 +22,10 @@
         {
             "name": "PDF",
             "type": "pdf",
-            "url": "https://dl.acm.org/doi/10.1145/3491102.3517550"
+            "url": "/publications/hubenschmid2022relive.pdf"
         },
         {
-            "name": "Video Figure",
+            "name": "Video",
             "type": "video",
             "url": "https://youtu.be/BaNZ02QkZ_k"
         },
@@ -35,7 +35,7 @@
             "url": "https://youtu.be/As3i9rzliF4"
         },
         {
-            "name": "Source Code",
+            "name": "Source",
             "type": "code",
             "url": "https://github.com/hcigroupkonstanz/ReLive"
         }

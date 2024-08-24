@@ -6,17 +6,23 @@
     "month": 2,
     "title": "An mHealth Intervention Promoting Physical Activity and Healthy Eating in a Family Setting (SMARTFAMILY): Randomized Controlled Trial",
     "authors": [
-        { "first": "Kathrin", "last": "Wunsch" },
-        { "first": "Janis", "last": "Fiedler" },
-        { "first": "Sebastian", "last": "Hubenschmid" },
-        { "first": "Harald", "last": "Reiterer" },
-        { "first": "Britta", "last": "Renner" },
-        { "first": "Alexander", "last": "Woll" }
+	{ "first": "Kathrin", "last": "Wunsch" },
+	{ "first": "Janis", "last": "Fiedler" },
+	{ "first": "Sebastian", "last": "Hubenschmid" },
+	{ "first": "Harald", "last": "Reiterer" },
+	{ "first": "Britta", "last": "Renner" },
+	{ "first": "Alexander", "last": "Woll" }
     ],
     "doi": "10.2196/51201",
     "conference": "JMIR mHealth and uHealth",
     "conference_short": "JMIR",
     "journal": "TODO",
     "journal_short": "TODO",
-    "links": [ ]
+    "links": [
+        {
+            "name": "PDF",
+            "type": "pdf",
+            "url": "/publications/wunsch2024mhealth.pdf"
+        }
+    ]
 }

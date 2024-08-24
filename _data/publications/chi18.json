@@ -19,15 +19,15 @@
         {
             "name": "PDF",
             "type": "pdf",
-            "url": "https://kops.uni-konstanz.de/handle/123456789/43062"
+            "url": "/publications/butscher2018clusters.pdf"
         },
         {
-            "name": "Video Figure",
+            "name": "Video",
             "type": "video",
             "url": "https://youtu.be/5KMH1t_N5Ow"
         },
         {
-            "name": "Source Code",
+            "name": "Code",
             "type": "code",
             "url": "https://github.com/SebiH/ART"
         }

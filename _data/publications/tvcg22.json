@@ -22,15 +22,15 @@
         {
             "name": "PDF",
             "type": "pdf",
-            "url": "https://ieeexplore.ieee.org/document/9729627"
+            "url": "/publications/fleck2023ragrug.pdf"
         },
         {
-            "name": "Video Figure",
+            "name": "Video",
             "type": "video",
             "url": "https://www.youtube.com/watch?v=mFxSdvQhSVU"
         },
         {
-            "name": "Source Code",
+            "name": "Code",
             "type": "code",
             "url": "https://github.com/philfleck/ragrug"
         }
