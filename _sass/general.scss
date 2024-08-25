@@ -229,13 +229,12 @@ ul > li:before {
         text-decoration: underline;
     }
 
-    .bibtex-label::after {
-
-      content: " ⏴"
+    .bibtex-label::before {
+      content: "▶ "
     }
 
-    :checked ~ .bibtex-label::after {
-      content: " ⏷";
+    :checked ~ .bibtex-label::before {
+      content: "▼ ";
     }
 
     $data-svg-prefix: 'data:image/svg+xml;base64,';

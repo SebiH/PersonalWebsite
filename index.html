@@ -46,6 +46,15 @@ title: Sebastian Hubenschmid
 
         {% if publication.doi or publication.bibtex %}
         <div class="citation">
+            {% if publication.bibtex %}
+            <input type="checkbox" id="{{publication.bibtex}}" class="bibtex-checkbox">
+            <label for="{{publication.bibtex}}" class="bibtex-label">BibTeX</label>
+            {% endif %}
+
+            {% if publication.doi and publication.bibtex %}
+            <span class="separator">/</span>
+            {% endif %}
+
             {% if publication.doi %}
             <span class="doi">
                 DOI:
@@ -53,14 +62,7 @@ title: Sebastian Hubenschmid
             </span>
             {% endif %}
 
-            {% if publication.doi and publication.bibtex %}
-            <span class="separator">/</span>
-            {% endif %}
-
             {% if publication.bibtex %}
-            <input type="checkbox" id="{{publication.bibtex}}" class="bibtex-checkbox">
-            <label for="{{publication.bibtex}}" class="bibtex-label">BibTeX</label>
-
             <div class="bibtex-content">
                 {% capture bibtex %}
                     {% assign bib_file = "/bib/" | append: publication.bibtex | append: ".bib" %}
@@ -73,6 +75,7 @@ title: Sebastian Hubenschmid
                 </a>
             </div>
             {% endif %}
+
         </div>
         {% endif %}
 
