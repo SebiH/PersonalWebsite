@@ -4,6 +4,7 @@
     "sort": 202410,
     "year": 2024,
     "month": 10,
+    "doi": "10.1109/ISMAR62088.2024.00082",
     "title": "Push2AR: Enhancing Mobile List Interactions Using Augmented Reality",
     "authors": [
         { "first": "Jonathan", "last": "Wieland" },
@@ -18,6 +19,7 @@
     "links": [
         {
             "name": "PDF",
+            "type": "pdf",
             "url": "/publications/wieland2024push2ar.pdf"
         },
         {
@@ -26,9 +28,9 @@
             "url": "https://github.com/hcigroupkonstanz/Push2AR"
         },
         {
-            "name": "Project",
-            "type": "code",
-            "url": "https://augmented-perception.org/publications/2024-push2AR.html"
+            "name": "Video",
+            "type": "video",
+            "url": "https://www.youtube.com/watch?v=Gkwah6YJX2s"
         }
     ]
 }

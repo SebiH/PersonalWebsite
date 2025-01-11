@@ -1,0 +1,19 @@
+{
+    "type": "Workshop",
+    "sort": 202404,
+    "year": 2024,
+    "month": 11,
+    "title": "Complementary Interfaces Workshop",
+    "authors": [
+        { "first": "IML Dresden × HCI Group University of Konstanz", "last": "" }
+    ],
+    "location": "Konstanz, Germany",
+    "links": [
+        {
+            "name": "News Article",
+            "type": "pdf",
+            "url": "https://hci.uni-konstanz.de/news/details/complementary-interfaces-workshop-and-talk-of-raimund-dachselt/"
+        }
+    ]
+}
+
