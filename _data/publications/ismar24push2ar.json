@@ -23,14 +23,14 @@
             "url": "/publications/wieland2024push2ar.pdf"
         },
         {
-            "name": "Code",
-            "type": "code",
-            "url": "https://github.com/hcigroupkonstanz/Push2AR"
-        },
-        {
             "name": "Video",
             "type": "video",
             "url": "https://www.youtube.com/watch?v=Gkwah6YJX2s"
+        },
+        {
+            "name": "Code",
+            "type": "code",
+            "url": "https://github.com/hcigroupkonstanz/Push2AR"
         }
     ]
 }
