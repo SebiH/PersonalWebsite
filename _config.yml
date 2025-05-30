@@ -1,11 +1,10 @@
 # Site settings
 title: Sebastian Hubenschmid | Personal Website
 email: info@sebi.sh
-description: Sebastian Hubenschmid, Ph.D. student at the HCI Group, University of Konstanz, Germany
+description: Sebastian Hubenschmid, PostDoc at Aarhus University, Denmark
 baseurl: ""
 encoding: utf-8
 url: "https://sebi.sh"
-twitter_username: s_hubenschmid
 github_username:  SebiH
 
 # Build settings
