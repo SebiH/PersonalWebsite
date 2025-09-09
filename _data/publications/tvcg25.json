@@ -1,0 +1,41 @@
+
+{
+    "type": "Journal Article",
+    "bibtex": "hubenschmid2025hybrid",
+    "sort": 202599,
+    "year": 2025,
+    "month": 12,
+    "title": "<i>[Under Review]</i> Hybrid User Interfaces: Past, Present, and Future of Complementary Cross-Device Interaction in Mixed Reality",
+    "authors": [
+        { "first": "Sebastian", "last": "Hubenschmid", "equal": true },
+        { "first": "Marc", "last": "Satkowski", "equal": true },
+        { "first": "Johannes", "last": "Zagermann", "equal": true },
+        { "first": "Julián", "last": "Méndez" },
+        { "first": "Niklas", "last": "Elmqvist" },
+        { "first": "Steven", "last": "Feiner" },
+        { "first": "Tiare", "last": "Feuchtner" },
+        { "first": "Jens Emil", "last": "Grønbæk" },
+        { "first": "Benjamin", "last": "Lee" },
+        { "first": "Dieter", "last": "Schmalstieg" },
+        { "first": "Raimund", "last": "Dachselt" },
+        { "first": "Harald", "last": "Reiterer" }
+    ],
+    "conference": "Submitted to: IEEE Transactions on Visualization and Computer Graphics (TVCG)",
+    "conference_short": "TVCG",
+    "journal": "arxiv",
+    "journal_short": "arxiv",
+    "doi": "10.48550/arXiv.2509.05491",
+    "links": [
+        {
+            "name": "Preprint",
+            "type": "pdf",
+            "url": "/publications/hubenschmid2025hybrid_preprint.pdf"
+        },
+        {
+            "name": "Survey",
+            "type": "code",
+            "url": "https://imldresden.github.io/huis"
+        }
+    ]
+}
+
