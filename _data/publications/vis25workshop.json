@@ -1,0 +1,29 @@
+{
+    "type": "Workshop Paper",
+    "sort": 202511,
+    "year": 2025,
+    "month": 11,
+    "title": "Revisiting Hybrid Input Devices for Immersive Analytics",
+    "authors": [
+        { "first": "Sebastian", "last": "Hubenschmid" },
+        { "first": "Johannes", "last": "Zagermann" },
+        { "first": "Niklas", "last": "Elmqvist" },
+        { "first": "Tiare", "last": "Feuchtner" },
+        { "first": "Jens", "last": "Grubert" },
+        { "first": "Markus", "last": "Tatzgern" },
+        { "first": "Dieter", "last": "Schmalstieg" },
+        { "first": "Harald", "last": "Reiterer" }
+    ],
+    "workshop": "Human Factors in Immersive Analytics Workshop at IEEE VIS 2025",
+    "conference": "2025 IEEE Conference on Human Factors in Immersive Analytics (HFIA)",
+    "conference_short": "HFIA  VIS'25",
+    "links": [
+        {
+            "name": "PDF",
+            "type": "pdf",
+            "url": "/publications/hubenschmid2025revisiting_preprint.pdf"
+        }
+    ]
+}
+
+
