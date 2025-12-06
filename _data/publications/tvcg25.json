@@ -10,7 +10,7 @@
         { "first": "Sebastian", "last": "Hubenschmid", "equal": true },
         { "first": "Marc", "last": "Satkowski", "equal": true },
         { "first": "Johannes", "last": "Zagermann", "equal": true },
-        { "first": "Julián", "last": "Méndez" },
+        { "first": "Julián", "last": "Méndez", "equal": true },
         { "first": "Niklas", "last": "Elmqvist" },
         { "first": "Steven", "last": "Feiner" },
         { "first": "Tiare", "last": "Feuchtner" },
