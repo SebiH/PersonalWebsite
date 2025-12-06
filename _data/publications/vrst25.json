@@ -15,6 +15,7 @@
         { "first": "Harald", "last": "Reiterer" }
     ],
     "doi": "10.1145/3756884.3766047",
+    "bibtex": "hubenschmid2025spatialmouse",
     "conference": "ACM Symposium on Virtual Reality Software and Technology (VRST'25)",
     "conference_short": "VRST",
     "links": [
