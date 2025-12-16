@@ -1,13 +1,14 @@
 {
     "type": "Journal Article",
     "doi": "10.2196/65558",
+    "bibtex": "fiedler2025refined",
     "sort": 202509,
     "year": 2025,
     "month": 11,
-    "title": "SMARTFAMILY2.0: A refined mobile health intervention to promote physical activity and healthy eating in a family setting – A randomized-controlled trial",
+    "title": "A Refined Mobile Health Intervention (SMARTFAMILY2.0) to Promote Physical Activity and Healthy Eating in a Family Setting: Randomized Controlled Trial",
     "authors": [
-        { "first": "Janis", "last": "Fiedler" },
-        { "first": "Kathrin", "last": "Wunsch" },
+        { "first": "Janis", "last": "Fiedler", "equal": "true" },
+        { "first": "Kathrin", "last": "Wunsch", "equal": "true" },
         { "first": "Sebastian", "last": "Hubenschmid" },
         { "first": "Harald", "last": "Reiterer" },
         { "first": "Britta", "last": "Renner" },
@@ -17,6 +18,12 @@
     "conference_short": "JMIR",
     "journal": "TODO",
     "journal_short": "TODO",
-    "links": [ ]
+    "links": [
+        {
+            "name": "PDF",
+            "type": "pdf",
+            "url": "/publications/fiedler2025refined.pdf"
+        }
+    ]
 }
 
