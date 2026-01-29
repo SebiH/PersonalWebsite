@@ -1,10 +1,10 @@
 
 {
     "type": "Journal Article",
-    "bibtex": "hubenschmid2025hybrid",
-    "sort": 202599,
-    "year": 2025,
-    "month": 12,
+    "bibtex": "hubenschmid2026hybrid",
+    "sort": 202612,
+    "year": 2026,
+    "month": 5,
     "title": "<i>[Under Review]</i> Hybrid User Interfaces: Past, Present, and Future of Complementary Cross-Device Interaction in Mixed Reality",
     "authors": [
         { "first": "Sebastian", "last": "Hubenschmid", "equal": true },
