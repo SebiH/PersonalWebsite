@@ -154,11 +154,26 @@ ul > li:before {
  * Publications
  * ------- */
 
+.about {
+    padding: 0em 1.5em;
+    margin: 0 0 2em 0;
+    line-height: 1.6;
+
+    b {
+        color: $nord3;
+        font-weight: 600;
+    }
+}
+
 .publication {
     padding-left: $indent-inner;
     margin-left: $indent-outer;
     padding-bottom: 32px;
-    
+
+    &.highlighted {
+        padding-bottom: 16px;
+    }
+
     position: relative;
 
     &:before {
@@ -184,6 +199,10 @@ ul > li:before {
         width: fit-content;
         line-height: 1.3em;
         margin-bottom: 5px;
+
+        &.small {
+            font-size: medium;
+        }
     }
 
     .authors {
@@ -271,7 +290,7 @@ ul > li:before {
             width: 30px;
             display: inline-block;
         }
-        
+
         &:hover {
           background-color: $nord4;
         }
@@ -342,4 +361,3 @@ ul > li:before {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
 }
-

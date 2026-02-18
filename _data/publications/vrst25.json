@@ -1,5 +1,6 @@
 {
     "type": "Paper",
+    "highlighted": true,
     "sort": 202512,
     "year": 2025,
     "month": 11,
@@ -36,5 +37,3 @@
         }
     ]
 }
-
-

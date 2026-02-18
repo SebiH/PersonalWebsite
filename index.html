@@ -14,6 +14,26 @@ title: Sebastian Hubenschmid
 </section>
 
 
+<h1>Highlighted Research</h1>
+<section class="publications highlighted">
+
+    <section class="about">
+        My research combines <b>human-computer interaction</b>, <b>mixed reality</b>, and <b>visual analytics</b>.
+        My work focuses on the field of <b>hybrid user interfaces</b>, which use cross-device interaction with complementary device technologies.
+        In addition, my work on <b>ambient analytics</b> aims to bring calm computing to mixed reality by integrating immersive data visualizations harmoniously into the physical environment.
+    </section>
+
+    {% assign hl_publications = site.data.publications | where: "highlighted", true | sort: "sort" | reverse %}
+    {% for publication in hl_publications %}
+    <section class="publication highlighted">
+        <div class="info">
+            <div class="title small"><a href="https://doi.org/{{ publication.doi }}">{{ publication.title }}</a></div>
+        </div>
+
+    </section>
+    {% endfor %}
+</section>
+
 
 <h1> Publications </h1>
 <section class="publications">
