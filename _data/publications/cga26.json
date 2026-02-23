@@ -1,0 +1,27 @@
+{
+    "type": "Journal Article",
+    "sort": 202605,
+    "year": 2026,
+    "month": 5,
+    "doi": "10.1109/MCG.2026.3667291",
+    "title": "Ambient Analytics: Calm Technology for Immersive Visualization and Sensemaking",
+    "authors": [
+        { "first": "Sebastian", "last": "Hubenschmid" },
+        { "first": "Arvind", "last": "Srinivasan" },
+        { "first": "Niklas", "last": "Elmqvist" },
+        { "first": "Dieter", "last": "Schmalstieg" },
+        { "first": "Michael", "last": "Sedlmair" }
+    ],
+    "conference": "Visualization Viewpoints in IEEE Computer Graphics and Applications",
+    "conference_short": "IEEE CG&A",
+    "journal": "TODO",
+    "journal_short": "TODO",
+    "highlighted": true,
+    "links": [
+      {
+          "name": "Preprint",
+          "type": "pdf",
+          "url": "/publications/hubenschmid2026ambient.pdf"
+      }
+    ]
+}

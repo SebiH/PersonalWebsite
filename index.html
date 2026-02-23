@@ -27,7 +27,12 @@ title: Sebastian Hubenschmid
     {% for publication in hl_publications %}
     <section class="publication highlighted">
         <div class="info">
-            <div class="title small"><a href="https://doi.org/{{ publication.doi }}">{{ publication.title }}</a></div>
+            <div class="title small">
+                {% if publication.doi %}
+                <a href="https://doi.org/{{ publication.doi }}" target="_blank">{{ publication.title }}</a>
+                {% else %}{{ publication.title }}
+                {% endif %}
+            </div>
         </div>
 
     </section>
