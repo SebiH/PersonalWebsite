@@ -14,7 +14,10 @@
     "conference": "2026 Workshop at AlpCHI: Beyond Fatigue: Building an Ergonomic Future for XR",
     "conference_short": "",
     "links": [
+      {
+          "name": "PDF",
+          "type": "pdf",
+          "url": "/publications/hubenschmid2026investigating.pdf"
+      }
     ]
 }
-
-
