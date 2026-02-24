@@ -1,0 +1,16 @@
+services:
+  jekyll:
+    image: jekyll/jekyll
+    volumes:
+      - .:/srv/jekyll
+      - bundle_cache:/usr/local/bundle
+    environment:
+      - JEKYLL_UID=1001
+      - JEKYLL_GID=1001
+    ports:
+      - "35729:35729"
+      - "4000:4000"
+    command: jekyll build
+
+volumes:
+  bundle_cache:
