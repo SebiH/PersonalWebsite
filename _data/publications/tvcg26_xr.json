@@ -1,0 +1,106 @@
+{
+    "type": "Journal Article",
+    "sort": 202604,
+    "year": 2026,
+    "month": 5,
+    "title": "<i>[Under Review]</i> Grand Challenges in Cross Reality",
+    "authors": [
+        {
+            "first": "Christoph",
+            "last": "Anthes"
+        },
+        {
+            "first": "Mark",
+            "last": "Billinghurst"
+        },
+        {
+            "first": "Uwe",
+            "last": "Grünefeld"
+        },
+        {
+            "first": "Hans-Christian",
+            "last": "Jetter"
+        },
+        {
+            "first": "Hai-Ning",
+            "last": "Liang"
+        },
+        {
+            "first": "Frank",
+            "last": "Maurer"
+        },
+        {
+            "first": "David",
+            "last": "Aigner"
+        },
+        {
+            "first": "Craig",
+            "last": "Anslow"
+        },
+        {
+            "first": "Guillaume",
+            "last": "Bataille"
+        },
+        {
+            "first": "Abraham",
+            "last": "Campbell"
+        },
+        {
+            "first": "Judith",
+            "last": "Friedl-Knirsch"
+        },
+        {
+            "first": "Alexander",
+            "last": "Gall"
+        },
+        {
+            "first": "Renan",
+            "last": "Guarese"
+        },
+        {
+            "first": "Sebastian",
+            "last": "Hubenschmid"
+        },
+        {
+            "first": "Yue",
+            "last": "Li"
+        },
+        {
+            "first": "Fabian",
+            "last": "Pointecker"
+        },
+        {
+            "first": "Andreas",
+            "last": "Riegler"
+        },
+        {
+            "first": "Daniel",
+            "last": "Roth"
+        },
+        {
+            "first": "Rishi",
+            "last": "Vanukuru"
+        },
+        {
+            "first": "Nanjia",
+            "last": "Wang"
+        },
+        {
+            "first": "Lingyun",
+            "last": "Yu"
+        },
+        {
+            "first": "Johannes",
+            "last": "Zagermann"
+        },
+        {
+            "first": "Daniel",
+            "last": "Zielasko"
+        }
+    ],
+    "conference": "Submitted to: IEEE Transactions on Visualization and Computer Graphics (TVCG)",
+    "conference_short": "TVCG",
+    "journal": "arxiv",
+    "journal_short": "arxiv",
+    "links": []
+}

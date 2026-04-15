@@ -1,0 +1,201 @@
+{
+    "type": "Conference Paper",
+    "sort": 202604,
+    "year": 2026,
+    "month": 4,
+    "doi": "10.48550/arXiv.2509.12752",
+    "title": "<i>[Under Review]</i> Participatory AI: A Scandinavian Approach to Human-Centered AI ",
+    "authors": [
+        {
+            "first": "Niklas",
+            "last": "Elmqvist"
+        },
+        {
+            "first": "Eve",
+            "last": "Hoggan"
+        },
+        {
+            "first": "Hans-Jörg",
+            "last": "Schulz"
+        },
+        {
+            "first": "Marianne Graves",
+            "last": "Petersen"
+        },
+        {
+            "first": "Peter",
+            "last": "Dalsgaard"
+        },
+        {
+            "first": "Ira",
+            "last": "Assent"
+        },
+        {
+            "first": "Olav W.",
+            "last": "Bertelsen"
+        },
+        {
+            "first": "Akhil",
+            "last": "Arora"
+        },
+        {
+            "first": "Kaj",
+            "last": "Grønbæk"
+        },
+        {
+            "first": "Susanne",
+            "last": "Bødker"
+        },
+        {
+            "first": "Clemens Nylandsted",
+            "last": "Klokmose"
+        },
+        {
+            "first": "Rachel Charlotte",
+            "last": "Smith"
+        },
+        {
+            "first": "Sebastian",
+            "last": "Hubenschmid"
+        },
+        {
+            "first": "Christoph A.",
+            "last": "Johns"
+        },
+        {
+            "first": "Gabriela Molina",
+            "last": "León"
+        },
+        {
+            "first": "Anton",
+            "last": "Wolter"
+        },
+        {
+            "first": "Johannes",
+            "last": "Ellemose"
+        },
+        {
+            "first": "Vaishali",
+            "last": "Dhanoa"
+        },
+        {
+            "first": "Simon Aagaard",
+            "last": "Enni"
+        },
+        {
+            "first": "Mille Skovhus",
+            "last": "Lunding"
+        },
+        {
+            "first": "Karl-Emil Kjær",
+            "last": "Bilstrup"
+        },
+        {
+            "first": "Juan Sánchez",
+            "last": "Esquivel"
+        },
+        {
+            "first": "Luke",
+            "last": "Connelly"
+        },
+        {
+            "first": "Rafael Pablos",
+            "last": "Sarabia"
+        },
+        {
+            "first": "Morten",
+            "last": "Birk"
+        },
+        {
+            "first": "Joachim",
+            "last": "Nyborg"
+        },
+        {
+            "first": "Stefanie",
+            "last": "Zollmann"
+        },
+        {
+            "first": "Tobias",
+            "last": "Langlotz"
+        },
+        {
+            "first": "Meredith Siang-Yun",
+            "last": "Chou"
+        },
+        {
+            "first": "Jens Emil Sloth",
+            "last": "Grønbæk"
+        },
+        {
+            "first": "Michael",
+            "last": "Wessely"
+        },
+        {
+            "first": "Yijing",
+            "last": "Jiang"
+        },
+        {
+            "first": "Caroline",
+            "last": "Berger"
+        },
+        {
+            "first": "Duosi",
+            "last": "Dai"
+        },
+        {
+            "first": "Michael Mose",
+            "last": "Biskjaer"
+        },
+        {
+            "first": "Germán",
+            "last": "Leiva"
+        },
+        {
+            "first": "Jonas",
+            "last": "Frich"
+        },
+        {
+            "first": "Eva",
+            "last": "Eriksson"
+        },
+        {
+            "first": "Kim",
+            "last": "Halskov"
+        },
+        {
+            "first": "Thorbjørn",
+            "last": "Mikkelsen"
+        },
+        {
+            "first": "Nearchos",
+            "last": "Potamitis"
+        },
+        {
+            "first": "Michel",
+            "last": "Yildirim"
+        },
+        {
+            "first": "Arvind",
+            "last": "Srinivasan"
+        },
+        {
+            "first": "Jeanette",
+            "last": "Falk"
+        },
+        {
+            "first": "Nanna",
+            "last": "Inie"
+        },
+        {
+            "first": "Ole Sejer",
+            "last": "Iversen"
+        },
+        {
+            "first": "Hugo",
+            "last": "Andersson"
+        }
+    ],
+    "conference": "Submitted to: ACM Transactions on Computer-Human Interaction (TOCHI)",
+    "conference_short": "TOCHI '26",
+    "links": [ ]
+}
