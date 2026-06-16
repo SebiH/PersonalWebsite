@@ -1,2 +1,3 @@
 User-agent: *
-Disallow: /publications/ /bib/
+Disallow: /publications/
+Disallow: /bib/

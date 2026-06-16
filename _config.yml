@@ -8,7 +8,6 @@ url: "https://sebi.sh"
 github_username:  SebiH
 
 # Build settings
-env: production
 destination: _site/
 markdown: kramdown
 
