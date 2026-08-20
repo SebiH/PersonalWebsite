@@ -1,2 +1,5 @@
 #!/bin/bash
-docker run --rm -it --volume="$PWD:/srv/jekyll" --volume="$PWD/vendor/bundle:/usr/local/bundle" jekyll/jekyll:4.2.0 jekyll build
+set -e
+cd "$(dirname "$0")"
+docker build -t site-jekyll .
+docker run --rm -it --volume="$PWD:/srv/jekyll" --user "$(id -u):$(id -g)" site-jekyll jekyll build
