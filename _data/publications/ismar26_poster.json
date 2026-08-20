@@ -1,0 +1,16 @@
+{
+    "type": "Poster",
+    "sort": 202609,
+    "year": 2026,
+    "month": 10,
+    "title": "Toward WorldMCP: An Agent-First Approach for Spatial-Grounding of AR VLMs",
+    "authors": [
+        { "first": "Emeric", "last": "Marguet" },
+        { "first": "Sebastian", "last": "Hubenschmid" },
+        { "first": "Niklas", "last": "Elmqvist" }
+    ],
+    "conference": "ISMAR'26 Poster (Non Archival)",
+    "conference_short": "",
+    "links": [
+    ]
+}

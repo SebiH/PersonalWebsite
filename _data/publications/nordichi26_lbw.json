@@ -1,0 +1,23 @@
+{
+    "type": "Workshop Paper",
+    "sort": 202610,
+    "year": 2026,
+    "month": 10,
+    "title": "Investigating Intersection-Based Hybrid Selection for Mixed Reality ",
+    "doi": "10.1145/3821402.3830121",
+    "authors": [
+        { "first": "Sebastian", "last": "Hubenschmid" },
+        { "first": "Paul", "last": "Rinau" },
+        { "first": "Johannes", "last": "Zagermann" },
+        { "first": "Tiare", "last": "Feuchtner" }
+    ],
+    "conference": "NordiCHI'26 Adjunct",
+    "conference_short": "",
+    "links": [
+      {
+          "name": "PDF",
+          "type": "pdf",
+          "url": "/publications/hubenschmid2026investigating2.pdf"
+      }
+    ]
+}
