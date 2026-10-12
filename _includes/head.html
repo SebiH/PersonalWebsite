@@ -14,11 +14,37 @@
     <meta property="og:description" content="{{ site.description }}" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://sebi.sh/" />
-    <meta property="twitter:card" content="summary" />
-    <meta
-      property="og:image"
-      content="https://sebi.sh/favicon.png"
-    />
+    <meta name="twitter:card" content="summary" />
+    <meta property="og:image" content="https://sebi.sh/og-image.jpg" />
+    <meta property="og:image:width" content="500" />
+    <meta property="og:image:height" content="500" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:alt" content="Portrait of Sebastian Hubenschmid" />
+
+    {% if page.url == "/" %}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Sebastian Hubenschmid",
+      "givenName": "Sebastian",
+      "familyName": "Hubenschmid",
+      "url": "https://sebi.sh/",
+      "image": "https://sebi.sh/og-image.jpg",
+      "jobTitle": "Postdoctoral Research Fellow",
+      "affiliation": { "@type": "CollegeOrUniversity", "name": "Aarhus University", "url": "https://www.au.dk/" },
+      "alumniOf": { "@type": "CollegeOrUniversity", "name": "University of Konstanz", "url": "https://www.uni-konstanz.de/" },
+      "knowsAbout": ["Human-Computer Interaction", "Mixed Reality", "Visual Analytics", "Hybrid User Interfaces", "Immersive Analytics", "Ambient Analytics", "Augmented Reality", "Virtual Reality", "Computer Science"],
+      "sameAs": [
+        "https://scholar.google.com/citations?user=dDGkq_YAAAAJ",
+        "https://orcid.org/0000-0002-8704-8503",
+        "https://github.com/SebiH",
+        "https://www.au.dk/en/ssh@cs.au.dk",
+        "https://www.linkedin.com/in/sebastianhubenschmid"
+      ]
+    }
+    </script>
+    {% endif %}
 
     <style>
         {% capture include_to_scssify %}

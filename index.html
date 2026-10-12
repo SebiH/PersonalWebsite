@@ -64,9 +64,13 @@ title: Sebastian Hubenschmid
 
             <br/>
 
+            {% assign year_prefix = publication.year | append: " " %}
+            {% assign conference = publication.conference %}
+            {% assign conference_start = conference | slice: 0, year_prefix.size %}
+            {% if conference_start == year_prefix %}{% assign conference = conference | remove_first: year_prefix %}{% endif %}
             <span>{{ publication.year }}</span>
             <span class="separator">/</span>
-            <span class="conference">{{ publication.conference }}.</span>
+            <span class="conference">{{ conference }}.</span>
 
         </div>
 
@@ -96,7 +100,7 @@ title: Sebastian Hubenschmid
                 {% endcapture %}
                 <pre><code>{{ bibtex | strip | escape }}</code></pre>
 
-                <a href="/bib/{{ publication.bibtex }}.bib" class="download-button" download>
+                <a href="/bib/{{ publication.bibtex }}.bib" class="download-button" aria-label="Download BibTeX" title="Download BibTeX" download>
                     <span class="icon"></span>
                 </a>
             </div>
@@ -140,9 +144,13 @@ title: Sebastian Hubenschmid
                 {% endfor %}
             </span>
 
+            {% assign year_prefix = workshop.year | append: " " %}
+            {% assign conference = workshop.conference %}
+            {% assign conference_start = conference | slice: 0, year_prefix.size %}
+            {% if conference_start == year_prefix %}{% assign conference = conference | remove_first: year_prefix %}{% endif %}
             {% if workshop.conference %}
             <span>In:</span>
-            <span class="conference">{{ workshop.conference }},</span>
+            <span class="conference">{{ conference }},</span>
             {% endif %}
             <span>{{ workshop.location }}.</span>
             <span>{{ workshop.year }}.</span>
@@ -170,6 +178,8 @@ title: Sebastian Hubenschmid
 <section>
     <ul class="bullet-list">
         <li> <a target="_blank" rel="noopener" href="https://www.au.dk/en/ssh@cs.au.dk">University</a></li>
+        <li> <a target="_blank" rel="noopener" href="https://orcid.org/0000-0002-8704-8503">ORCID</a></li>
+        <li> <a target="_blank" rel="noopener" href="https://scholar.google.com/citations?user=dDGkq_YAAAAJ">Google Scholar</a></li>
         <li> <a target="_blank" rel="noopener" href="https://github.com/SebiH">GitHub</a></li>
         <li> <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/sebastianhubenschmid">LinkedIn</a></li>
         <li> <a target="_blank" rel="noopener" href="https://instagram.com/s_hubenschmid/">Instagram</a></li>
