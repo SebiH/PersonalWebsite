@@ -32,6 +32,7 @@ title: Sebastian Hubenschmid
                 <a href="https://doi.org/{{ publication.doi }}" target="_blank">{{ publication.title }}</a>
                 {% else %}{{ publication.title }}
                 {% endif %}
+                {% include award.html publication=publication compact=true %}
             </div>
         </div>
 
@@ -46,6 +47,7 @@ title: Sebastian Hubenschmid
     {% assign publications = site.data.publications | where_exp:"type","type != null" | sort: "sort" | reverse %}
     {% for publication in publications %}
     <section class="publication">
+        {% include award.html publication=publication marker=true %}
         <div class="info">
             <div class="title">{{ publication.title }}</div>
 
@@ -71,6 +73,7 @@ title: Sebastian Hubenschmid
             <span>{{ publication.year }}</span>
             <span class="separator">/</span>
             <span class="conference">{{ conference }}.</span>
+            {% comment %}{% include award.html publication=publication %}{% endcomment %}
 
         </div>
 
