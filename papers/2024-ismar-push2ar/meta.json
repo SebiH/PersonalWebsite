@@ -1,0 +1,18 @@
+{
+    "sort": 202410,
+    "conference": "2024 IEEE International Symposium on Mixed and Augmented Reality (ISMAR)",
+    "links": [
+        {
+            "name": "PDF",
+            "url": "wieland2024push2ar.pdf"
+        },
+        {
+            "name": "Video",
+            "url": "https://www.youtube.com/watch?v=Gkwah6YJX2s"
+        },
+        {
+            "name": "Code",
+            "url": "https://github.com/hcigroupkonstanz/Push2AR"
+        }
+    ]
+}

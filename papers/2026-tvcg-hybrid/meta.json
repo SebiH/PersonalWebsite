@@ -1,0 +1,16 @@
+{
+    "equalContribution": 4,
+    "highlighted": true,
+    "sort": 202612,
+    "conference": "IEEE Transactions on Visualization and Computer Graphics (TVCG)",
+    "links": [
+        {
+            "name": "Preprint",
+            "url": "hubenschmid2026hybrid.pdf"
+        },
+        {
+            "name": "Survey",
+            "url": "https://imldresden.github.io/huis"
+        }
+    ]
+}

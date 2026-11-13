@@ -1,0 +1,23 @@
+{
+    "equalContribution": 3,
+    "sort": 202205,
+    "conference": "CHI Conference on Human Factors in Computing Systems (CHI '22)",
+    "links": [
+        {
+            "name": "PDF",
+            "url": "hubenschmid2022relive.pdf"
+        },
+        {
+            "name": "Video",
+            "url": "https://youtu.be/BaNZ02QkZ_k"
+        },
+        {
+            "name": "Presentation",
+            "url": "https://youtu.be/As3i9rzliF4"
+        },
+        {
+            "name": "Source",
+            "url": "https://github.com/hcigroupkonstanz/ReLive"
+        }
+    ]
+}

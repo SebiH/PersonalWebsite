@@ -1,0 +1,18 @@
+{
+    "sort": 202204,
+    "conference": "IEEE Transactions on Visualization and Computer Graphics (TVCG)",
+    "links": [
+        {
+            "name": "PDF",
+            "url": "fleck2023ragrug.pdf"
+        },
+        {
+            "name": "Video",
+            "url": "https://www.youtube.com/watch?v=mFxSdvQhSVU"
+        },
+        {
+            "name": "Code",
+            "url": "https://github.com/philfleck/ragrug"
+        }
+    ]
+}

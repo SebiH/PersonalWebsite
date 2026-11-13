@@ -1,0 +1,18 @@
+{
+    "sort": 201804,
+    "conference": "Proceedings of the 2018 CHI Conference on Human Factors in Computing Systems",
+    "links": [
+        {
+            "name": "PDF",
+            "url": "butscher2018clusters.pdf"
+        },
+        {
+            "name": "Video",
+            "url": "https://youtu.be/5KMH1t_N5Ow"
+        },
+        {
+            "name": "Code",
+            "url": "https://github.com/SebiH/ART"
+        }
+    ]
+}

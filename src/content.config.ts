@@ -9,12 +9,11 @@ const link = z.strictObject({ name: z.string(), url: z.string() });
 const author = z.strictObject({ first: z.string(), last: z.string() });
 const award = z.union([z.boolean(), z.string()]).optional();
 
-// Title, authors, year and DOI come from public/bib/<bibtex>.bib; fields in the JSON override them.
-function fromBib(key: string) {
-  const file = path.join('public', 'bib', `${key}.bib`);
-  if (!fs.existsSync(file)) throw new Error(`Missing ${file} (referenced as "bibtex": "${key}")`);
+// Title, authors, year and DOI come from the folder's .bib file; fields in meta.json override them.
+function fromBib(file: string) {
+  const bibtex = fs.readFileSync(file, 'utf-8').trim();
   // 'richtext' mode gives plain text with Unicode accents and no sentence-casing.
-  const { fields } = parse(fs.readFileSync(file, 'utf-8'), {
+  const { fields } = parse(bibtex, {
     fieldMode: { title: 'richtext' },
     caseProtection: false,
   }).entries[0];
@@ -24,29 +23,44 @@ function fromBib(key: string) {
     authors: fields.author?.map((a) => ({ first: nfc(a.firstName), last: nfc(a.lastName) })),
     year: Number(fields.year),
     doi: fields.doi,
+    bibtex,
+    bibFile: path.basename(file),
   };
 }
 
-const dir = 'src/data/publications';
+// Each paper lives in papers/<folder>/ with a meta.json and (optionally) one .bib file.
+// Other files are published at /papers/<folder>/ by src/pages/papers/[folder]/[...file].ts.
+const dir = 'papers';
 const publications = defineCollection({
   loader: {
     name: 'publications',
     load: async ({ store, parseData, watcher }) => {
       const loadAll = async () => {
         store.clear();
-        for (const file of fs.readdirSync(dir).filter((f) => f.endsWith('.json'))) {
-          const json = JSON.parse(fs.readFileSync(path.join(dir, file), 'utf-8'));
-          const id = file.replace(/\.json$/, '');
-          const data = await parseData({ id, data: { ...(json.bibtex && fromBib(json.bibtex)), ...json } });
+        for (const folder of fs.readdirSync(dir, { withFileTypes: true }).filter((e) => e.isDirectory())) {
+          const id = folder.name;
+          const base = path.join(dir, id);
+          const json = JSON.parse(fs.readFileSync(path.join(base, 'meta.json'), 'utf-8'));
+          const bibs = fs.readdirSync(base).filter((f) => f.endsWith('.bib'));
+          if (bibs.length > 1) throw new Error(`papers/${id}: more than one .bib file`);
+          const links = json.links?.map((l: { url: string }) => {
+            if (/^[a-z]+:/i.test(l.url) || l.url.startsWith('/')) return l;
+            if (!fs.existsSync(path.join(base, l.url))) throw new Error(`papers/${id}: link target "${l.url}" not found`);
+            return { ...l, url: `/papers/${id}/${l.url}` };
+          });
+          const data = await parseData({
+            id,
+            data: { ...(bibs[0] && fromBib(path.join(base, bibs[0]))), ...json, ...(links && { links }) },
+          });
           store.set({ id, data });
         }
       };
       await loadAll();
 
-      // In dev, reload when a publication JSON or .bib file changes.
-      watcher?.add([dir, 'public/bib']);
+      // In dev, reload when a meta.json or .bib file changes.
+      watcher?.add(dir);
       const reload = (file: string) => {
-        if (/\.(json|bib)$/.test(file) && /(src[\\/]data[\\/]publications|public[\\/]bib)/.test(file)) {
+        if (/\.(json|bib)$/.test(file) && /(^|[\\/])papers[\\/]/.test(file)) {
           loadAll().catch(console.error);
         }
       };
@@ -62,6 +76,7 @@ const publications = defineCollection({
     conference: z.string().optional(),
     doi: z.string().optional(),
     bibtex: z.string().optional(),
+    bibFile: z.string().optional(),
     highlighted: z.boolean().optional(),
     best_paper: award,
     honorable_mention: award,

@@ -1,0 +1,15 @@
+{
+    "equalContribution": 2,
+    "sort": 202311,
+    "conference": "2023 IEEE International Symposium on Mixed and Augmented Reality Adjunct (ISMAR-Adjunct)",
+    "links": [
+        {
+            "name": "PDF",
+            "url": "hubenschmid2023colibri.pdf"
+        },
+        {
+            "name": "Project",
+            "url": "https://github.com/hcigroupkonstanz/Colibri"
+        }
+    ]
+}

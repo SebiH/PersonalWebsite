@@ -1,6 +1,4 @@
 ---
-import fs from 'node:fs';
-import path from 'node:path';
 import { getCollection } from 'astro:content';
 import Default from '../layouts/Default.astro';
 import Award from '../components/Award.astro';
@@ -9,7 +7,7 @@ import Award from '../components/Award.astro';
 const load = async (name: 'publications' | 'workshops') =>
   (await getCollection(name))
     .sort((a, b) => b.data.sort - a.data.sort || (a.id < b.id ? 1 : -1))
-    .map((entry) => entry.data);
+    .map((entry) => ({ id: entry.id, ...entry.data }));
 
 const publications = await load('publications');
 const workshops = await load('workshops');
@@ -22,10 +20,6 @@ function stripYear(entry: { year: number; conference?: string }): string {
 }
 
 const isMe = (a: { first: string; last: string }) => a.first === 'Sebastian' && a.last === 'Hubenschmid';
-
-function readBibtex(id: string): string {
-  return fs.readFileSync(path.join(process.cwd(), 'public', 'bib', `${id}.bib`), 'utf-8').trim();
-}
 ---
 <Default title="Sebastian Hubenschmid" jsonLd>
 <h1>About me</h1>
@@ -92,8 +86,8 @@ function readBibtex(id: string): string {
         {(publication.doi || publication.bibtex) && (
         <div class="citation">
             {publication.bibtex && (<>
-            <input type="checkbox" id={publication.bibtex} class="bibtex-checkbox">
-            <label for={publication.bibtex} class="bibtex-label">BibTeX</label>
+            <input type="checkbox" id={publication.id} class="bibtex-checkbox">
+            <label for={publication.id} class="bibtex-label">BibTeX</label>
             </>)}
 
             {publication.doi && publication.bibtex && (
@@ -109,9 +103,9 @@ function readBibtex(id: string): string {
 
             {publication.bibtex && (
             <div class="bibtex-content">
-                <pre><code>{readBibtex(publication.bibtex)}</code></pre>
+                <pre><code>{publication.bibtex}</code></pre>
 
-                <a href={`/bib/${publication.bibtex}.bib`} class="download-button" aria-label="Download BibTeX" title="Download BibTeX" download>
+                <a href={`/papers/${publication.id}/${publication.bibFile}`} class="download-button" aria-label="Download BibTeX" title="Download BibTeX" download>
                     <span class="icon"></span>
                 </a>
             </div>
