@@ -1,49 +1,27 @@
 ---
 import fs from 'node:fs';
 import path from 'node:path';
+import { getCollection } from 'astro:content';
 import Default from '../layouts/Default.astro';
 import Award from '../components/Award.astro';
 
-interface Author { first: string; last: string; equal?: boolean }
-interface Link { name: string; url: string }
-interface Entry {
-  title: string;
-  sort: number;
-  year: number;
-  conference?: string;
-  location?: string;
-  doi?: string;
-  bibtex?: string;
-  highlighted?: boolean;
-  best_paper?: boolean | string;
-  honorable_mention?: boolean | string;
-  authors: Author[];
-  links?: Link[];
-}
+// Sorted by `sort` descending; ties broken by id (filename) descending.
+const load = async (name: 'publications' | 'workshops') =>
+  (await getCollection(name))
+    .sort((a, b) => b.data.sort - a.data.sort || (a.id < b.id ? 1 : -1))
+    .map((entry) => entry.data);
 
-// Sorted by `sort` descending; ties broken by filename descending.
-function load(files: Record<string, unknown>): Entry[] {
-  return Object.entries(files)
-    .sort(([a], [b]) => (a < b ? 1 : a > b ? -1 : 0))
-    .map(([, entry]) => entry as Entry)
-    .sort((a, b) => b.sort - a.sort);
-}
-
-const publications = load(
-  import.meta.glob('../data/publications/*.json', { eager: true, import: 'default' }),
-);
-const workshops = load(
-  import.meta.glob('../data/workshops/*.json', { eager: true, import: 'default' }),
-);
+const publications = await load('publications');
+const workshops = await load('workshops');
 const highlighted = publications.filter((p) => p.highlighted === true);
 
-function stripYear(entry: Entry): string {
+function stripYear(entry: { year: number; conference?: string }): string {
   const prefix = `${entry.year} `;
   const conference = entry.conference ?? '';
   return conference.startsWith(prefix) ? conference.slice(prefix.length) : conference;
 }
 
-const isMe = (a: Author) => a.first === 'Sebastian' && a.last === 'Hubenschmid';
+const isMe = (a: { first: string; last: string }) => a.first === 'Sebastian' && a.last === 'Hubenschmid';
 
 function readBibtex(id: string): string {
   return fs.readFileSync(path.join(process.cwd(), 'public', 'bib', `${id}.bib`), 'utf-8').trim();
