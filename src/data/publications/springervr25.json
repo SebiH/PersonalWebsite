@@ -1,15 +1,6 @@
 {
-    "doi": "10.1007/s10055-025-01149-6",
     "bibtex": "lunding2025arthur",
     "sort": 202501,
-    "year": 2025,
-    "title": "ARTHUR: Authoring Human-Robot Collaboration Processes with Augmented Reality using Hybrid User Interfaces",
-    "authors": [
-        { "first": "Rasmus", "last": "Lunding" },
-        { "first": "Sebastian", "last": "Hubenschmid" },
-        { "first": "Tiare", "last": "Feuchtner" },
-        { "first": "Kaj", "last": "Grønbæk" }
-    ],
     "conference": "Springer VR'25",
     "links": [
         {

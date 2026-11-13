@@ -1,17 +1,6 @@
 {
     "bibtex": "wunsch2024mhealth",
     "sort": 202403,
-    "year": 2024,
-    "title": "An mHealth Intervention Promoting Physical Activity and Healthy Eating in a Family Setting (SMARTFAMILY): Randomized Controlled Trial",
-    "authors": [
-	{ "first": "Kathrin", "last": "Wunsch" },
-	{ "first": "Janis", "last": "Fiedler" },
-	{ "first": "Sebastian", "last": "Hubenschmid" },
-	{ "first": "Harald", "last": "Reiterer" },
-	{ "first": "Britta", "last": "Renner" },
-	{ "first": "Alexander", "last": "Woll" }
-    ],
-    "doi": "10.2196/51201",
     "conference": "JMIR mHealth and uHealth",
     "links": [
         {

@@ -1,20 +1,8 @@
 
 {
+    "equalContribution": 2,
     "bibtex": "zagermann2022complementary",
     "sort": 202208,
-    "year": 2022,
-    "title": "Complementary Interfaces for Visual Computing",
-    "authors": [
-        { "first": "Johannes", "last": "Zagermann", "equal": true },
-        { "first": "Sebastian", "last": "Hubenschmid", "equal": true },
-        { "first": "Priscilla", "last": "Balestrucci" },
-        { "first": "Tiare", "last": "Feuchtner" },
-        { "first": "Sven", "last": "Mayer" },
-        { "first": "Marc O.", "last": "Ernst" },
-        { "first": "Albrecht", "last": "Schmidt" },
-        { "first": "Harald", "last": "Reiterer" }
-    ],
-    "doi": "10.1515/itit-2022-0031",
     "conference": "Information Technology Special Issue",
     "links": [
         {

@@ -1,15 +1,6 @@
 {
     "bibtex": "hubenschmid2021stream",
     "sort": 202105,
-    "year": 2021,
-    "title": "STREAM: Exploring the Combination of Spatially-Aware Tablets with Augmented Reality Head-Mounted Displays for Immersive Analytics",
-    "authors": [
-        { "first": "Sebastian", "last": "Hubenschmid" },
-        { "first": "Johannes", "last": "Zagermann" },
-        { "first": "Simon", "last": "Butscher" },
-        { "first": "Harald", "last": "Reiterer" }
-    ],
-    "doi": "10.1145/3411764.3445298",
     "conference": "CHI Conference on Human Factors in Computing Systems (CHI '21)",
     "links": [
         {

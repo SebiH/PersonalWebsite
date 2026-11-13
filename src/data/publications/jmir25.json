@@ -1,17 +1,7 @@
 {
-    "doi": "10.2196/65558",
+    "equalContribution": 2,
     "bibtex": "fiedler2025refined",
     "sort": 202509,
-    "year": 2025,
-    "title": "A Refined Mobile Health Intervention (SMARTFAMILY2.0) to Promote Physical Activity and Healthy Eating in a Family Setting: Randomized Controlled Trial",
-    "authors": [
-        { "first": "Janis", "last": "Fiedler", "equal": true },
-        { "first": "Kathrin", "last": "Wunsch", "equal": true },
-        { "first": "Sebastian", "last": "Hubenschmid" },
-        { "first": "Harald", "last": "Reiterer" },
-        { "first": "Britta", "last": "Renner" },
-        { "first": "Alexander", "last": "Woll" }
-    ],
     "conference": "JMIR mHealth and uHealth",
     "links": [
         {

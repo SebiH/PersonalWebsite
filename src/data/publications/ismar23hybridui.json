@@ -1,18 +1,7 @@
 {
     "bibtex": "zagermann2023challenges",
     "sort": 202310,
-    "year": 2023,
-    "title": "Challenges and Opportunities for Collaborative Immersive Analytics with Hybrid User Interfaces",
-    "authors": [
-        { "first": "Johannes", "last": "Zagermann" },
-        { "first": "Sebastian", "last": "Hubenschmid" },
-        { "first": "Daniel Immanuel", "last": "Fink" },
-        { "first": "Jonathan", "last": "Wieland" },
-        { "first": "Harald", "last": "Reiterer" },
-        { "first": "Tiare", "last": "Feuchtner" }
-    ],
     "conference": "2023 IEEE International Symposium on Mixed and Augmented Reality Adjunct (ISMAR-Adjunct)",
-    "doi": "10.1109/ISMAR-Adjunct60411.2023.00044",
     "links": [
         {
             "name": "PDF",

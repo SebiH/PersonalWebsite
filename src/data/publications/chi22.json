@@ -1,18 +1,7 @@
 {
+    "equalContribution": 3,
     "bibtex": "hubenschmid2022relive",
     "sort": 202205,
-    "year": 2022,
-    "title": "ReLive: Bridging In-Situ and Ex-Situ Visual Analytics for Analyzing Mixed Reality User Studies",
-    "authors": [
-        { "first": "Sebastian", "last": "Hubenschmid", "equal": true },
-        { "first": "Jonathan", "last": "Wieland", "equal": true },
-        { "first": "Daniel Immanuel", "last": "Fink", "equal": true },
-        { "first": "Andrea", "last": "Batch" },
-        { "first": "Johannes", "last": "Zagermann" },
-        { "first": "Niklas", "last": "Elmqvist" },
-        { "first": "Harald", "last": "Reiterer" }
-    ],
-    "doi": "10.1145/3491102.3517550",
     "conference": "CHI Conference on Human Factors in Computing Systems (CHI '22)",
     "links": [
         {

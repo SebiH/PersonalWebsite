@@ -76,7 +76,7 @@ function readBibtex(id: string): string {
             <span class="authors">
                 {publication.authors.map((author, i) => (
                 <span class={isMe(author) ? 'me' : undefined}>
-                    {author.equal ? <abbr title="Contributed equally">{author.first} {author.last}<sup>*</sup></abbr> : <>{author.first} {author.last}</>}{i < publication.authors.length - 1 ? ',' : '.'}
+                    {i < (publication.equalContribution ?? 0) ? <abbr title="Contributed equally">{author.first} {author.last}<sup>*</sup></abbr> : <>{author.first} {author.last}</>}{i < publication.authors.length - 1 ? ',' : '.'}
                 </span>
                 ))}
             </span>
@@ -145,7 +145,7 @@ function readBibtex(id: string): string {
             <span class="authors">
                 {workshop.authors.map((author, i) => (
                 <span class={isMe(author) ? 'me' : undefined}>
-                    {author.first} {author.last}{author.equal && <abbr title="Contributed equally"><sup>*</sup></abbr>}{i < workshop.authors.length - 1 ? ',' : '.'}
+                    {author.first} {author.last}{i < workshop.authors.length - 1 ? ',' : '.'}
                 </span>
                 ))}
             </span>

@@ -2,16 +2,6 @@
 {
     "bibtex": "fleck2023ragrug",
     "sort": 202204,
-    "year": 2022,
-    "title": "RagRug: A Toolkit for Situated Analytics",
-    "authors": [
-        { "first": "Philipp", "last": "Fleck" },
-        { "first": "Aimée Sousa", "last": "Calepso" },
-        { "first": "Sebastian", "last": "Hubenschmid" },
-        { "first": "Michael", "last": "Sedlmair" },
-        { "first": "Dieter", "last": "Schmalstieg" }
-    ],
-    "doi": "10.1109/TVCG.2022.3157058",
     "conference": "IEEE Transactions on Visualization and Computer Graphics (TVCG)",
     "links": [
         {

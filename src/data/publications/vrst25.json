@@ -1,19 +1,6 @@
 {
     "highlighted": true,
     "sort": 202512,
-    "year": 2025,
-    "title": "SpatialMouse: A Hybrid Pointing Device for Seamless Interaction Across 2D and 3D Spaces",
-    "authors": [
-        { "first": "Sebastian", "last": "Hubenschmid" },
-        { "first": "Johannes", "last": "Zagermann" },
-        { "first": "Robin", "last": "Erb" },
-        { "first": "Tiare", "last": "Feuchtner" },
-        { "first": "Jens", "last": "Grubert" },
-        { "first": "Markus", "last": "Tatzgern" },
-        { "first": "Dieter", "last": "Schmalstieg" },
-        { "first": "Harald", "last": "Reiterer" }
-    ],
-    "doi": "10.1145/3756884.3766047",
     "bibtex": "hubenschmid2025spatialmouse",
     "conference": "ACM Symposium on Virtual Reality Software and Technology (VRST'25)",
     "links": [

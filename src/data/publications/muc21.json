@@ -1,16 +1,6 @@
 {
     "bibtex": "vock2021idiar",
     "sort": 202109,
-    "year": 2021,
-    "title": "IDIAR: Augmented Reality Dashboards to Supervise Mobile Intervention Studies",
-    "authors": [
-        { "first": "Katja", "last": "Vock" },
-        { "first": "Sebastian", "last": "Hubenschmid" },
-        { "first": "Johannes", "last": "Zagermann" },
-        { "first": "Simon", "last": "Butscher" },
-        { "first": "Harald", "last": "Reiterer" }
-    ],
-    "doi": "10.1145/3473856.3473876",
     "conference": "Mensch und Computer 2021 (MuC '21)",
     "links": [
         {

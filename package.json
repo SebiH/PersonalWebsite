@@ -12,6 +12,7 @@
     "preview": "astro preview"
   },
   "dependencies": {
+    "@retorquere/bibtex-parser": "^13.0.15",
     "astro": "^7.4.11",
     "sass": "^1.108.2"
   }
