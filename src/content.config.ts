@@ -31,14 +31,26 @@ const dir = 'src/data/publications';
 const publications = defineCollection({
   loader: {
     name: 'publications',
-    load: async ({ store, parseData }) => {
-      store.clear();
-      for (const file of fs.readdirSync(dir).filter((f) => f.endsWith('.json'))) {
-        const json = JSON.parse(fs.readFileSync(path.join(dir, file), 'utf-8'));
-        const id = file.replace(/\.json$/, '');
-        const data = await parseData({ id, data: { ...(json.bibtex && fromBib(json.bibtex)), ...json } });
-        store.set({ id, data });
-      }
+    load: async ({ store, parseData, watcher }) => {
+      const loadAll = async () => {
+        store.clear();
+        for (const file of fs.readdirSync(dir).filter((f) => f.endsWith('.json'))) {
+          const json = JSON.parse(fs.readFileSync(path.join(dir, file), 'utf-8'));
+          const id = file.replace(/\.json$/, '');
+          const data = await parseData({ id, data: { ...(json.bibtex && fromBib(json.bibtex)), ...json } });
+          store.set({ id, data });
+        }
+      };
+      await loadAll();
+
+      // In dev, reload when a publication JSON or .bib file changes.
+      watcher?.add([dir, 'public/bib']);
+      const reload = (file: string) => {
+        if (/\.(json|bib)$/.test(file) && /(src[\\/]data[\\/]publications|public[\\/]bib)/.test(file)) {
+          loadAll().catch(console.error);
+        }
+      };
+      watcher?.on('add', reload).on('change', reload).on('unlink', reload);
     },
   },
   schema: z.strictObject({
