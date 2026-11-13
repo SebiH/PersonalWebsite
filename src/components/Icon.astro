@@ -1,0 +1,24 @@
+---
+interface Props {
+  name: string;
+  width: number;
+  height: number;
+}
+
+const { name, width, height } = Astro.props;
+
+const icons = import.meta.glob<string>('../icons/*.svg', {
+  query: '?raw',
+  import: 'default',
+  eager: true,
+});
+
+const svg = icons[`../icons/${name}.svg`];
+if (!svg) throw new Error(`Unknown icon: ${name}`);
+
+// Icons are stored with a default width/height on the root <svg> element.
+const html = svg
+  .trim()
+  .replace(/^<svg width="\d+" height="\d+"/, `<svg width="${width}" height="${height}"`);
+---
+<Fragment set:html={html} />

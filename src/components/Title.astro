@@ -1,29 +1,29 @@
+---
+import Icon from './Icon.astro';
+---
 <div class="name"> Sebastian Hubenschmid </div>
 <div class="social noselect">
     <a target="_blank" rel="noopener" class="icon" href="https://scholar.google.com/citations?user=dDGkq_YAAAAJ" title="Google Scholar" aria-label="Google Scholar">
-        {% include sprites/scholar.svg width="24" height="24" %}
+        <Icon name="scholar" width={24} height={24} />
     </a>
 
     <a target="_blank" rel="noopener me" class="icon" href="https://orcid.org/0000-0002-8704-8503" title="ORCID" aria-label="ORCID">
-        {% include sprites/orcid.svg width="24" height="24" %}
+        <Icon name="orcid" width={24} height={24} />
     </a>
 
     <a target="_blank" rel="noopener" class="icon" href="https://www.au.dk/en/ssh@cs.au.dk" title="University" aria-label="University profile">
-        {% include sprites/flask.svg width=24 height=24 %}
+        <Icon name="flask" width={24} height={24} />
     </a>
 
     <a target="_blank" rel="noopener" class="icon" href="https://github.com/SebiH" title="GitHub" aria-label="GitHub">
-        {% include sprites/github.svg width="24" height="24" %}
+        <Icon name="github" width={24} height={24} />
     </a>
 
     <a target="_blank" rel="noopener" class="icon" href="https://www.linkedin.com/in/sebastianhubenschmid" title="LinkedIn" aria-label="LinkedIn">
-        {% include sprites/linkedin.svg width=24 height=24 %}
+        <Icon name="linkedin" width={24} height={24} />
     </a>
 
     <a target="_blank" rel="me" class="icon" href="https://mastodon.social/@sebih" title="Mastodon" aria-label="Mastodon" style="display: none;">
-        {% comment %}
-        {% include sprites/mastodon.svg width=24 height=24 %}
-        {% endcomment %}
+        {/* <Icon name="mastodon" width={24} height={24} /> */}
     </a>
-
 </div>

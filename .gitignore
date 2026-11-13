@@ -1,6 +1,5 @@
 _site
-.jekyll-metadata
-.jekyll-cache
-.sass-cache
-_drafts
+node_modules
+.astro
+.DS_Store
 vendor
