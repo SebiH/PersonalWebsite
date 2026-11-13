@@ -1,9 +1,7 @@
 {
-    "type": "Workshop Paper",
     "bibtex": "zagermann2023challenges",
     "sort": 202310,
     "year": 2023,
-    "month": 10,
     "title": "Challenges and Opportunities for Collaborative Immersive Analytics with Hybrid User Interfaces",
     "authors": [
         { "first": "Johannes", "last": "Zagermann" },
@@ -13,19 +11,15 @@
         { "first": "Harald", "last": "Reiterer" },
         { "first": "Tiare", "last": "Feuchtner" }
     ],
-    "workshop": "Workshop on Hybrid User Interfaces: Complementary Interfaces for Mixed Reality Interaction",
     "conference": "2023 IEEE International Symposium on Mixed and Augmented Reality Adjunct (ISMAR-Adjunct)",
-    "conference_short": "ISMAR '23 Adjunct",
     "doi": "10.1109/ISMAR-Adjunct60411.2023.00044",
     "links": [
         {
             "name": "PDF",
-            "type": "pdf",
             "url": "/publications/zagermann2023challenges.pdf"
         },
         {
             "name": "Presentation",
-            "type": "video",
             "url": "https://youtu.be/8qNkOR1KCsE"
         }
     ]

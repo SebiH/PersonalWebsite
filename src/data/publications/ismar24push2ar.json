@@ -1,9 +1,7 @@
 {
-    "type": "Conference Paper",
     "bibtex": "wieland2024push2ar",
     "sort": 202410,
     "year": 2024,
-    "month": 10,
     "doi": "10.1109/ISMAR62088.2024.00082",
     "title": "Push2AR: Enhancing Mobile List Interactions Using Augmented Reality",
     "authors": [
@@ -15,21 +13,17 @@
         { "first": "David", "last": "Lindlbauer" }
     ],
     "conference": "2024 IEEE International Symposium on Mixed and Augmented Reality (ISMAR)",
-    "conference_short": "ISMAR '24",
     "links": [
         {
             "name": "PDF",
-            "type": "pdf",
             "url": "/publications/wieland2024push2ar.pdf"
         },
         {
             "name": "Video",
-            "type": "video",
             "url": "https://www.youtube.com/watch?v=Gkwah6YJX2s"
         },
         {
             "name": "Code",
-            "type": "code",
             "url": "https://github.com/hcigroupkonstanz/Push2AR"
         }
     ]

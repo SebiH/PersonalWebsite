@@ -1,10 +1,8 @@
 
 {
-    "type": "Journal Article",
     "bibtex": "fleck2023ragrug",
     "sort": 202204,
     "year": 2022,
-    "month": 4,
     "title": "RagRug: A Toolkit for Situated Analytics",
     "authors": [
         { "first": "Philipp", "last": "Fleck" },
@@ -15,21 +13,17 @@
     ],
     "doi": "10.1109/TVCG.2022.3157058",
     "conference": "IEEE Transactions on Visualization and Computer Graphics (TVCG)",
-    "conference_short": "TVCG",
     "links": [
         {
             "name": "PDF",
-            "type": "pdf",
             "url": "/publications/fleck2023ragrug.pdf"
         },
         {
             "name": "Video",
-            "type": "video",
             "url": "https://www.youtube.com/watch?v=mFxSdvQhSVU"
         },
         {
             "name": "Code",
-            "type": "code",
             "url": "https://github.com/philfleck/ragrug"
         }
     ]

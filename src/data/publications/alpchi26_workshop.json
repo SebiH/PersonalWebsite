@@ -1,8 +1,6 @@
 {
-    "type": "Workshop Paper",
     "sort": 202603,
     "year": 2026,
-    "month": 3,
     "title": "Investigating the Ergonomics of Hybrid User Interfaces for 3D Selection in Mixed Reality",
     "authors": [
         { "first": "Sebastian", "last": "Hubenschmid" },
@@ -10,13 +8,10 @@
         { "first": "Johannes", "last": "Zagermann" },
         { "first": "Tiare", "last": "Feuchtner" }
     ],
-    "workshop": "Beyond Fatigue: Building an Ergonomic Future for XR",
     "conference": "2026 Workshop at AlpCHI: Beyond Fatigue: Building an Ergonomic Future for XR",
-    "conference_short": "",
     "links": [
       {
           "name": "PDF",
-          "type": "pdf",
           "url": "/publications/hubenschmid2026investigating.pdf"
       }
     ]

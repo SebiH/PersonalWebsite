@@ -1,9 +1,7 @@
 {
-    "type": "Conference Paper",
     "bibtex": "butscher2018clusters",
     "sort": 201804,
     "year": 2018,
-    "month": 4,
     "title": "Clusters, Trends, and Outliers: How Immersive Technologies Can Facilitate the Collaborative Analysis of Multidimensional Data",
     "authors": [
         { "first": "Simon", "last": "Butscher" },
@@ -14,21 +12,17 @@
     ],
     "doi": "10.1145/3173574.3173664",
     "conference": "Proceedings of the 2018 CHI Conference on Human Factors in Computing Systems",
-    "conference_short": "CHI '18",
     "links": [
         {
             "name": "PDF",
-            "type": "pdf",
             "url": "/publications/butscher2018clusters.pdf"
         },
         {
             "name": "Video",
-            "type": "video",
             "url": "https://youtu.be/5KMH1t_N5Ow"
         },
         {
             "name": "Code",
-            "type": "code",
             "url": "https://github.com/SebiH/ART"
         }
     ]

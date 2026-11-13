@@ -1,11 +1,9 @@
 
 {
-    "type": "Journal Article",
     "bibtex": "hubenschmid2026hybrid",
     "highlighted": true,
     "sort": 202612,
     "year": 2026,
-    "month": 5,
     "title": "Hybrid User Interfaces: Past, Present, and Future of Complementary Cross-Device Interaction in Mixed Reality",
     "authors": [
         { "first": "Sebastian", "last": "Hubenschmid", "equal": true },
@@ -22,19 +20,14 @@
         { "first": "Harald", "last": "Reiterer" }
     ],
     "conference": "IEEE Transactions on Visualization and Computer Graphics (TVCG)",
-    "conference_short": "TVCG",
-    "journal": "IEEE Transactions on Visualization and Computer Graphics",
-    "journal_short": "IEEE TVCG",
     "doi": "10.1109/TVCG.2026.3683941",
     "links": [
         {
             "name": "Preprint",
-            "type": "pdf",
             "url": "/publications/hubenschmid2026hybrid.pdf"
         },
         {
             "name": "Survey",
-            "type": "code",
             "url": "https://imldresden.github.io/huis"
         }
     ]

@@ -1,8 +1,6 @@
 {
-    "type": "Journal Article",
     "sort": 202610,
     "year": 2026,
-    "month": 5,
     "bibtex": "anthes2026grand",
     "title": "Grand Challenges in Cross Reality",
     "authors": [
@@ -100,14 +98,10 @@
         }
     ],
     "conference": "IEEE Transactions on Visualization and Computer Graphics (TVCG)",
-    "conference_short": "TVCG",
     "doi": "10.1109/TVCG.2026.3695303",
-    "journal": "TVCG",
-    "journal_short": "TVCG",
     "links": [
         {
             "name": "PDF",
-            "type": "pdf",
             "url": "/publications/anthes2026grand.pdf"
         }
     ]

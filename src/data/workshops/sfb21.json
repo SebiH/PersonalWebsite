@@ -1,8 +1,6 @@
 {
-    "type": "Workshop",
     "sort": 202111,
     "year": 2021,
-    "month": 11,
     "title": "Situated Analytics Workshop",
     "authors": [
         { "first": "Sebastian", "last": "Hubenschmid" },
@@ -19,7 +17,6 @@
     "links": [
         {
             "name": "News Article",
-            "type": "pdf",
             "url": "https://www.visual-computing.org/2021/12/20/situated-analytics-workshop/"
         }
     ]

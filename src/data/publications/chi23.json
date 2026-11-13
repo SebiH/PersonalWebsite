@@ -1,9 +1,7 @@
 {
-    "type": "Conference Paper",
     "bibtex": "hubenschmid2023smartphone",
     "sort": 202304,
     "year": 2023,
-    "month": 4,
     "title": "ARound the Smartphone: Investigating the Effects of Virtually-Extended Display Size on Spatial Memory",
     "authors": [
         { "first": "Sebastian", "last": "Hubenschmid" },
@@ -13,27 +11,22 @@
         { "first": "Tiare", "last": "Feuchtner" }
     ],
     "conference": "CHI Conference on Human Factors in Computing Systems (CHI '23)",
-    "conference_short": "CHI '23",
     "doi": "10.1145/3544548.3581438",
     "links": [
         {
             "name": "PDF",
-            "type": "pdf",
             "url": "/publications/hubenschmid2023smartphone.pdf"
         },
         {
             "name": "Video",
-            "type": "video",
             "url": "https://youtu.be/p6cHwLxHWJg"
         },
         {
             "name": "Presentation",
-            "type": "video",
             "url": "https://youtu.be/4boLfuMl63Y"
         },
         {
             "name": "Code",
-            "type": "code",
             "url": "https://github.com/hcigroupkonstanz/ARound-the-Smartphone"
         }
     ]

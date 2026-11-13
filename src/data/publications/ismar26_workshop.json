@@ -1,8 +1,6 @@
 {
-    "type": "Workshop Paper",
     "sort": 202611,
     "year": 2026,
-    "month": 10,
     "title": "I Want to be Iron Man: Exploring JARVIS as Future Vision for AI Assistants in AR",
     "authors": [
         { "first": "Emeric", "last": "Marguet" },
@@ -10,12 +8,10 @@
         { "first": "Sebastian", "last": "Hubenschmid" }
     ],
     "conference": "ISMAR'26 Adjunct - XRAG Workshop",
-    "conference_short": "",
     "honorable_mention": true,
     "links": [
         {
           "name": "PDF",
-          "type": "pdf",
           "url": "/publications/marguet2026want.pdf"
         }
     ]
